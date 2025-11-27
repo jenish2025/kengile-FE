@@ -10,8 +10,8 @@ interface SEOProps {
 }
 
 const SEO = ({ title, description, canonical, keywords, ogImage }: SEOProps) => {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://bacancy.com'
-  const fullTitle = `${title} | Bacancy - Future-Ready IT Services`
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://kengile.com'
+  const fullTitle = `${title} | Kengile - Future-Ready IT Services`
   const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl
 
   return (

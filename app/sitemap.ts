@@ -1,7 +1,9 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://bacancy.com'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://kengile.com'
+  
+  // Define all your pages here
 
   const routes = [
     '',

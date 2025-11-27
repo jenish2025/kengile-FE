@@ -53,8 +53,8 @@ export default function ContactUs() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
-                  <p className="text-accent-600">info@bacancy.com</p>
-                  <p className="text-accent-600">support@bacancy.com</p>
+                  <p className="text-accent-600">info@kengile.com</p>
+                  <p className="text-accent-600">support@kengile.com</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">

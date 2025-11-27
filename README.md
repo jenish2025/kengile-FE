@@ -1,6 +1,6 @@
-# Futuristic Bacancy - Future-Ready IT Services Website
+# Futuristic Kengile - Future-Ready IT Services Website
 
-A modern, SEO-optimized website for Bacancy, positioning the company as a next-generation IT services provider specializing in AI, cloud, energy, blockchain, and space connectivity.
+A modern, SEO-optimized website for Kengile, positioning the company as a next-generation IT services provider specializing in AI, cloud, energy, blockchain, and space connectivity.
 
 ## 🚀 Features
 

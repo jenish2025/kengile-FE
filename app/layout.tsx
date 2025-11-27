@@ -19,21 +19,20 @@ export const metadata: Metadata = {
 }
 
 const organizationSchema = {
-  '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Bacancy',
-  description: 'Future-ready IT services company specializing in AI, cloud, energy, blockchain, and space connectivity',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://bacancy.com',
-  logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://bacancy.com'}/logo.png`,
+  name: 'Kengile',
+  description: 'Next-generation IT services company specializing in AI, cloud, energy, blockchain, and space connectivity',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://kengile.com',
+  logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://kengile.com'}/logo.png`,
   contactPoint: {
     '@type': 'ContactPoint',
     telephone: '+1-555-123-4567',
     contactType: 'Customer Service',
-    email: 'info@bacancy.com',
+    email: 'info@kengile.com',
   },
   sameAs: [
-    'https://linkedin.com/company/bacancy',
-    'https://twitter.com/bacancy',
+    'https://linkedin.com/company/kengile',
+    'https://twitter.com/kengile',
   ],
 }
 

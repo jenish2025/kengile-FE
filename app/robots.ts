@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/admin/'],
       },
     ],
-    sitemap: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://bacancy.com'}/sitemap.xml`,
+    sitemap: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://kengile.com'}/sitemap.xml`,
   }
 }
 
