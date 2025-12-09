@@ -34,12 +34,14 @@ import {
   CheckCircle,
   BarChart3,
   Network,
+  AlertCircle,
+  Sparkles,
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Future-Ready IT Services | AI • Cloud • Energy • Blockchain • Space",
+  title: "Future-Ready IT Services for Modern Enterprises | Kengile",
   description:
-    "We design, build, and manage future-ready IT infrastructure — integrating AI, cloud, energy systems, blockchain, and satellite networks for global enterprises.",
+    "We deliver future-ready IT services across infrastructure, AI, cloud, blockchain, and satellite networks to accelerate enterprise growth. Start your journey.",
   keywords:
     "AI infrastructure, cloud services, data center, blockchain, space connectivity, IT services, future technology",
 };
@@ -49,42 +51,42 @@ export default function Home() {
     {
       title: "AI Infrastructure Services",
       description:
-        "End-to-end AI infrastructure services — GPU cloud setup, distributed training, MLOps pipelines, and performance optimization.",
+        "Our IT experts develop AI infrastructure with a GPU cloud setup, distributed training support, MLOps pipelines, and performance-focused architecture.",
       href: "/services/ai-infrastructure-services",
       icon: <Brain size={32} />,
     },
     {
       title: "Data Center Modernization",
       description:
-        "Transform traditional IT environments into intelligent, automated, energy-efficient data centers built for AI workloads.",
+        "We modernize legacy data centers into automated, energy-efficient, AI-ready environments for next-generation workloads.",
       href: "/services/data-center-modernization",
       icon: <Server size={32} />,
     },
     {
       title: "Cloud & HPC Engineering",
       description:
-        "Design hybrid cloud and HPC systems that deliver scalability, security, and AI-ready compute efficiency.",
+        "Get scalable, secure, and AI-ready compute power with hybrid cloud and HPC systems designed for enterprise-level operations.",
       href: "/services/cloud-hpc-engineering",
       icon: <Cloud size={32} />,
     },
     {
       title: "Smart Energy IT Solutions",
       description:
-        "AI and IoT solutions for power forecasting, load balancing, and energy analytics for modern utilities.",
+        "Being a leading IT services provider, we help utilities leverage AI and IoT for power forecasting, load balancing, and advanced energy analytics.",
       href: "/services/smart-energy-it-solutions",
       icon: <Zap size={32} />,
     },
     {
       title: "Blockchain Infrastructure",
       description:
-        "Design, deploy, and manage blockchain networks with enterprise-grade reliability and governance frameworks.",
+        "Our Blockchain experts implement enterprise blockchain networks that have secure architecture, reliable operations, and strong governance frameworks in place.",
       href: "/services/blockchain-infrastructure-services",
       icon: <Link2 size={32} />,
     },
     {
       title: "Space Connectivity",
       description:
-        "Build and manage satellite-based internet infrastructure for low-latency, high-availability global connectivity.",
+        "We develop satellite-based systems that provide low-latency, high-availability, and secure worldwide communication for reliable connectivity everywhere.",
       href: "/services/satellite-space-internet-solutions",
       icon: <Satellite size={32} />,
     },
@@ -95,7 +97,7 @@ export default function Home() {
       <AnimatedHero
         title="Future-Ready IT Services"
         subtitle="Next-Generation Technology Partner"
-        description="We design, build, and manage future-ready IT infrastructure — integrating AI, cloud, energy systems, blockchain, and satellite networks for global enterprises."
+        description="We design, build, and manage future-ready IT infrastructure powered by AI, cloud, energy systems, blockchain, and satellite networks. As a full-stack IT services provider, we help enterprises scale, transform, and achieve results."
         ctaText="Start Your Journey"
         ctaLink="/contact-us"
       />
@@ -106,7 +108,7 @@ export default function Home() {
         <div className="relative">
           <StatsSection
             title="Our Impact"
-            description="Delivering measurable results for enterprises worldwide"
+            description="Top enterprises worldwide partner with us to drive measurable growth, improve efficiency, and achieve tangible results."
             stats={[
               {
                 value: "500+",
@@ -133,8 +135,94 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* About Us Section */}
+      <Section className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyNTYzZWIiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PGNpcmNsZSBjeD0iMyIgY3k9IjMiIHI9IjMiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-60"></div>
+        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-blue-300 via-indigo-300 to-transparent rounded-full blur-3xl opacity-30 -translate-x-1/3 -translate-y-1/3"></div>
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-tl from-purple-300 via-pink-300 to-transparent rounded-full blur-3xl opacity-30 translate-x-1/3 translate-y-1/3"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-r from-primary-200 to-accent-200 rounded-full blur-3xl opacity-20"></div>
+
+        <div className="max-w-6xl mx-auto relative">
+          <div className="text-center mb-16">
+            <div className="inline-block mb-6">
+              <span className="px-6 py-3 bg-gradient-to-r from-primary-100 via-indigo-100 to-purple-100 text-primary-700 rounded-full text-sm font-bold uppercase tracking-widest shadow-md">
+                Who We Are
+              </span>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-primary-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent mb-6 !leading-tight">
+              About Kengile
+            </h2>
+            <p className="text-xl md:text-2xl text-gray-700 mb-6 max-w-4xl mx-auto leading-relaxed font-medium">
+              Kengile is a next-generation IT services company building smart,
+              energy-saving, decentralized infrastructures for the future
+              internet.
+            </p>
+            <p className="text-lg text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
+              From top technologies in AI, cloud computing, energy systems,
+              blockchain, to satellite networks, we combine them in an
+              innovative and customer-centric manner. Our work enables global
+              companies to modernize, optimize, and transform with confidence in
+              their digital setup.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="group bg-white/80 backdrop-blur-sm rounded-3xl p-8 border-2 border-blue-100 hover:border-blue-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl">
+                <Globe className="text-white" size={32} />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                Global Reach
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-lg">
+                Working with enterprises across more than 25 countries, with
+                distributed teams and local know-how.
+              </p>
+            </div>
+
+            <div className="group bg-white/80 backdrop-blur-sm rounded-3xl p-8 border-2 border-indigo-100 hover:border-indigo-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3">
+              <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl">
+                <Users className="text-white" size={32} />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-indigo-600 transition-colors">
+                Expert Team
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-lg">
+                More than 200 engineers, architects, and consultants focused on
+                AI, cloud, and new technologies.
+              </p>
+            </div>
+
+            <div className="group bg-white/80 backdrop-blur-sm rounded-3xl p-8 border-2 border-purple-100 hover:border-purple-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl">
+                <Target className="text-white" size={32} />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
+                Innovation Focus
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-lg">
+                Dedicated innovation labs exploring next-gen technologies to
+                shape the future of the next decade.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Link href="/about-us">
+              <button className="group px-10 py-5 bg-gradient-to-r from-primary-600 via-indigo-600 to-purple-600 text-white hover:from-primary-700 hover:via-indigo-700 hover:to-purple-700 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-indigo-500/50 inline-flex items-center space-x-3">
+                <span>Learn More About Us</span>
+                <ArrowRight
+                  size={24}
+                  className="group-hover:translate-x-2 transition-transform"
+                />
+              </button>
+            </Link>
+          </div>
+        </div>
+      </Section>
+
       {/* Services Overview */}
-      <Section className="bg-[#e4e4ff] overflow-hidden">
+      <Section className="bg-[#e4e4ff] relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary-200 to-primary-300 rounded-full blur-3xl opacity-20 -translate-y-1/2 translate-x-1/2"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-primary-100 to-primary-200 rounded-full blur-3xl opacity-20 translate-y-1/2 -translate-x-1/2"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyNTYzZWIiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMyIgY3k9IjMiIHI9IjMiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-50"></div>
@@ -146,10 +234,11 @@ export default function Home() {
               </span>
             </div> */}
             <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
-              Our Services
+              Our Next Generation IT Services
             </h2>
             <p className="text-xl text-accent-600 max-w-3xl mx-auto">
-              Comprehensive IT solutions for the next digital decade and beyond
+              We provide future-ready IT services and our digital solutions help
+              enterprises scale, transform, and achieve results.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -178,91 +267,6 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* About Us Section */}
-      <Section className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyNTYzZWIiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PGNpcmNsZSBjeD0iMyIgY3k9IjMiIHI9IjMiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-60"></div>
-        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-blue-300 via-indigo-300 to-transparent rounded-full blur-3xl opacity-30 -translate-x-1/3 -translate-y-1/3"></div>
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-tl from-purple-300 via-pink-300 to-transparent rounded-full blur-3xl opacity-30 translate-x-1/3 translate-y-1/3"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-r from-primary-200 to-accent-200 rounded-full blur-3xl opacity-20"></div>
-
-        <div className="max-w-6xl mx-auto relative">
-          <div className="text-center mb-16">
-            <div className="inline-block mb-6">
-              <span className="px-6 py-3 bg-gradient-to-r from-primary-100 via-indigo-100 to-purple-100 text-primary-700 rounded-full text-sm font-bold uppercase tracking-widest shadow-md">
-                Who We Are
-              </span>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-primary-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent mb-6 leading-tight">
-              About Kengile
-            </h2>
-            <p className="text-xl md:text-2xl text-gray-700 mb-6 max-w-4xl mx-auto leading-relaxed font-medium">
-              We position ourselves as a next-generation IT services company
-              building intelligent, energy-efficient, and decentralized
-              infrastructure for the future internet.
-            </p>
-            <p className="text-lg text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-              We specialize in integrating cutting-edge technologies including
-              AI, cloud computing, energy systems, blockchain, and satellite
-              networks to help global enterprises transform their digital
-              infrastructure.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="group bg-white/80 backdrop-blur-sm rounded-3xl p-8 border-2 border-blue-100 hover:border-blue-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl">
-                <Globe className="text-white" size={32} />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
-                Global Reach
-              </h3>
-              <p className="text-gray-600 leading-relaxed text-lg">
-                Serving enterprises across 25+ countries with distributed teams
-                and local expertise.
-              </p>
-            </div>
-
-            <div className="group bg-white/80 backdrop-blur-sm rounded-3xl p-8 border-2 border-indigo-100 hover:border-indigo-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3">
-              <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl">
-                <Users className="text-white" size={32} />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-indigo-600 transition-colors">
-                Expert Team
-              </h3>
-              <p className="text-gray-600 leading-relaxed text-lg">
-                200+ engineers, architects, and consultants specializing in AI,
-                cloud, and emerging technologies.
-              </p>
-            </div>
-
-            <div className="group bg-white/80 backdrop-blur-sm rounded-3xl p-8 border-2 border-purple-100 hover:border-purple-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl">
-                <Target className="text-white" size={32} />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
-                Innovation Focus
-              </h3>
-              <p className="text-gray-600 leading-relaxed text-lg">
-                Dedicated innovation labs researching next-generation
-                technologies for the next decade.
-              </p>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <Link href="/about-us">
-              <button className="group px-10 py-5 bg-gradient-to-r from-primary-600 via-indigo-600 to-purple-600 text-white hover:from-primary-700 hover:via-indigo-700 hover:to-purple-700 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-indigo-500/50 inline-flex items-center space-x-3">
-                <span>Learn More About Us</span>
-                <ArrowRight
-                  size={24}
-                  className="group-hover:translate-x-2 transition-transform"
-                />
-              </button>
-            </Link>
-          </div>
-        </div>
-      </Section>
-
       {/* Industries We Serve */}
       <Section className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 relative overflow-hidden">
         <div className="absolute top-1/2 left-0 w-96 h-96 bg-primary-100 rounded-full blur-3xl opacity-30 -translate-y-1/2"></div>
@@ -278,51 +282,51 @@ export default function Home() {
               Industries We Serve
             </h2>
             <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium">
-              Tailored IT solutions for diverse industries — from AI startups to
-              global enterprises
+              Our customized IT solutions help enterprises across industries
+              solve unique business challenges and achieve measurable results.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ServiceCard
-              title="AI & Machine Learning Companies"
-              description="Specialized infrastructure for AI startups and ML enterprises — GPU clusters, distributed training, and MLOps platforms."
+              title="Space Technology"
+              description="We work with space innovators to enhance satellite connectivity, process deep-space data, and enable edge computing engineered for mission-critical environments."
               href="/industries-we-serve"
-              icon={<TrendingUp size={32} />}
+              icon={<Rocket size={32} />}
               delay={0}
             />
             <ServiceCard
-              title="Energy & Utilities"
-              description="Smart grid solutions, energy analytics, and IoT integration for power companies and renewable energy providers."
+              title="Telecommunications"
+              description="Our experts enable telecom providers to gain unprecedented network performance with 5G-ready infrastructure, cloud-native cores, and AI-driven optimization."
               href="/industries-we-serve"
-              icon={<Zap size={32} />}
+              icon={<Network size={32} />}
               delay={0.1}
             />
             <ServiceCard
-              title="Financial Services & FinTech"
-              description="Blockchain infrastructure, secure payment systems, and high-frequency trading platforms for financial institutions."
+              title="Energy & Utilities"
+              description="As a trusted technology partner, we enable utilities to adopt Artificial Intelligence and IoT for smarter power forecasting, automation of smart grids, and precise energy distribution."
               href="/industries-we-serve"
-              icon={<Shield size={32} />}
+              icon={<Zap size={32} />}
               delay={0.2}
             />
             <ServiceCard
-              title="Space Technology"
-              description="Satellite connectivity, space data analytics, and edge computing solutions for space-tech innovators."
+              title="Financial Services"
+              description="Our teams create secure digital finance ecosystems, blockchain-supported settlement systems, and high-performance architectures for today's financial operations."
               href="/industries-we-serve"
-              icon={<Rocket size={32} />}
+              icon={<Shield size={32} />}
               delay={0.3}
             />
             <ServiceCard
-              title="Manufacturing & Industrial"
-              description="IoT integration, predictive maintenance, and industrial automation for smart manufacturing operations."
+              title="Manufacturing"
+              description="We help industrial organizations with IoT-enabled operations, real-time monitoring, predictive maintenance, and automation for large-scale production."
               href="/industries-we-serve"
               icon={<Factory size={32} />}
               delay={0.4}
             />
             <ServiceCard
-              title="Enterprise Corporations"
-              description="Comprehensive digital transformation — cloud migration, data modernization, and AI adoption for large enterprises."
+              title="Healthcare & Life Sciences"
+              description="Through secure data platforms, AI-powered analytics, and high-performance computing for research, healthcare, and life sciences organizations can innovate in care delivery."
               href="/industries-we-serve"
-              icon={<Building2 size={32} />}
+              icon={<FlaskConical size={32} />}
               delay={0.5}
             />
           </div>
@@ -340,6 +344,133 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* Technology Expertise */}
+      <Section className="bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyNTYzZWIiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PGNpcmNsZSBjeD0iMyIgY3k9IjMiIHI9IjMiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-60"></div>
+        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-blue-200 via-indigo-200 to-transparent rounded-full blur-3xl opacity-30 -translate-x-1/3 -translate-y-1/3"></div>
+        <div className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-gradient-to-tl from-purple-200 via-pink-200 to-transparent rounded-full blur-3xl opacity-30 translate-x-1/3 translate-y-1/3"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-r from-primary-100 to-accent-100 rounded-full blur-3xl opacity-20"></div>
+
+        <div className="max-w-7xl mx-auto relative">
+          <div className="text-center mb-20">
+            <div className="inline-block mb-6">
+              <span className="px-6 py-3 bg-gradient-to-r from-primary-100 via-blue-100 to-indigo-100 text-primary-700 rounded-full text-sm font-bold uppercase tracking-widest shadow-lg">
+                Our Technical Expertise
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
+              Our Technical Expertise
+            </h2>
+            <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium">
+              We specialize in AI, cloud, blockchain, and IT systems, using
+              these advanced technology stacks to drive enterprise-grade
+              projects and services.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="group bg-white/90 backdrop-blur-sm rounded-3xl p-8 text-center border-2 border-blue-100 hover:border-blue-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xl">
+                <Brain className="text-white" size={40} />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                AI & Machine Learning
+              </h3>
+              <p className="text-base text-gray-600 leading-relaxed">
+                PyTorch, TensorFlow, Hugging Face, MLOps, MLflow, Scikit-learn,
+                NVIDIA CUDA
+              </p>
+            </div>
+
+            <div className="group bg-white/90 backdrop-blur-sm rounded-3xl p-8 text-center border-2 border-indigo-100 hover:border-indigo-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
+              <div className="w-20 h-20 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xl">
+                <Cloud className="text-white" size={40} />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                Cloud Platforms
+              </h3>
+              <p className="text-base text-gray-600 leading-relaxed">
+                AWS, Azure, GCP, Kubernetes, Docker, Terraform, OpenShift
+              </p>
+            </div>
+
+            <div className="group bg-white/90 backdrop-blur-sm rounded-3xl p-8 text-center border-2 border-purple-100 hover:border-purple-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
+              <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xl">
+                <Link2 className="text-white" size={40} />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                Blockchain
+              </h3>
+              <p className="text-base text-gray-600 leading-relaxed">
+                Ethereum, Hyperledger, Solidity, Corda, IPFS, Web3, Chainlink
+              </p>
+            </div>
+
+            <div className="group bg-white/90 backdrop-blur-sm rounded-3xl p-8 text-center border-2 border-pink-100 hover:border-pink-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
+              <div className="w-20 h-20 bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xl">
+                <Satellite className="text-white" size={40} />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-pink-600 transition-colors">
+                Space Technology
+              </h3>
+              <p className="text-base text-gray-600 leading-relaxed">
+                Satellite networks, CubeSats, GNSS, Edge IoT, Telemetry
+              </p>
+            </div>
+
+            <div className="group bg-white/90 backdrop-blur-sm rounded-3xl p-8 text-center border-2 border-yellow-100 hover:border-yellow-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
+              <div className="w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xl">
+                <Zap className="text-white" size={40} />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-yellow-600 transition-colors">
+                Energy & Industrial IT Systems
+              </h3>
+              <p className="text-base text-gray-600 leading-relaxed">
+                SCADA, IoT sensors, Smart grids, Energy analytics, Industrial
+                automation, Digital twins
+              </p>
+            </div>
+
+            <div className="group bg-white/90 backdrop-blur-sm rounded-3xl p-8 text-center border-2 border-cyan-100 hover:border-cyan-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
+              <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xl">
+                <Database className="text-white" size={40} />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-cyan-600 transition-colors">
+                Data Engineering & Analytics
+              </h3>
+              <p className="text-base text-gray-600 leading-relaxed">
+                Spark, Kafka, Data Lakes, Airflow, Snowflake, DBT, BigQuery
+              </p>
+            </div>
+
+            <div className="group bg-white/90 backdrop-blur-sm rounded-3xl p-8 text-center border-2 border-teal-100 hover:border-teal-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
+              <div className="w-20 h-20 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xl">
+                <Code className="text-white" size={40} />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors">
+                DevOps & SRE
+              </h3>
+              <p className="text-base text-gray-600 leading-relaxed">
+                CI/CD, Jenkins, GitLab, Prometheus, Grafana, Ansible, ArgoCD
+              </p>
+            </div>
+
+            <div className="group bg-white/90 backdrop-blur-sm rounded-3xl p-8 text-center border-2 border-emerald-100 hover:border-emerald-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
+              <div className="w-20 h-20 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xl">
+                <Shield className="text-white" size={40} />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">
+                Security & Compliance
+              </h3>
+              <p className="text-base text-gray-600 leading-relaxed">
+                Zero-trust, IAM, SIEM, Cloud Security, Encryption, Threat
+                Detection, OWASP
+              </p>
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* Innovation Labs */}
       <Section className="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM4YjVjZjYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PGNpcmNsZSBjeD0iMyIgY3k9IjMiIHI9IjMiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-60"></div>
@@ -353,12 +484,12 @@ export default function Home() {
                 Research & Development
               </span>
             </div>
-            <h2 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 bg-clip-text text-transparent mb-6 leading-tight">
+            <h2 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 bg-clip-text text-transparent mb-6 !leading-tight">
               Innovation Labs
             </h2>
             <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium">
-              Pioneering the future of IT through cutting-edge research and
-              development
+              Build advanced AI infrastructure through our innovation labs with
+              research, development, and full-stack IT services.
             </p>
           </div>
 
@@ -371,9 +502,9 @@ export default function Home() {
                 AI Infrastructure Lab
               </h3>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Researching next-generation AI infrastructure, including
-                quantum-classical hybrid systems, neuromorphic computing, and
-                distributed AI architectures.
+                Our IT experts excel in quantum classical computing,
+                neuromorphic systems, and distributed AI architectures that
+                enhance high-performance enterprise AI.
               </p>
             </div>
 
@@ -385,9 +516,9 @@ export default function Home() {
                 Blockchain Innovation Lab
               </h3>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Exploring advanced blockchain technologies, consensus
-                mechanisms, and decentralized systems for enterprise
-                applications.
+                When you partner with us, we ensure research on advanced
+                consensus models, decentralized architectures and secure trust
+                frameworks that support scalable enterprise blockchain.
               </p>
             </div>
 
@@ -399,8 +530,9 @@ export default function Home() {
                 Sustainable IT Lab
               </h3>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Developing green computing technologies, carbon-negative data
-                centers, and energy-efficient AI algorithms.
+                As a top IT company, Kengile brings innovation in carbon-neutral
+                data centers, low-power AI models, and energy-efficient cloud
+                systems, enabling responsible enterprise growth.
               </p>
             </div>
 
@@ -412,8 +544,10 @@ export default function Home() {
                 Space Technology Lab
               </h3>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Advancing space connectivity, satellite computing, and orbital
-                infrastructure for next-generation global networks.
+                We are one of the trusted IT service providers that focus on
+                enhancing orbital networks, satellite edge computing, and
+                resilient global communication systems that strengthen
+                enterprise connectivity.
               </p>
             </div>
           </div>
@@ -442,259 +576,252 @@ export default function Home() {
           <div className="text-center mb-20">
             <div className="inline-block mb-6">
               <span className="px-6 py-3 bg-gradient-to-r from-blue-100 via-indigo-100 to-purple-100 text-blue-700 rounded-full text-sm font-bold uppercase tracking-widest shadow-md">
-                Learn & Explore
+                Success Stories
               </span>
             </div>
-            <h2 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent mb-6 leading-tight">
-              Insights & Case Studies
+            <h2 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent mb-6 !leading-tight">
+              Our Real World Case Studies
             </h2>
             <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium">
-              Latest insights, research papers, and success stories from our
-              projects
+              Discover real-world success stories from our AI infrastructure
+              projects that deliver measurable impact.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto mb-16">
-            <InsightCard
-              title="The Future of AI Infrastructure"
-              description="Exploring how next-generation AI infrastructure will transform enterprise computing, from edge AI to distributed training systems."
-              href="/insights/ai-infrastructure"
-              icon={<FileText size={40} />}
-              borderColor="border-blue-100"
-              hoverBorderColor="hover:border-blue-400"
-              iconGradientFrom="from-blue-500"
-              iconGradientTo="to-blue-600"
-              textColor="text-blue-600"
-              hoverTextColor="hover:text-blue-700"
-            />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto mb-16">
+            {/* Financial Services Case Study */}
+            <div className="group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 border-2 border-green-100 hover:border-green-300">
+              <div className="bg-gradient-to-br from-green-500 to-emerald-600 p-6">
+                <div className="flex items-center space-x-4 mb-2">
+                  <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                    <Shield className="text-white" size={28} />
+                  </div>
+                  <div>
+                    <div className="text-white/90 text-sm font-semibold uppercase tracking-wider">
+                      Financial Services
+                    </div>
+                    <h3 className="text-2xl font-bold text-white">
+                      Green Data Center Transformation
+                    </h3>
+                  </div>
+                </div>
+              </div>
 
-            <InsightCard
-              title="Sustainable Data Centers"
-              description="How green data centers and renewable energy integration are reshaping the IT industry's environmental impact."
-              href="/insights/sustainable-data-centers"
-              icon={<BookOpen size={40} />}
-              borderColor="border-green-100"
-              hoverBorderColor="hover:border-green-400"
-              iconGradientFrom="from-green-500"
-              iconGradientTo="to-emerald-600"
-              textColor="text-green-600"
-              hoverTextColor="hover:text-green-700"
-            />
+              <div className="p-8">
+                <div className="mb-6">
+                  <div className="flex items-start space-x-3 mb-4">
+                    <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <AlertCircle className="text-red-600" size={20} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg text-gray-900 mb-2">
+                        Challenge
+                      </h4>
+                      <p className="text-gray-600 leading-relaxed">
+                        A bank wanted to update its data centers to align with
+                        ESG goals and handle growing, power-hungry AI workloads.
+                        They required significant energy reductions without
+                        sacrificing reliability.
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
-            <InsightCard
-              title="Blockchain in Enterprise"
-              description="Case studies on how enterprises are leveraging blockchain for supply chain, identity, and financial services."
-              href="/insights/blockchain-enterprise"
-              icon={<Award size={40} />}
-              borderColor="border-purple-100"
-              hoverBorderColor="hover:border-purple-400"
-              iconGradientFrom="from-purple-500"
-              iconGradientTo="to-purple-600"
-              textColor="text-purple-600"
-              hoverTextColor="hover:text-purple-700"
-            />
+                <div className="mb-6">
+                  <div className="flex items-start space-x-3 mb-4">
+                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Lightbulb className="text-blue-600" size={20} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg text-gray-900 mb-2">
+                        Solution
+                      </h4>
+                      <p className="text-gray-600 leading-relaxed">
+                        Upgraded to energy-efficient hardware, added liquid
+                        cooling, integrated solar and wind power, deployed
+                        AI-driven energy optimization, and introduced smart
+                        workload scheduling in order to cut energy use.
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
-            <InsightCard
-              title="Space-Based Connectivity"
-              description="Analyzing the potential of satellite internet and space connectivity to bridge the global digital divide."
-              href="/insights/space-connectivity"
-              icon={<Satellite size={40} />}
-              borderColor="border-indigo-100"
-              hoverBorderColor="hover:border-indigo-400"
-              iconGradientFrom="from-indigo-500"
-              iconGradientTo="to-blue-600"
-              textColor="text-indigo-600"
-              hoverTextColor="hover:text-indigo-700"
-            />
+                <div>
+                  <div className="flex items-start space-x-3 mb-4">
+                    <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <CheckCircle className="text-green-600" size={20} />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-bold text-lg text-gray-900 mb-3">
+                        Results
+                      </h4>
+                      <ul className="space-y-2">
+                        <li className="flex items-start space-x-2">
+                          <CheckCircle
+                            className="text-green-600 flex-shrink-0 mt-0.5"
+                            size={18}
+                          />
+                          <span className="text-gray-700">
+                            Reduce energy use in data centers by 50%
+                          </span>
+                        </li>
+                        <li className="flex items-start space-x-2">
+                          <CheckCircle
+                            className="text-green-600 flex-shrink-0 mt-0.5"
+                            size={18}
+                          />
+                          <span className="text-gray-700">
+                            Reached 80% renewable energy usage
+                          </span>
+                        </li>
+                        <li className="flex items-start space-x-2">
+                          <CheckCircle
+                            className="text-green-600 flex-shrink-0 mt-0.5"
+                            size={18}
+                          />
+                          <span className="text-gray-700">
+                            Improved PUE from 2.1 to 1.2
+                          </span>
+                        </li>
+                        <li className="flex items-start space-x-2">
+                          <CheckCircle
+                            className="text-green-600 flex-shrink-0 mt-0.5"
+                            size={18}
+                          />
+                          <span className="text-gray-700">
+                            Met all ESG compliance requirements
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Agriculture Case Study */}
+            <div className="group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 border-2 border-emerald-100 hover:border-emerald-300">
+              <div className="bg-gradient-to-br from-emerald-500 to-teal-600 p-6">
+                <div className="flex items-center space-x-4 mb-2">
+                  <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                    <Leaf className="text-white" size={28} />
+                  </div>
+                  <div>
+                    <div className="text-white/90 text-sm font-semibold uppercase tracking-wider">
+                      Agriculture
+                    </div>
+                    <h3 className="text-2xl font-bold text-white">
+                      Global IoT Network via Satellite
+                    </h3>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-8">
+                <div className="mb-6">
+                  <div className="flex items-start space-x-3 mb-4">
+                    <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <AlertCircle className="text-red-600" size={20} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg text-gray-900 mb-2">
+                        Challenge
+                      </h4>
+                      <p className="text-gray-600 leading-relaxed">
+                        One ag-tech company had to connect thousands of IoT
+                        sensors across remote farms worldwide. In most regions,
+                        traditional internet connectivity was unavailable, and
+                        satellite connectivity became a necessity.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <div className="flex items-start space-x-3 mb-4">
+                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Lightbulb className="text-blue-600" size={20} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg text-gray-900 mb-2">
+                        Solution
+                      </h4>
+                      <p className="text-gray-600 leading-relaxed">
+                        Implemented a hybrid satellite-terrestrial network using
+                        LEO satellites with low latency. Set up ground stations,
+                        brought in edge computing for data processing, and
+                        created a unified network management platform.
+                        Integrated with the existing cloud setup.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="flex items-start space-x-3 mb-4">
+                    <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <CheckCircle className="text-green-600" size={20} />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-bold text-lg text-gray-900 mb-3">
+                        Results
+                      </h4>
+                      <ul className="space-y-2">
+                        <li className="flex items-start space-x-2">
+                          <CheckCircle
+                            className="text-green-600 flex-shrink-0 mt-0.5"
+                            size={18}
+                          />
+                          <span className="text-gray-700">
+                            Connected 50,000+ IoT devices across 5 continents
+                          </span>
+                        </li>
+                        <li className="flex items-start space-x-2">
+                          <CheckCircle
+                            className="text-green-600 flex-shrink-0 mt-0.5"
+                            size={18}
+                          />
+                          <span className="text-gray-700">
+                            Achieved 99.5% network uptime
+                          </span>
+                        </li>
+                        <li className="flex items-start space-x-2">
+                          <CheckCircle
+                            className="text-green-600 flex-shrink-0 mt-0.5"
+                            size={18}
+                          />
+                          <span className="text-gray-700">
+                            Reduced data transmission costs by 60%
+                          </span>
+                        </li>
+                        <li className="flex items-start space-x-2">
+                          <CheckCircle
+                            className="text-green-600 flex-shrink-0 mt-0.5"
+                            size={18}
+                          />
+                          <span className="text-gray-700">
+                            Enabled real-time monitoring of remote agricultural
+                            operations
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="text-center">
             <Link href="/insights-case-studies">
               <button className="group px-10 py-5 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-blue-500/50 inline-flex items-center space-x-3">
-                <span>Read All Insights</span>
+                <span>View All Case Studies</span>
                 <ArrowRight
                   size={24}
                   className="group-hover:translate-x-2 transition-transform"
                 />
               </button>
             </Link>
-          </div>
-        </div>
-      </Section>
-
-      {/* Careers */}
-      <Section className="bg-gradient-to-br from-accent-50 via-primary-50 to-accent-50 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyNTYzZWIiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTAgMGg0MHY0MEgwVjB6bTQwIDQwaDQwdjQwSDQwVjQweiIvPjwvZz48L2c+PC9zdmc+')] opacity-50"></div>
-        <div className="relative">
-          <div className="text-center mb-16">
-            <div className="inline-block mb-4">
-              <span className="px-4 py-2 bg-gradient-to-r from-primary-100 to-primary-200 text-primary-700 rounded-full text-sm font-semibold uppercase tracking-wider">
-                Join Us
-              </span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
-              Join Our Team
-            </h2>
-            <p className="text-xl text-accent-600 max-w-3xl mx-auto">
-              Build your career in AI, cloud, blockchain, and infrastructure
-              services — shaping the next wave of global innovation
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ServiceCard
-              title="AI Infrastructure Engineer"
-              description="Design and deploy scalable AI infrastructure, GPU clusters, and MLOps pipelines for enterprise clients."
-              href="/careers"
-              icon={<Brain size={32} />}
-              delay={0}
-            />
-            <ServiceCard
-              title="Cloud Architect"
-              description="Architect hybrid cloud and HPC solutions, multi-cloud strategies, and enterprise cloud migrations."
-              href="/careers"
-              icon={<Cloud size={32} />}
-              delay={0.1}
-            />
-            <ServiceCard
-              title="Blockchain Developer"
-              description="Build blockchain networks, smart contracts, and decentralized applications for enterprise use cases."
-              href="/careers"
-              icon={<Code size={32} />}
-              delay={0.2}
-            />
-          </div>
-          <div className="text-center mt-12">
-            <Link href="/careers">
-              <button className="group px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white hover:from-primary-700 hover:to-primary-800 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center space-x-2">
-                <span>View All Openings</span>
-                <ArrowRight
-                  size={20}
-                  className="group-hover:translate-x-1 transition-transform"
-                />
-              </button>
-            </Link>
-          </div>
-        </div>
-      </Section>
-
-      {/* Technology Expertise */}
-      <Section className="bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-50 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyNTYzZWIiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PGNpcmNsZSBjeD0iMyIgY3k9IjMiIHI9IjMiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-60"></div>
-        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-blue-200 via-indigo-200 to-transparent rounded-full blur-3xl opacity-30 -translate-x-1/3 -translate-y-1/3"></div>
-        <div className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-gradient-to-tl from-purple-200 via-pink-200 to-transparent rounded-full blur-3xl opacity-30 translate-x-1/3 translate-y-1/3"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-r from-primary-100 to-accent-100 rounded-full blur-3xl opacity-20"></div>
-
-        <div className="max-w-7xl mx-auto relative">
-          <div className="text-center mb-20">
-            <div className="inline-block mb-6">
-              <span className="px-6 py-3 bg-gradient-to-r from-primary-100 via-blue-100 to-indigo-100 text-primary-700 rounded-full text-sm font-bold uppercase tracking-widest shadow-lg">
-                Our Stack
-              </span>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-primary-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6 leading-tight">
-              Technology Expertise
-            </h2>
-            <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium">
-              We work with cutting-edge technologies across multiple domains
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="group bg-white/90 backdrop-blur-sm rounded-3xl p-8 text-center border-2 border-blue-100 hover:border-blue-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xl">
-                <Brain className="text-white" size={40} />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                AI & Machine Learning
-              </h3>
-              <p className="text-base text-gray-600 leading-relaxed">
-                PyTorch, TensorFlow, LLMs, MLOps
-              </p>
-            </div>
-
-            <div className="group bg-white/90 backdrop-blur-sm rounded-3xl p-8 text-center border-2 border-indigo-100 hover:border-indigo-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
-              <div className="w-20 h-20 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xl">
-                <Cloud className="text-white" size={40} />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
-                Cloud Platforms
-              </h3>
-              <p className="text-base text-gray-600 leading-relaxed">
-                AWS, Azure, GCP, Kubernetes
-              </p>
-            </div>
-
-            <div className="group bg-white/90 backdrop-blur-sm rounded-3xl p-8 text-center border-2 border-purple-100 hover:border-purple-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xl">
-                <Link2 className="text-white" size={40} />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
-                Blockchain
-              </h3>
-              <p className="text-base text-gray-600 leading-relaxed">
-                Ethereum, Hyperledger, Web3
-              </p>
-            </div>
-
-            <div className="group bg-white/90 backdrop-blur-sm rounded-3xl p-8 text-center border-2 border-pink-100 hover:border-pink-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
-              <div className="w-20 h-20 bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xl">
-                <Satellite className="text-white" size={40} />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-pink-600 transition-colors">
-                Space Tech
-              </h3>
-              <p className="text-base text-gray-600 leading-relaxed">
-                Satellite networks, IoT
-              </p>
-            </div>
-
-            <div className="group bg-white/90 backdrop-blur-sm rounded-3xl p-8 text-center border-2 border-yellow-100 hover:border-yellow-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
-              <div className="w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xl">
-                <Zap className="text-white" size={40} />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-yellow-600 transition-colors">
-                Energy Systems
-              </h3>
-              <p className="text-base text-gray-600 leading-relaxed">
-                Smart grids, renewables
-              </p>
-            </div>
-
-            <div className="group bg-white/90 backdrop-blur-sm rounded-3xl p-8 text-center border-2 border-cyan-100 hover:border-cyan-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
-              <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xl">
-                <Database className="text-white" size={40} />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-cyan-600 transition-colors">
-                Data Engineering
-              </h3>
-              <p className="text-base text-gray-600 leading-relaxed">
-                Spark, Kafka, Data Lakes
-              </p>
-            </div>
-
-            <div className="group bg-white/90 backdrop-blur-sm rounded-3xl p-8 text-center border-2 border-teal-100 hover:border-teal-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
-              <div className="w-20 h-20 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xl">
-                <Code className="text-white" size={40} />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors">
-                DevOps & SRE
-              </h3>
-              <p className="text-base text-gray-600 leading-relaxed">
-                CI/CD, Observability
-              </p>
-            </div>
-
-            <div className="group bg-white/90 backdrop-blur-sm rounded-3xl p-8 text-center border-2 border-emerald-100 hover:border-emerald-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
-              <div className="w-20 h-20 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xl">
-                <Shield className="text-white" size={40} />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">
-                Security
-              </h3>
-              <p className="text-base text-gray-600 leading-relaxed">
-                Zero-trust, Compliance
-              </p>
-            </div>
           </div>
         </div>
       </Section>
@@ -713,12 +840,13 @@ export default function Home() {
                 Why Kengile
               </span>
             </div>
-            <h2 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-primary-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6 leading-tight">
+            <h2 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-primary-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6 !leading-tight">
               Why Choose Kengile?
             </h2>
             <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium">
-              We deliver results that matter through innovation, expertise, and
-              commitment
+              We deliver results that truly matter for businesses through
+              innovation, deep expertise, and unwavering commitment to
+              excellence.
             </p>
           </div>
 
@@ -733,9 +861,10 @@ export default function Home() {
                     AI-Powered Solutions
                   </h3>
                   <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                    Cutting-edge AI infrastructure and intelligent automation
-                    for next-generation IT systems. We leverage the latest in
-                    machine learning, deep learning, and generative AI.
+                    Our state-of-the-art AI infrastructure and intelligent
+                    automation enable next-generation IT systems, leveraging the
+                    latest in machine learning, deep learning, and generative
+                    AI.
                   </p>
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3 text-gray-700 group-hover:translate-x-2 transition-transform duration-300">
@@ -780,9 +909,9 @@ export default function Home() {
                     Sustainable Technology
                   </h3>
                   <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                    Green cloud solutions and energy-efficient infrastructure
-                    for a sustainable future. We help organizations reduce their
-                    carbon footprint while improving performance.
+                    We provide green cloud solutions and energy-efficient
+                    infrastructure to help organizations reduce their carbon
+                    footprint while improving performance.
                   </p>
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3 text-gray-700 group-hover:translate-x-2 transition-transform duration-300">
@@ -827,9 +956,9 @@ export default function Home() {
                     Enterprise Scale
                   </h3>
                   <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                    Scalable, reliable infrastructure designed for global
-                    enterprises and high-performance workloads. We handle
-                    everything from startups to Fortune 500 companies.
+                    Our scalable, reliable infrastructure supports global
+                    enterprises and high-performance workloads, from startups to
+                    Fortune 500 companies.
                   </p>
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3 text-gray-700 group-hover:translate-x-2 transition-transform duration-300">
@@ -874,9 +1003,9 @@ export default function Home() {
                     Data-Driven Results
                   </h3>
                   <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                    We measure and optimize everything. Our solutions deliver
-                    measurable ROI through improved performance, reduced costs,
-                    and enhanced capabilities.
+                    We focus on measurable outcomes, delivering ROI through
+                    improved performance, reduced costs, and enhanced
+                    capabilities.
                   </p>
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3 text-gray-700 group-hover:translate-x-2 transition-transform duration-300">
@@ -910,6 +1039,61 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Careers */}
+      <Section className="bg-gradient-to-br from-accent-50 via-primary-50 to-accent-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyNTYzZWIiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTAgMGg0MHY0MEgwVjB6bTQwIDQwaDQwdjQwSDQwVjQweiIvPjwvZz48L2c+PC9zdmc+')] opacity-50"></div>
+        <div className="relative">
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4">
+              <span className="px-4 py-2 bg-gradient-to-r from-primary-100 to-primary-200 text-primary-700 rounded-full text-sm font-semibold uppercase tracking-wider">
+                Join Us
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
+              Join Our Team
+            </h2>
+            <p className="text-xl text-accent-600 max-w-3xl mx-auto">
+              Build your career in AI, cloud, blockchain, and infrastructure
+              services while shaping the next wave of global innovation.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <ServiceCard
+              title="AI Infrastructure Engineer"
+              description="Design and deploy scalable AI infrastructure, GPU clusters, and MLOps pipelines for enterprise clients."
+              href="/careers"
+              icon={<Brain size={32} />}
+              delay={0}
+            />
+            <ServiceCard
+              title="Cloud Architect"
+              description="Architect hybrid cloud and HPC solutions, multi-cloud strategies, and enterprise cloud migrations."
+              href="/careers"
+              icon={<Cloud size={32} />}
+              delay={0.1}
+            />
+            <ServiceCard
+              title="Blockchain Developer"
+              description="Build blockchain networks, smart contracts, and decentralized applications for enterprise use cases."
+              href="/careers"
+              icon={<Code size={32} />}
+              delay={0.2}
+            />
+          </div>
+          <div className="text-center mt-12">
+            <Link href="/careers">
+              <button className="group px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white hover:from-primary-700 hover:to-primary-800 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center space-x-2">
+                <span>View All Openings</span>
+                <ArrowRight
+                  size={20}
+                  className="group-hover:translate-x-1 transition-transform"
+                />
+              </button>
+            </Link>
           </div>
         </div>
       </Section>
