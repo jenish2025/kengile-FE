@@ -14,12 +14,18 @@ import {
   Rocket,
   Clock,
   CheckCircle2,
+  Database,
+  Search,
+  Activity,
+  Scale,
+  Star,
+  BadgeCheck,
 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Us | Global IT Services Partner for AI & Infrastructure",
   description:
-    "Learn how we combine IT expertise with innovation in AI, cloud, and energy to create sustainable, intelligent infrastructure for the next digital decade.",
+    "Learn how we combine IT expertise, AI innovation, cloud strength, and modern energy solutions to create sustainable and intelligent infrastructure for the future of digital business.",
   keywords:
     "IT services company, AI infrastructure, cloud services, technology partner, digital transformation",
 };
@@ -27,28 +33,40 @@ export const metadata: Metadata = {
 export default function AboutUs() {
   const values = [
     {
-      icon: <Target size={32} />,
-      title: "Innovation First",
+      icon: <CheckCircle2 size={32} />,
+      title: "Reliability First",
       description:
-        "We stay ahead of technology trends, continuously exploring AI, blockchain, and space connectivity solutions.",
+        "Kengile builds systems that remain consistent every day, enabling your teams to work uninterrupted.",
     },
     {
-      icon: <Users size={32} />,
-      title: "Client-Centric",
+      icon: <Database size={32} />,
+      title: "Data Discipline",
       description:
-        "Your success is our mission. We build long-term partnerships focused on delivering measurable business value.",
+        "We keep your data structured and dependable, helping every workflow run with clarity and confidence.",
     },
     {
-      icon: <Award size={32} />,
-      title: "Excellence",
+      icon: <Search size={32} />,
+      title: "Retrieval Quality",
       description:
-        "We maintain the highest standards in engineering, security, and operational excellence across all our services.",
+        "Our approach enhances how information is retrieved, ensuring you always receive the most accurate and useful results.",
     },
     {
-      icon: <Globe size={32} />,
-      title: "Global Reach",
+      icon: <Shield size={32} />,
+      title: "Secure Foundations",
       description:
-        "Serving enterprises worldwide with scalable, reliable infrastructure solutions that transcend geographical boundaries.",
+        "Kengile strengthens your digital ecosystem with verified data paths and strong protection at every layer.",
+    },
+    {
+      icon: <Activity size={32} />,
+      title: "Continuous Monitoring",
+      description:
+        "We track system behavior in real time to catch issues early and keep your operations performing smoothly.",
+    },
+    {
+      icon: <Scale size={32} />,
+      title: "Scalable Growth",
+      description:
+        "Our infrastructure expands with your business needs, ensuring stability and performance at every milestone.",
     },
   ];
 
@@ -97,37 +115,37 @@ export default function AboutUs() {
       icon: <Zap size={28} />,
       title: "AI Infrastructure & MLOps",
       description:
-        "Design and deploy high-performance computing environments optimized for machine learning workloads. From GPU clusters to distributed training pipelines, we ensure your AI initiatives have the foundation they need to succeed.",
+        "High-performance computing environments are designed and deployed with our expert guidance for machine learning workloads. Kengile ensures GPU clusters and distributed training pipelines provide a solid foundation for AI initiatives.",
     },
     {
       icon: <Globe size={28} />,
       title: "Cloud Architecture",
       description:
-        "Multi-cloud and hybrid cloud strategies tailored to your business. We architect, migrate, and optimize cloud infrastructure across AWS, Azure, and Google Cloud, ensuring cost efficiency and peak performance.",
+        "Multi-cloud and hybrid strategies are tailored to meet specific business requirements. Kengile provides cloud architecture, migration, and optimization on AWS, Azure, Google, and other cloud platforms for optimal performance and economics.",
     },
     {
       icon: <Shield size={28} />,
       title: "Security & Compliance",
       description:
-        "Enterprise-grade security frameworks that protect your digital assets. Our solutions include zero-trust architecture, advanced threat detection, and compliance management for GDPR, HIPAA, and SOC 2.",
+        "Enterprise-class security frameworks safeguard your digital assets. Our specialists at Kengile use zero-trust networks, threat protection, and ensure adherence to the GDPR, HIPAA, and SOC 2 guidelines.",
     },
     {
       icon: <TrendingUp size={28} />,
       title: "Blockchain Solutions",
       description:
-        "Decentralized infrastructure for Web3 applications and DeFi platforms. We build secure, scalable blockchain networks and smart contract systems that drive the future of digital transactions.",
+        "Secure and scalable blockchain networks for Web3 applications and DeFi platforms are built with our guidance. Kengile develops smart contract systems that enable innovation and reliable digital transactions.",
     },
     {
       icon: <Rocket size={28} />,
       title: "Space Connectivity",
       description:
-        "Satellite internet solutions for remote operations and disaster recovery. Partner with leading satellite providers to deliver uninterrupted connectivity anywhere on Earth.",
+        "Reliable satellite Internet connectivity for teleworking and disaster recovery is made possible via Kengile's alliances with top satellite service suppliers, guaranteeing connectivity anywhere on the surface of Earth.",
     },
     {
       icon: <Heart size={28} />,
       title: "Sustainable IT",
       description:
-        "Green computing initiatives that reduce environmental impact. Energy-efficient data centers, renewable power integration, and carbon-neutral infrastructure solutions.",
+        "Green computing initiatives reduce environmental impact. Our expert team at Kengile implements energy-efficient data centers, integrates renewable power, and delivers carbon-neutral infrastructure solutions.",
     },
   ];
 
@@ -136,25 +154,25 @@ export default function AboutUs() {
       step: "01",
       title: "Discovery & Assessment",
       description:
-        "We begin by deeply understanding your business objectives, current infrastructure, and pain points through comprehensive audits and stakeholder interviews.",
+        "It includes analyzing your business objectives, existing systems, and pain points through audits and discussions with various stakeholders.",
     },
     {
       step: "02",
       title: "Strategic Planning",
       description:
-        "Our architects design tailored solutions that align with your goals, budget, and timeline, presenting multiple scenarios and ROI projections.",
+        "Our architects design solution pathways that can conform to your requirements, costs, and time scales, along with well-articulated scenarios of the ROI.",
     },
     {
       step: "03",
       title: "Implementation",
       description:
-        "Agile deployment methodology ensures minimal disruption. Our teams work closely with yours, providing training and documentation at every stage.",
+        "Agile Deployment: This helps ensure that the implementation happens seamlessly, with minimal interruption. Our experts will work alongside yours throughout the entire process.",
     },
     {
       step: "04",
       title: "Optimization & Support",
       description:
-        "Continuous monitoring, proactive maintenance, and regular optimization ensure your infrastructure evolves with your needs and stays ahead of threats.",
+        "This means everything from monitoring and maintenance to enhancements that allow the growth of the infrastructure along with the business, safeguarding against new threats.",
     },
   ];
 
@@ -190,11 +208,15 @@ export default function AboutUs() {
       <AnimatedHero
         title="About Kengile"
         subtitle="Technology Partner for the Future"
-        description="We combine IT expertise with innovation in AI, cloud, and energy to create sustainable, intelligent infrastructure for the next digital decade."
+        ctaText="Connect Us"
+        description="We combine IT expertise, AI innovation, cloud strength, and modern energy solutions to create sustainable and intelligent infrastructure for the future of digital business."
       />
 
       {/* Stats Section */}
-      <Section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white">
+      <Section
+        className="bg-gradient-to-br from-primary-600 to-primary-800 text-white"
+        contrast="dark"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -207,24 +229,70 @@ export default function AboutUs() {
         </div>
       </Section>
 
-      {/* Mission & Vision */}
+      {/* Our Story */}
       <Section className="bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gradient mb-4">Our Story</h2>
+            <p className="text-xl text-accent-600">
+              Born from a Vision to Transform Infrastructure
+            </p>
+          </div>
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg text-accent-700 mb-6 leading-relaxed">
+              We founded Kengile when our team of engineers and architects
+              recognized a critical gap in the industry. Traditional IT
+              infrastructure was not evolving fast enough to support the demands
+              of AI workloads, real-time analytics, and global connectivity. We
+              created Kengile to address this challenge and help organizations
+              move into the future.
+            </p>
+            <p className="text-lg text-accent-700 mb-6 leading-relaxed">
+              Our focus is simple—we deliver modern infrastructure solutions
+              powered by AI, cloud, and automation, supported by strong
+              engineering. As strategic partners, we guide clients from initial
+              planning through long-term optimization, ensuring their systems
+              remain secure, scalable, and future-ready.
+            </p>
+            <p className="text-lg text-accent-700 mb-8 leading-relaxed">
+              Today, we serve Fortune 500 companies across more than 50
+              countries, delivering enterprise-grade solutions that are secure,
+              scalable, and environmentally responsible.
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      {/* Mission & Vision */}
+      <Section className="bg-gradient-to-br from-primary-50 to-white">
         <div className="max-w-7xl mx-auto">
+          {/* Pill with text "What Drives Us" */}
+          <div className="text-center mb-6">
+            <span className="px-6 py-3 bg-gradient-to-r from-primary-100 via-indigo-100 to-purple-100 text-primary-700 rounded-full text-sm font-bold uppercase tracking-widest shadow-md">
+              What Drives Us
+            </span>
+          </div>
+
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gradient mb-4">
+              Our Purpose & Direction
+            </h2>
+          </div>
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-gradient-to-br from-primary-50 to-white border border-primary-200 rounded-2xl p-10">
               <h2 className="text-3xl font-bold text-accent-900 mb-6">
                 Our Mission
               </h2>
               <p className="text-lg text-accent-700 leading-relaxed mb-4">
-                To empower organizations worldwide with cutting-edge IT
-                infrastructure that enables them to harness the full potential
-                of emerging technologies.
+                Our mission is to help organizations worldwide build their
+                sophisticated IT infrastructure, unlocking the potential of new
+                technologies. The proper foundation gives the ultimate
+                competitive advantage.
               </p>
               <p className="text-lg text-accent-700 leading-relaxed">
-                We believe that the right infrastructure is not just a
-                foundation—it&apos;s a competitive advantage. By combining technical
-                excellence with strategic vision, we help our clients stay ahead
-                in an increasingly digital world.
+                Our engineering excellence and expert advice will instill
+                confidence in innovation for businesses, enabling them to stay
+                ahead of the curve in the rapidly evolving digital landscape.
               </p>
             </div>
             <div className="bg-gradient-to-br from-accent-50 to-white border border-accent-200 rounded-2xl p-10">
@@ -232,14 +300,15 @@ export default function AboutUs() {
                 Our Vision
               </h2>
               <p className="text-lg text-accent-700 leading-relaxed mb-4">
-                To be the world&apos;s most trusted partner in building the
-                intelligent, sustainable infrastructure that powers the next
-                generation of innovation.
+                Our vision is to become the most trusted partner for the next
+                generation of smart and sustainable infrastructure, fueling
+                innovation.
               </p>
               <p className="text-lg text-accent-700 leading-relaxed">
-                We envision a future where every organization, regardless of
-                size or location, has access to enterprise-grade infrastructure
-                that is secure, scalable, and environmentally responsible.
+                We aim to create a future where every business, regardless of
+                size or location, can access secure, scalable, and sustainable
+                systems, empowering them to thrive, innovate continuously, and
+                maintain a competitive edge in an ever-changing digital world.
               </p>
             </div>
           </div>
@@ -250,15 +319,21 @@ export default function AboutUs() {
       <Section className="bg-accent-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
+            {/* Pill with text "The Principles That Guide Us" */}
+            <div className="text-center mb-6">
+              <span className="px-6 py-3 bg-gradient-to-r from-primary-100 via-indigo-100 to-purple-100 text-primary-700 rounded-full text-sm font-bold uppercase tracking-widest shadow-md">
+                Our Core Values
+              </span>
+            </div>
             <h2 className="text-4xl font-bold text-gradient mb-4">
-              Our Core Values
+              The Principles That Guide Us
             </h2>
             <p className="text-xl text-accent-600 max-w-3xl mx-auto">
-              The principles that guide everything we do and shape how we serve
-              our clients
+              These values define how we work, how we serve our clients, and how
+              we deliver consistent excellence.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => (
               <div
                 key={value.title}
@@ -279,34 +354,28 @@ export default function AboutUs() {
         </div>
       </Section>
 
-      {/* Why We Exist */}
-      <Section className="bg-white">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold text-gradient mb-8 text-center">
-            Why We Exist
-          </h2>
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-accent-700 mb-6 leading-relaxed">
-              The IT landscape is evolving at an unprecedented pace. Traditional
-              infrastructure is no longer sufficient to support the demands of
-              AI workloads, real-time analytics, and global connectivity.
-              Organizations face mounting pressure to innovate faster, scale
-              smarter, and operate more sustainably—all while managing
-              increasing complexity and security threats.
+      {/* Message from Our Leader */}
+      <Section className="bg-gradient-to-br from-accent-50 to-primary-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-2xl p-10 shadow-lg border border-accent-200">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-accent-900 mb-4">
+                A Message from Our Leader
+              </h2>
+            </div>
+            <p className="text-lg text-accent-700 mb-6 leading-relaxed text-center">
+              At Kengile, great partnerships start with clear communication and
+              genuine intent. When we work together, the team ensures you always
+              know the why, the how, and the next step behind every decision.
+              Your goals guide our direction, and your success remains our
+              measure of progress.
             </p>
-            <p className="text-lg text-accent-700 mb-6 leading-relaxed">
-              We exist to bridge the gap between current IT capabilities and
-              future requirements. Our team of seasoned engineers and architects
-              has spent years at the forefront of technological innovation,
-              working with enterprises across industries to solve their most
-              challenging infrastructure problems.
-            </p>
-            <p className="text-lg text-accent-700 mb-8 leading-relaxed">
-              What sets us apart is our holistic approach. We don&apos;t just
-              implement technology—we become strategic partners in your digital
-              transformation journey. From initial consultation to ongoing
-              optimization, we&apos;re committed to your long-term success.
-            </p>
+            <div className="text-center mt-8 pt-6 border-t border-accent-200">
+              <p className="text-xl font-semibold text-accent-900">
+                Chandresh Patel
+              </p>
+              <p className="text-accent-600">M.D. & Agile Coach | India</p>
+            </div>
           </div>
         </div>
       </Section>
@@ -316,10 +385,11 @@ export default function AboutUs() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gradient mb-4">
-              Areas of Expertise
+              Our Areas of Expertise
             </h2>
             <p className="text-xl text-accent-600 max-w-3xl mx-auto">
-              Comprehensive solutions across the entire technology stack
+              We deliver complete technology solutions across every layer of
+              your business, backed by Kengile’s expertise.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -351,7 +421,9 @@ export default function AboutUs() {
               Our Approach
             </h2>
             <p className="text-xl text-accent-600 max-w-3xl mx-auto">
-              A proven methodology that delivers results
+              A proven methodology that helps Kengile deliver reliable,
+              scalable, and secure technology solutions across your entire
+              stack.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -458,21 +530,128 @@ export default function AboutUs() {
         </div>
       </Section>
 
+      {/* Certifications & Partnerships */}
+      <Section className="bg-gradient-to-br from-primary-50 to-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            {/* Pill with text "Certifications & Partnerships" */}
+            <div className="text-center mb-6">
+              <span className="px-6 py-3 bg-gradient-to-r from-primary-100 via-indigo-100 to-purple-100 text-primary-700 rounded-full text-sm font-bold uppercase tracking-widest shadow-md">
+                Certifications & Partnerships
+              </span>
+            </div>
+
+            <h2 className="text-4xl font-bold text-gradient mb-4">
+              Industry-Recognized Excellence
+            </h2>
+            <p className="text-xl text-accent-600">
+              Industry-Recognized Excellence
+            </p>
+            <p className="text-lg text-accent-700 mt-4 max-w-3xl mx-auto">
+              Our team holds top certifications from leading cloud providers and
+              security organizations.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {[
+              "AWS Advanced Partner",
+              "Microsoft Gold Partner",
+              "Google Cloud Partner",
+              "ISO 27001 Certified",
+              "SOC 2 Type II",
+              "GDPR Compliant",
+            ].map((cert, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-br from-primary-50 to-white border border-primary-200 rounded-xl p-6 text-center hover:border-primary-400 hover:shadow-lg transition-all duration-300"
+              >
+                <BadgeCheck className="w-12 h-12 text-primary-600 mx-auto mb-3" />
+                <p className="text-sm font-semibold text-accent-900">{cert}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* What Our Clients Say */}
+      <Section className="bg-accent-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gradient mb-4">
+              What Our Clients Say About Kengile
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                quote:
+                  "At Kengile, they have been a leading technology partner in providing state-of-the-art modernization to our cloud environment. Their experience with multi-cloud architecture enabled us to make things simple and enhance performance across teams. Such dependability with a partner is rare under high-intensity pressure.",
+                author: "Rohan Mehta",
+                role: "Head of Cloud Engineering",
+              },
+              {
+                quote:
+                  "Kengile played an important role in strengthening our security posture. Their team instantly understood our challenges around compliance and delivered solutions that fit our workflows perfectly. The peace of mind we get from their ongoing support is truly unmatched.",
+                author: "Elena Roberts",
+                role: "Director of Information Security",
+              },
+              {
+                quote:
+                  "With Kengile driving the infrastructure setup, our AI initiatives moved at a faster rate than was initially anticipated. Their knowledge, attention to minute details, and swiftness in response made this complex transition appear seamless. A partner like this adds real value to every project.",
+                author: "Michael Chen",
+                role: "CTO, Tech Innovations Inc.",
+              },
+            ].map((testimonial, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-accent-200"
+              >
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="w-5 h-5 text-yellow-400 fill-current"
+                    />
+                  ))}
+                </div>
+                <p className="text-accent-700 mb-6 leading-relaxed italic">
+                  &quot;{testimonial.quote}&quot;
+                </p>
+                <div className="border-t border-accent-200 pt-4">
+                  <p className="font-semibold text-accent-900">
+                    {testimonial.author}
+                  </p>
+                  <p className="text-sm text-accent-600">{testimonial.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
       {/* Commitment */}
-      <Section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white">
+      <Section
+        className="bg-gradient-to-br from-primary-600 to-primary-800 text-white"
+        contrast="dark"
+      >
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">Our Commitment to You</h2>
           <p className="text-xl text-primary-100 mb-8 leading-relaxed">
-            When you partner with Kengile, you&apos;re not just getting an IT
-            services provider—you&apos;re gaining a dedicated team that&apos;s invested in
-            your success. We measure our achievements by the value we deliver to
-            your organization.
+            Kengile is committed to the provision of technology solutions that
+            will keep your business moving. We focus on clarity and
+            communication, dependable delivery, and solutioning that creates
+            measurable value.
+          </p>
+          <p className="text-xl text-primary-100 mb-8 leading-relaxed">
+            Our team collaborates tightly with yours to understand goals, so
+            every step feels guided, aligned, and focused on long-term success.
+            With continued support and practical know-how, we make your
+            technology journey frictionless and future-ready.
           </p>
           <p className="text-xl text-primary-100 leading-relaxed">
-            Whether you&apos;re building AI infrastructure from the ground up,
-            migrating to the cloud, or exploring emerging technologies like
-            blockchain and satellite connectivity, we&apos;re here to guide you every
-            step of the way.
+            Strengthen, modernize, or adopt advanced capabilities—everywhere
+            along the way, we will be there to assist you in staying engaged,
+            being responsible, and realizing the results that really count.
           </p>
         </div>
       </Section>
@@ -484,8 +663,8 @@ export default function AboutUs() {
             Ready to Transform Your Infrastructure?
           </h2>
           <p className="text-xl text-accent-600 mb-10">
-            Let&apos;s discuss how we can help you build the technology foundation
-            your business needs to thrive in the digital age.
+            Let&apos;s discuss how we can help you build the technology
+            foundation your business needs to thrive in the digital age.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

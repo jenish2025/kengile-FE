@@ -62,7 +62,10 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-gradient-to-b from-accent-900 via-accent-950 to-black border-t border-accent-800/50 text-white overflow-hidden">
+    <footer
+      className="relative bg-gradient-to-b from-accent-900 via-accent-950 to-black border-t border-accent-800/50 text-white overflow-hidden"
+      data-nav-contrast="dark"
+    >
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-500/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary-600/5 rounded-full blur-3xl" />

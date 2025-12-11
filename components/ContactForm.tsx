@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useState, useRef } from "react";
 import axios from "axios";
+import { getInquiriesUrl } from "@/config/api";
 
 interface ContactFormProps {
   title?: string;
@@ -37,7 +38,7 @@ const ContactForm = ({
     };
 
     try {
-      await axios.post("http://localhost:3001/api/inquiries", data, {
+      await axios.post(getInquiriesUrl(), data, {
         headers: {
           "Content-Type": "application/json",
         },

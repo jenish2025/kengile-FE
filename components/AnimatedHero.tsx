@@ -1,32 +1,47 @@
-'use client'
+"use client";
 
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { ArrowRight, Sparkles, Play, ChevronDown } from 'lucide-react'
-import Link from 'next/link'
-import AnimatedDottedPattern from './AnimatedDottedPattern'
-import { useState } from 'react'
+import { motion, useScroll, useTransform } from "framer-motion";
+import { ArrowRight, Sparkles, Play, ChevronDown } from "lucide-react";
+import Link from "next/link";
+import AnimatedDottedPattern from "./AnimatedDottedPattern";
+import { useState } from "react";
 
 interface AnimatedHeroProps {
-  title: string
-  subtitle: string
-  description: string
-  ctaText?: string
-  ctaLink?: string
+  title: string;
+  subtitle: string;
+  description: string;
+  ctaText?: string;
+  ctaLink?: string;
 }
 
-const AnimatedHero = ({ title, subtitle, description, ctaText = 'Get Started', ctaLink = '/contact-us' }: AnimatedHeroProps) => {
-  const [isHoveredPrimary, setIsHoveredPrimary] = useState(false)
-  const [isHoveredSecondary, setIsHoveredSecondary] = useState(false)
-  const { scrollY } = useScroll()
-  const opacity = useTransform(scrollY, [0, 300], [1, 0])
-  const scale = useTransform(scrollY, [0, 300], [1, 0.8])
+const AnimatedHero = ({
+  title,
+  subtitle,
+  description,
+  ctaText = "Get Started",
+  ctaLink = "/contact-us",
+}: AnimatedHeroProps) => {
+  const [isHoveredPrimary, setIsHoveredPrimary] = useState(false);
+  const [isHoveredSecondary, setIsHoveredSecondary] = useState(false);
+  const { scrollY } = useScroll();
+  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
+  const scale = useTransform(scrollY, [0, 300], [1, 0.8]);
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-accent-50/30 to-primary-50/20">
+    <div
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-accent-50/30 to-primary-50/20"
+      data-nav-contrast="light"
+    >
       {/* Gradient Orbs Background */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-primary-200 to-primary-400 rounded-full blur-3xl opacity-20 animate-pulse" style={{ animationDuration: '4s' }} />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-primary-300 to-primary-500 rounded-full blur-3xl opacity-15 animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }} />
-      
+      <div
+        className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-primary-200 to-primary-400 rounded-full blur-3xl opacity-20 animate-pulse"
+        style={{ animationDuration: "4s" }}
+      />
+      <div
+        className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-primary-300 to-primary-500 rounded-full blur-3xl opacity-15 animate-pulse"
+        style={{ animationDuration: "5s", animationDelay: "1s" }}
+      />
+
       {/* Animated Dotted Grid Pattern - Primary Layer */}
       <AnimatedDottedPattern
         opacity={0.6}
@@ -36,7 +51,7 @@ const AnimatedHero = ({ title, subtitle, description, ctaText = 'Get Started', c
         speed={20}
         direction="forward"
       />
-      
+
       {/* Secondary Dotted Layer for Depth */}
       <AnimatedDottedPattern
         opacity={0.4}
@@ -61,7 +76,12 @@ const AnimatedHero = ({ title, subtitle, description, ctaText = 'Get Started', c
           y: [0, 25, 0],
           rotate: [0, -5, 0],
         }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1,
+        }}
         className="absolute top-48 right-[15%] w-20 h-20 bg-gradient-to-br from-primary-300 to-primary-500 rounded-full opacity-10 blur-sm"
       />
       <motion.div
@@ -69,11 +89,16 @@ const AnimatedHero = ({ title, subtitle, description, ctaText = 'Get Started', c
           y: [0, -30, 0],
           x: [0, 10, 0],
         }}
-        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+        transition={{
+          duration: 7,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 2,
+        }}
         className="absolute bottom-32 right-[20%] w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl opacity-10 blur-sm"
       />
 
-      <motion.div 
+      <motion.div
         style={{ opacity, scale }}
         className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
       >
@@ -154,7 +179,7 @@ const AnimatedHero = ({ title, subtitle, description, ctaText = 'Get Started', c
               </motion.div>
             </motion.button>
           </Link>
-          
+
           <Link href="/services">
             <motion.button
               onHoverStart={() => setIsHoveredSecondary(true)}
@@ -163,7 +188,7 @@ const AnimatedHero = ({ title, subtitle, description, ctaText = 'Get Started', c
               whileTap={{ scale: 0.95 }}
               className="group relative px-10 py-5 bg-white/80 backdrop-blur-sm border-2 border-primary-600 text-primary-600 hover:bg-primary-50 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-3"
             >
-              <span className="text-lg">Explore Services</span>
+              <span className="text-lg">Explore Our Services</span>
               <motion.div
                 animate={isHoveredSecondary ? { rotate: [0, 360] } : {}}
                 transition={{ duration: 0.5 }}
@@ -203,7 +228,9 @@ const AnimatedHero = ({ title, subtitle, description, ctaText = 'Get Started', c
         transition={{ delay: 1.2, duration: 1 }}
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center space-y-2"
       >
-        <span className="text-xs text-accent-600 font-medium uppercase tracking-wider">Scroll Down</span>
+        <span className="text-xs text-accent-600 font-medium uppercase tracking-wider">
+          Scroll Down
+        </span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
@@ -218,8 +245,7 @@ const AnimatedHero = ({ title, subtitle, description, ctaText = 'Get Started', c
         </motion.div>
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default AnimatedHero
-
+export default AnimatedHero;
