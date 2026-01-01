@@ -5,6 +5,8 @@ import Section from "@/components/Section";
 import ServiceCard from "@/components/ServiceCard";
 import StatsSection from "@/components/StatsSection";
 import InsightCard from "@/components/InsightCard";
+import SectionHeader from "@/components/SectionHeader";
+import FeatureCard from "@/components/FeatureCard";
 import {
   Brain,
   Server,
@@ -144,19 +146,14 @@ export default function Home() {
 
         <div className="max-w-6xl mx-auto relative">
           <div className="text-center mb-16">
-            <div className="inline-block mb-6">
-              <span className="px-6 py-3 bg-gradient-to-r from-primary-100 via-indigo-100 to-purple-100 text-primary-700 rounded-full text-sm font-bold uppercase tracking-widest shadow-md">
-                Who We Are
-              </span>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-primary-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent mb-6 !leading-tight">
-              About Kengile
-            </h2>
-            <p className="text-xl md:text-2xl text-gray-700 mb-6 max-w-4xl mx-auto leading-relaxed font-medium">
-              Kengile is a next-generation IT services company building smart,
-              energy-saving, decentralized infrastructures for the future
-              internet.
-            </p>
+            <SectionHeader
+              pillText="Who We Are"
+              title="About Kengile"
+              subtitle="Kengile is a next-generation IT services company building smart, energy-saving, decentralized infrastructures for the future internet."
+              className="mb-0"
+              titleClassName="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-primary-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent mb-6 !leading-tight"
+              subtitleClassName="text-xl md:text-2xl text-gray-700 mb-6 max-w-4xl mx-auto leading-relaxed font-medium"
+            />
             <p className="text-lg text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
               From top technologies in AI, cloud computing, energy systems,
               blockchain, to satellite networks, we combine them in an
@@ -227,20 +224,13 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-primary-100 to-primary-200 rounded-full blur-3xl opacity-20 translate-y-1/2 -translate-x-1/2"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyNTYzZWIiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMyIgY3k9IjMiIHI9IjMiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-50"></div>
         <div className="relative">
-          <div className="text-center mb-16">
-            {/* <div className="inline-block mb-4">
-              <span className="px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold uppercase tracking-wider">
-                What We Do
-              </span>
-            </div> */}
-            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
-              Our Next Generation IT Services
-            </h2>
-            <p className="text-xl text-accent-600 max-w-3xl mx-auto">
-              We provide future-ready IT services and our digital solutions help
-              enterprises scale, transform, and achieve results.
-            </p>
-          </div>
+          <SectionHeader
+            title="Our Next Generation IT Services"
+            subtitle="We provide future-ready IT services and our digital solutions help enterprises scale, transform, and achieve results."
+            className="text-center mb-16"
+            titleClassName="text-4xl md:text-5xl font-bold text-gradient mb-4"
+            subtitleClassName="text-xl text-accent-600 max-w-3xl mx-auto"
+          />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <ServiceCard
@@ -272,20 +262,14 @@ export default function Home() {
         <div className="absolute top-1/2 left-0 w-96 h-96 bg-primary-100 rounded-full blur-3xl opacity-30 -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent-100 rounded-full blur-3xl opacity-30"></div>
         <div className="relative">
-          <div className="text-center mb-16">
-            <div className="inline-block mb-4">
-              <span className="px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold uppercase tracking-wider">
-                Industries
-              </span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
-              Industries We Serve
-            </h2>
-            <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium">
-              Our customized IT solutions help enterprises across industries
-              solve unique business challenges and achieve measurable results.
-            </p>
-          </div>
+          <SectionHeader
+            pillText="Industries"
+            title="Industries We Serve"
+            subtitle="Our customized IT solutions help enterprises across industries solve unique business challenges and achieve measurable results."
+            className="text-center mb-16"
+            titleClassName="text-4xl md:text-5xl font-bold text-gradient mb-4"
+            subtitleClassName="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium"
+          />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ServiceCard
               title="Space Technology"
@@ -352,21 +336,14 @@ export default function Home() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-r from-primary-100 to-accent-100 rounded-full blur-3xl opacity-20"></div>
 
         <div className="max-w-7xl mx-auto relative">
-          <div className="text-center mb-20">
-            <div className="inline-block mb-6">
-              <span className="px-6 py-3 bg-gradient-to-r from-primary-100 via-blue-100 to-indigo-100 text-primary-700 rounded-full text-sm font-bold uppercase tracking-widest shadow-lg">
-                Our Technical Expertise
-              </span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
-              Our Technical Expertise
-            </h2>
-            <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium">
-              We specialize in AI, cloud, blockchain, and IT systems, using
-              these advanced technology stacks to drive enterprise-grade
-              projects and services.
-            </p>
-          </div>
+          <SectionHeader
+            pillText="Our Technical Expertise"
+            title="Our Technical Expertise"
+            subtitle="We specialize in AI, cloud, blockchain, and IT systems, using these advanced technology stacks to drive enterprise-grade projects and services."
+            className="text-center mb-20"
+            titleClassName="text-4xl md:text-5xl font-bold text-gradient mb-4"
+            subtitleClassName="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium"
+          />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="group bg-white/90 backdrop-blur-sm rounded-3xl p-8 text-center border-2 border-blue-100 hover:border-blue-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
@@ -478,20 +455,14 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-indigo-200 via-blue-200 to-transparent rounded-full blur-3xl opacity-30 -translate-x-1/3 translate-y-1/3"></div>
 
         <div className="relative">
-          <div className="text-center mb-20">
-            <div className="inline-block mb-6">
-              <span className="px-6 py-3 bg-gradient-to-r from-purple-100 via-pink-100 to-indigo-100 text-purple-700 rounded-full text-sm font-bold uppercase tracking-widest shadow-md">
-                Research & Development
-              </span>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 bg-clip-text text-transparent mb-6 !leading-tight">
-              Innovation Labs
-            </h2>
-            <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium">
-              Build advanced AI infrastructure through our innovation labs with
-              research, development, and full-stack IT services.
-            </p>
-          </div>
+          <SectionHeader
+            pillText="Research & Development"
+            title="Innovation Labs"
+            subtitle="Build advanced AI infrastructure through our innovation labs with research, development, and full-stack IT services."
+            className="text-center mb-20"
+            titleClassName="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 bg-clip-text text-transparent mb-6 !leading-tight"
+            subtitleClassName="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium"
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto mb-16">
             <div className="group bg-white/80 backdrop-blur-sm rounded-3xl p-10 border-2 border-purple-100 hover:border-purple-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3">
@@ -573,20 +544,14 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-purple-200 via-pink-200 to-transparent rounded-full blur-3xl opacity-30 -translate-x-1/4 translate-y-1/4"></div>
 
         <div className="relative">
-          <div className="text-center mb-20">
-            <div className="inline-block mb-6">
-              <span className="px-6 py-3 bg-gradient-to-r from-blue-100 via-indigo-100 to-purple-100 text-blue-700 rounded-full text-sm font-bold uppercase tracking-widest shadow-md">
-                Success Stories
-              </span>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent mb-6 !leading-tight">
-              Our Real World Case Studies
-            </h2>
-            <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium">
-              Discover real-world success stories from our AI infrastructure
-              projects that deliver measurable impact.
-            </p>
-          </div>
+          <SectionHeader
+            pillText="Success Stories"
+            title="Our Real World Case Studies"
+            subtitle="Discover real-world success stories from our AI infrastructure projects that deliver measurable impact."
+            className="text-center mb-20"
+            titleClassName="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent mb-6 !leading-tight"
+            subtitleClassName="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium"
+          />
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto mb-16">
             {/* Financial Services Case Study */}
@@ -834,211 +799,63 @@ export default function Home() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-r from-primary-200 to-accent-200 rounded-full blur-3xl opacity-20"></div>
 
         <div className="max-w-7xl mx-auto relative">
-          <div className="text-center mb-20">
-            <div className="inline-block mb-6">
-              <span className="px-6 py-3 bg-gradient-to-r from-primary-100 via-blue-100 to-indigo-100 text-primary-700 rounded-full text-sm font-bold uppercase tracking-widest shadow-lg">
-                Why Kengile
-              </span>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-primary-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6 !leading-tight">
-              Why Choose Kengile?
-            </h2>
-            <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium">
-              We deliver results that truly matter for businesses through
-              innovation, deep expertise, and unwavering commitment to
-              excellence.
-            </p>
-          </div>
+          <SectionHeader
+            pillText="Why Kengile"
+            title="Why Choose Kengile?"
+            subtitle="We deliver results that truly matter for businesses through innovation, deep expertise, and unwavering commitment to excellence."
+            className="text-center mb-20"
+            titleClassName="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-primary-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6 !leading-tight"
+            subtitleClassName="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium"
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div className="group bg-white/90 backdrop-blur-sm rounded-3xl p-10 border-2 border-blue-100 hover:border-blue-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
-              <div className="flex items-start space-x-6">
-                <div className="flex-shrink-0 w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xl">
-                  <Cpu className="text-white" size={36} />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
-                    AI-Powered Solutions
-                  </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                    Our state-of-the-art AI infrastructure and intelligent
-                    automation enable next-generation IT systems, leveraging the
-                    latest in machine learning, deep learning, and generative
-                    AI.
-                  </p>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3 text-gray-700 group-hover:translate-x-2 transition-transform duration-300">
-                      <CheckCircle
-                        className="text-blue-600 flex-shrink-0"
-                        size={20}
-                      />
-                      <span className="font-medium">
-                        GPU clusters and distributed training
-                      </span>
-                    </div>
-                    <div className="flex items-center space-x-3 text-gray-700 group-hover:translate-x-2 transition-transform duration-300 delay-75">
-                      <CheckCircle
-                        className="text-blue-600 flex-shrink-0"
-                        size={20}
-                      />
-                      <span className="font-medium">
-                        MLOps pipelines and automation
-                      </span>
-                    </div>
-                    <div className="flex items-center space-x-3 text-gray-700 group-hover:translate-x-2 transition-transform duration-300 delay-150">
-                      <CheckCircle
-                        className="text-blue-600 flex-shrink-0"
-                        size={20}
-                      />
-                      <span className="font-medium">
-                        LLM integration and fine-tuning
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <FeatureCard
+              icon={<Cpu className="text-white" size={36} />}
+              title="AI-Powered Solutions"
+              description="Our state-of-the-art AI infrastructure and intelligent automation enable next-generation IT systems, leveraging the latest in machine learning, deep learning, and generative AI."
+              features={[
+                "GPU clusters and distributed training",
+                "MLOps pipelines and automation",
+                "LLM integration and fine-tuning",
+              ]}
+              colorTheme="blue"
+            />
 
-            <div className="group bg-white/90 backdrop-blur-sm rounded-3xl p-10 border-2 border-green-100 hover:border-green-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
-              <div className="flex items-start space-x-6">
-                <div className="flex-shrink-0 w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xl">
-                  <Leaf className="text-white" size={36} />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-green-600 transition-colors">
-                    Sustainable Technology
-                  </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                    We provide green cloud solutions and energy-efficient
-                    infrastructure to help organizations reduce their carbon
-                    footprint while improving performance.
-                  </p>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3 text-gray-700 group-hover:translate-x-2 transition-transform duration-300">
-                      <CheckCircle
-                        className="text-green-600 flex-shrink-0"
-                        size={20}
-                      />
-                      <span className="font-medium">
-                        Energy-efficient data centers
-                      </span>
-                    </div>
-                    <div className="flex items-center space-x-3 text-gray-700 group-hover:translate-x-2 transition-transform duration-300 delay-75">
-                      <CheckCircle
-                        className="text-green-600 flex-shrink-0"
-                        size={20}
-                      />
-                      <span className="font-medium">
-                        Renewable energy integration
-                      </span>
-                    </div>
-                    <div className="flex items-center space-x-3 text-gray-700 group-hover:translate-x-2 transition-transform duration-300 delay-150">
-                      <CheckCircle
-                        className="text-green-600 flex-shrink-0"
-                        size={20}
-                      />
-                      <span className="font-medium">
-                        Carbon-neutral cloud solutions
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <FeatureCard
+              icon={<Leaf className="text-white" size={36} />}
+              title="Sustainable Technology"
+              description="We provide green cloud solutions and energy-efficient infrastructure to help organizations reduce their carbon footprint while improving performance."
+              features={[
+                "Energy-efficient data centers",
+                "Renewable energy integration",
+                "Carbon-neutral cloud solutions",
+              ]}
+              colorTheme="green"
+            />
 
-            <div className="group bg-white/90 backdrop-blur-sm rounded-3xl p-10 border-2 border-purple-100 hover:border-purple-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
-              <div className="flex items-start space-x-6">
-                <div className="flex-shrink-0 w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xl">
-                  <Database className="text-white" size={36} />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
-                    Enterprise Scale
-                  </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                    Our scalable, reliable infrastructure supports global
-                    enterprises and high-performance workloads, from startups to
-                    Fortune 500 companies.
-                  </p>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3 text-gray-700 group-hover:translate-x-2 transition-transform duration-300">
-                      <CheckCircle
-                        className="text-purple-600 flex-shrink-0"
-                        size={20}
-                      />
-                      <span className="font-medium">
-                        Multi-cloud and hybrid architectures
-                      </span>
-                    </div>
-                    <div className="flex items-center space-x-3 text-gray-700 group-hover:translate-x-2 transition-transform duration-300 delay-75">
-                      <CheckCircle
-                        className="text-purple-600 flex-shrink-0"
-                        size={20}
-                      />
-                      <span className="font-medium">
-                        99.99% uptime SLA guarantees
-                      </span>
-                    </div>
-                    <div className="flex items-center space-x-3 text-gray-700 group-hover:translate-x-2 transition-transform duration-300 delay-150">
-                      <CheckCircle
-                        className="text-purple-600 flex-shrink-0"
-                        size={20}
-                      />
-                      <span className="font-medium">
-                        Global infrastructure support
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <FeatureCard
+              icon={<Database className="text-white" size={36} />}
+              title="Enterprise Scale"
+              description="Our scalable, reliable infrastructure supports global enterprises and high-performance workloads, from startups to Fortune 500 companies."
+              features={[
+                "Multi-cloud and hybrid architectures",
+                "99.99% uptime SLA guarantees",
+                "Global infrastructure support",
+              ]}
+              colorTheme="purple"
+            />
 
-            <div className="group bg-white/90 backdrop-blur-sm rounded-3xl p-10 border-2 border-orange-100 hover:border-orange-400 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
-              <div className="flex items-start space-x-6">
-                <div className="flex-shrink-0 w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xl">
-                  <BarChart3 className="text-white" size={36} />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors">
-                    Data-Driven Results
-                  </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                    We focus on measurable outcomes, delivering ROI through
-                    improved performance, reduced costs, and enhanced
-                    capabilities.
-                  </p>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3 text-gray-700 group-hover:translate-x-2 transition-transform duration-300">
-                      <CheckCircle
-                        className="text-orange-600 flex-shrink-0"
-                        size={20}
-                      />
-                      <span className="font-medium">
-                        Real-time monitoring and analytics
-                      </span>
-                    </div>
-                    <div className="flex items-center space-x-3 text-gray-700 group-hover:translate-x-2 transition-transform duration-300 delay-75">
-                      <CheckCircle
-                        className="text-orange-600 flex-shrink-0"
-                        size={20}
-                      />
-                      <span className="font-medium">
-                        Performance optimization
-                      </span>
-                    </div>
-                    <div className="flex items-center space-x-3 text-gray-700 group-hover:translate-x-2 transition-transform duration-300 delay-150">
-                      <CheckCircle
-                        className="text-orange-600 flex-shrink-0"
-                        size={20}
-                      />
-                      <span className="font-medium">
-                        Cost reduction strategies
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <FeatureCard
+              icon={<BarChart3 className="text-white" size={36} />}
+              title="Data-Driven Results"
+              description="We focus on measurable outcomes, delivering ROI through improved performance, reduced costs, and enhanced capabilities."
+              features={[
+                "Real-time monitoring and analytics",
+                "Performance optimization",
+                "Cost reduction strategies",
+              ]}
+              colorTheme="orange"
+            />
           </div>
         </div>
       </Section>
@@ -1047,20 +864,14 @@ export default function Home() {
       <Section className="bg-gradient-to-br from-accent-50 via-primary-50 to-accent-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyNTYzZWIiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTAgMGg0MHY0MEgwVjB6bTQwIDQwaDQwdjQwSDQwVjQweiIvPjwvZz48L2c+PC9zdmc+')] opacity-50"></div>
         <div className="relative">
-          <div className="text-center mb-16">
-            <div className="inline-block mb-4">
-              <span className="px-4 py-2 bg-gradient-to-r from-primary-100 to-primary-200 text-primary-700 rounded-full text-sm font-semibold uppercase tracking-wider">
-                Join Us
-              </span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
-              Join Our Team
-            </h2>
-            <p className="text-xl text-accent-600 max-w-3xl mx-auto">
-              Build your career in AI, cloud, blockchain, and infrastructure
-              services while shaping the next wave of global innovation.
-            </p>
-          </div>
+          <SectionHeader
+            pillText="Join Us"
+            title="Join Our Team"
+            subtitle="Build your career in AI, cloud, blockchain, and infrastructure services while shaping the next wave of global innovation."
+            className="text-center mb-16"
+            titleClassName="text-4xl md:text-5xl font-bold text-gradient mb-4"
+            subtitleClassName="text-xl text-accent-600 max-w-3xl mx-auto"
+          />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ServiceCard
               title="AI Infrastructure Engineer"

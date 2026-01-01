@@ -22,12 +22,20 @@ const ContactForm = ({
     type: "success" | "error" | null;
     message: string;
   }>({ type: null, message: "" });
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const formRef = useRef<HTMLFormElement>(null);
+
+  // Map API field names to form field names
+  const fieldNameMap: Record<string, string> = {
+    description: "message",
+    mobile: "phone",
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus({ type: null, message: "" });
+    setFieldErrors({});
 
     const formData = new FormData(e.currentTarget);
     const data = {
@@ -49,14 +57,56 @@ const ContactForm = ({
         message: "Thank you! Your message has been sent successfully.",
       });
       formRef.current?.reset();
+      setFieldErrors({});
     } catch (error) {
-      setSubmitStatus({
-        type: "error",
-        message: "Something went wrong. Please try again later.",
-      });
+      // Handle API error response
+      if (axios.isAxiosError(error) && error.response?.data) {
+        const errorData = error.response.data as {
+          success?: boolean;
+          message?: string;
+          errors?: Array<{ field: string; message: string }>;
+        };
+
+        // Set field-specific errors
+        if (errorData.errors && Array.isArray(errorData.errors)) {
+          const newFieldErrors: Record<string, string> = {};
+          errorData.errors.forEach((err) => {
+            // Map API field name to form field name
+            const formFieldName = fieldNameMap[err.field] || err.field;
+            newFieldErrors[formFieldName] = err.message;
+          });
+          setFieldErrors(newFieldErrors);
+        }
+
+        // Set general error message
+        const errorMessage =
+          errorData.message ||
+          "Something went wrong. Please check the form and try again.";
+        setSubmitStatus({
+          type: "error",
+          message: errorMessage,
+        });
+      } else {
+        // Handle network or other errors
+        setSubmitStatus({
+          type: "error",
+          message: "Network error. Please check your connection and try again.",
+        });
+      }
       console.error("Error submitting form:", error);
     } finally {
       setIsSubmitting(false);
+    }
+  };
+
+  const handleFieldChange = (fieldName: string) => {
+    // Clear field error when user starts typing
+    if (fieldErrors[fieldName]) {
+      setFieldErrors((prev) => {
+        const newErrors = { ...prev };
+        delete newErrors[fieldName];
+        return newErrors;
+      });
     }
   };
 
@@ -69,9 +119,9 @@ const ContactForm = ({
       className={`bg-[rgba(71,96,136,0.3)] backdrop-blur-sm border border-accent-700 rounded-2xl p-8 md:p-10 ${className}`}
     >
       <div className="text-center mb-8">
-        <h4 className="text-2xl md:text-3xl font-bold text-white mb-3">
+        <div className="text-2xl md:text-3xl font-bold text-gradient mb-3">
           {title}
-        </h4>
+        </div>
         <p className="text-sm text-accent-300 font-normal">{description}</p>
       </div>
 
@@ -90,8 +140,16 @@ const ContactForm = ({
               name="name"
               required
               placeholder="Your full name"
-              className="w-full px-4 py-3 bg-accent-900/50 border border-accent-700 rounded-xl text-white placeholder-accent-500 focus:outline-none focus:border-primary-500 transition-colors text-sm font-normal"
+              onChange={() => handleFieldChange("name")}
+              className={`w-full px-4 py-3 bg-accent-900/50 border rounded-xl text-white placeholder-accent-500 focus:outline-none transition-colors text-sm font-normal ${
+                fieldErrors.name
+                  ? "border-red-500 focus:border-red-500"
+                  : "border-accent-700 focus:border-primary-500"
+              }`}
             />
+            {fieldErrors.name && (
+              <p className="mt-1 text-xs text-red-400">{fieldErrors.name}</p>
+            )}
           </div>
 
           <div>
@@ -107,8 +165,16 @@ const ContactForm = ({
               name="email"
               required
               placeholder="your.email@example.com"
-              className="w-full px-4 py-3 bg-accent-900/50 border border-accent-700 rounded-xl text-white placeholder-accent-500 focus:outline-none focus:border-primary-500 transition-colors text-sm font-normal"
+              onChange={() => handleFieldChange("email")}
+              className={`w-full px-4 py-3 bg-accent-900/50 border rounded-xl text-white placeholder-accent-500 focus:outline-none transition-colors text-sm font-normal ${
+                fieldErrors.email
+                  ? "border-red-500 focus:border-red-500"
+                  : "border-accent-700 focus:border-primary-500"
+              }`}
             />
+            {fieldErrors.email && (
+              <p className="mt-1 text-xs text-red-400">{fieldErrors.email}</p>
+            )}
           </div>
         </div>
 
@@ -125,8 +191,16 @@ const ContactForm = ({
             name="phone"
             required
             placeholder="+1 (555) 000-0000"
-            className="w-full px-4 py-3 bg-accent-900/50 border border-accent-700 rounded-xl text-white placeholder-accent-500 focus:outline-none focus:border-primary-500 transition-colors text-sm font-normal"
+            onChange={() => handleFieldChange("phone")}
+            className={`w-full px-4 py-3 bg-accent-900/50 border rounded-xl text-white placeholder-accent-500 focus:outline-none transition-colors text-sm font-normal ${
+              fieldErrors.phone
+                ? "border-red-500 focus:border-red-500"
+                : "border-accent-700 focus:border-primary-500"
+            }`}
           />
+          {fieldErrors.phone && (
+            <p className="mt-1 text-xs text-red-400">{fieldErrors.phone}</p>
+          )}
         </div>
 
         <div>
@@ -142,8 +216,16 @@ const ContactForm = ({
             required
             rows={5}
             placeholder="Tell us about your project or inquiry..."
-            className="w-full px-4 py-3 bg-accent-900/50 border border-accent-700 rounded-xl text-white placeholder-accent-500 focus:outline-none focus:border-primary-500 transition-colors text-sm font-normal resize-none"
+            onChange={() => handleFieldChange("message")}
+            className={`w-full px-4 py-3 bg-accent-900/50 border rounded-xl text-white placeholder-accent-500 focus:outline-none transition-colors text-sm font-normal resize-none ${
+              fieldErrors.message
+                ? "border-red-500 focus:border-red-500"
+                : "border-accent-700 focus:border-primary-500"
+            }`}
           />
+          {fieldErrors.message && (
+            <p className="mt-1 text-xs text-red-400">{fieldErrors.message}</p>
+          )}
         </div>
 
         {submitStatus.type && (

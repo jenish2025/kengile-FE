@@ -1,6 +1,8 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import AnimatedHero from "@/components/AnimatedHero";
 import Section from "@/components/Section";
+import SectionHeader from "@/components/SectionHeader";
 import {
   Target,
   Users,
@@ -181,25 +183,25 @@ export default function AboutUs() {
       icon: <Lightbulb size={24} />,
       title: "Future-Proof Technology",
       description:
-        "We don't just solve today's problems—we anticipate tomorrow's challenges. Our solutions are designed with scalability and adaptability at their core.",
+        "Our experts position your systems for long-term growth by shaping solutions that adapt to emerging demands with ease and support ever-evolving business goals.",
     },
     {
       icon: <Users size={24} />,
       title: "Expert Team",
       description:
-        "Our engineers hold certifications from AWS, Azure, Google Cloud, and specialized credentials in AI/ML, blockchain, and cybersecurity.",
+        "The engineers at Kengile are certified and possess great skills across AWS, Azure, Google Cloud, AI, blockchain, and cybersecurity, delivering strong and dependable outcomes.",
     },
     {
       icon: <Clock size={24} />,
       title: "Rapid Response",
       description:
-        "Critical issues demand immediate attention. Our global support teams ensure someone is always available when you need assistance.",
+        "By acting swiftly in response to issues, our global support teams ensure that your business receives the most timely assistance and seamless operations around the clock.",
     },
     {
       icon: <CheckCircle2 size={24} />,
       title: "Proven Track Record",
       description:
-        "With hundreds of successful implementations across industries, we bring battle-tested expertise to every engagement.",
+        "Years of successful work across industries allow us to apply real-world experience to give every project a stable foundation and bring about consistent, reliable results.",
     },
   ];
 
@@ -248,7 +250,7 @@ export default function AboutUs() {
               move into the future.
             </p>
             <p className="text-lg text-accent-700 mb-6 leading-relaxed">
-              Our focus is simple—we deliver modern infrastructure solutions
+              Our focus is simple,we deliver modern infrastructure solutions
               powered by AI, cloud, and automation, supported by strong
               engineering. As strategic partners, we guide clients from initial
               planning through long-term optimization, ensuring their systems
@@ -266,18 +268,11 @@ export default function AboutUs() {
       {/* Mission & Vision */}
       <Section className="bg-gradient-to-br from-primary-50 to-white">
         <div className="max-w-7xl mx-auto">
-          {/* Pill with text "What Drives Us" */}
-          <div className="text-center mb-6">
-            <span className="px-6 py-3 bg-gradient-to-r from-primary-100 via-indigo-100 to-purple-100 text-primary-700 rounded-full text-sm font-bold uppercase tracking-widest shadow-md">
-              What Drives Us
-            </span>
-          </div>
-
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gradient mb-4">
-              Our Purpose & Direction
-            </h2>
-          </div>
+          <SectionHeader
+            pillText="What Drives Us"
+            title="Our Purpose & Direction"
+            className="text-center mb-16"
+          />
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-gradient-to-br from-primary-50 to-white border border-primary-200 rounded-2xl p-10">
               <h2 className="text-3xl font-bold text-accent-900 mb-6">
@@ -318,21 +313,11 @@ export default function AboutUs() {
       {/* Values */}
       <Section className="bg-accent-50">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            {/* Pill with text "The Principles That Guide Us" */}
-            <div className="text-center mb-6">
-              <span className="px-6 py-3 bg-gradient-to-r from-primary-100 via-indigo-100 to-purple-100 text-primary-700 rounded-full text-sm font-bold uppercase tracking-widest shadow-md">
-                Our Core Values
-              </span>
-            </div>
-            <h2 className="text-4xl font-bold text-gradient mb-4">
-              The Principles That Guide Us
-            </h2>
-            <p className="text-xl text-accent-600 max-w-3xl mx-auto">
-              These values define how we work, how we serve our clients, and how
-              we deliver consistent excellence.
-            </p>
-          </div>
+          <SectionHeader
+            pillText="Our Core Values"
+            title="The Principles That Guide Us"
+            subtitle="These values define how we work, how we serve our clients, and how we deliver consistent excellence."
+          />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => (
               <div
@@ -359,7 +344,7 @@ export default function AboutUs() {
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-2xl p-10 shadow-lg border border-accent-200">
             <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-accent-900 mb-4">
+              <h2 className="text-3xl font-bold text-gradient mb-4">
                 A Message from Our Leader
               </h2>
             </div>
@@ -371,7 +356,7 @@ export default function AboutUs() {
               measure of progress.
             </p>
             <div className="text-center mt-8 pt-6 border-t border-accent-200">
-              <p className="text-xl font-semibold text-accent-900">
+              <p className="text-xl font-semibold text-gradient">
                 Chandresh Patel
               </p>
               <p className="text-accent-600">M.D. & Agile Coach | India</p>
@@ -407,6 +392,37 @@ export default function AboutUs() {
                 <p className="text-accent-600 leading-relaxed">
                   {area.description}
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Certifications & Partnerships */}
+      <Section className="bg-white">
+        <div className="max-w-7xl mx-auto">
+          <SectionHeader
+            pillText="Certifications & Partnerships"
+            title="Industry-Recognized Excellence"
+            subtitle="Our team holds top certifications from leading cloud providers and security organizations."
+            className="text-center mb-12"
+            subtitleClassName="text-lg text-accent-700 mt-4 max-w-3xl mx-auto"
+          />
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {[
+              "AWS Advanced Partner",
+              "Microsoft Gold Partner",
+              "Google Cloud Partner",
+              "ISO 27001 Certified",
+              "SOC 2 Type II",
+              "GDPR Compliant",
+            ].map((cert, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-br from-primary-50 to-white border border-primary-200 rounded-xl p-6 text-center hover:border-primary-400 hover:shadow-lg transition-all duration-300"
+              >
+                <BadgeCheck className="w-12 h-12 text-primary-600 mx-auto mb-3" />
+                <p className="text-sm font-semibold text-accent-900">{cert}</p>
               </div>
             ))}
           </div>
@@ -450,14 +466,10 @@ export default function AboutUs() {
       {/* Journey/Timeline */}
       <Section className="bg-accent-50">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gradient mb-4">
-              Our Journey
-            </h2>
-            <p className="text-xl text-accent-600 max-w-3xl mx-auto">
-              Milestones that shaped our evolution
-            </p>
-          </div>
+          <SectionHeader
+            pillText="Our Journey"
+            title="Milestones That Define Us"
+          />
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary-200" />
             <div className="space-y-12">
@@ -502,7 +514,8 @@ export default function AboutUs() {
               What Makes Us Different
             </h2>
             <p className="text-xl text-accent-600 max-w-3xl mx-auto">
-              Why leading enterprises choose Kengile as their technology partner
+              Kengile earns the trust of leading enterprises through our proven
+              expertise, strong support, and results-driven approach.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -530,49 +543,6 @@ export default function AboutUs() {
         </div>
       </Section>
 
-      {/* Certifications & Partnerships */}
-      <Section className="bg-gradient-to-br from-primary-50 to-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            {/* Pill with text "Certifications & Partnerships" */}
-            <div className="text-center mb-6">
-              <span className="px-6 py-3 bg-gradient-to-r from-primary-100 via-indigo-100 to-purple-100 text-primary-700 rounded-full text-sm font-bold uppercase tracking-widest shadow-md">
-                Certifications & Partnerships
-              </span>
-            </div>
-
-            <h2 className="text-4xl font-bold text-gradient mb-4">
-              Industry-Recognized Excellence
-            </h2>
-            <p className="text-xl text-accent-600">
-              Industry-Recognized Excellence
-            </p>
-            <p className="text-lg text-accent-700 mt-4 max-w-3xl mx-auto">
-              Our team holds top certifications from leading cloud providers and
-              security organizations.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {[
-              "AWS Advanced Partner",
-              "Microsoft Gold Partner",
-              "Google Cloud Partner",
-              "ISO 27001 Certified",
-              "SOC 2 Type II",
-              "GDPR Compliant",
-            ].map((cert, index) => (
-              <div
-                key={index}
-                className="bg-gradient-to-br from-primary-50 to-white border border-primary-200 rounded-xl p-6 text-center hover:border-primary-400 hover:shadow-lg transition-all duration-300"
-              >
-                <BadgeCheck className="w-12 h-12 text-primary-600 mx-auto mb-3" />
-                <p className="text-sm font-semibold text-accent-900">{cert}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
       {/* What Our Clients Say */}
       <Section className="bg-accent-50">
         <div className="max-w-7xl mx-auto">
@@ -580,6 +550,14 @@ export default function AboutUs() {
             <h2 className="text-4xl font-bold text-gradient mb-4">
               What Our Clients Say About Kengile
             </h2>
+            <p className="text-lg text-accent-700 mt-4 max-w-3xl mx-auto">
+              At Kengile, they have been a leading technology partner in
+              providing state-of-the-art modernization to our cloud environment.
+              Their experience with multi-cloud architecture enabled us to make
+              things simple and enhance performance across teams. Such
+              dependability with a partner is rare under high-intensity
+              pressure.
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -598,8 +576,8 @@ export default function AboutUs() {
               {
                 quote:
                   "With Kengile driving the infrastructure setup, our AI initiatives moved at a faster rate than was initially anticipated. Their knowledge, attention to minute details, and swiftness in response made this complex transition appear seamless. A partner like this adds real value to every project.",
-                author: "Michael Chen",
-                role: "CTO, Tech Innovations Inc.",
+                author: "Marcus Hill",
+                role: "VP Technology Innovation",
               },
             ].map((testimonial, index) => (
               <div
@@ -635,24 +613,27 @@ export default function AboutUs() {
         contrast="dark"
       >
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Our Commitment to You</h2>
+          <h2 className="text-4xl font-bold mb-6">Our Commitment To You</h2>
           <p className="text-xl text-primary-100 mb-8 leading-relaxed">
             Kengile is committed to the provision of technology solutions that
             will keep your business moving. We focus on clarity and
             communication, dependable delivery, and solutioning that creates
-            measurable value.
+            measurable value. Our team collaborates tightly with yours to
+            understand goals, so every step feels guided, aligned, and focused
+            on long-term success.
           </p>
           <p className="text-xl text-primary-100 mb-8 leading-relaxed">
-            Our team collaborates tightly with yours to understand goals, so
-            every step feels guided, aligned, and focused on long-term success.
             With continued support and practical know-how, we make your
-            technology journey frictionless and future-ready.
+            technology journey frictionless and future-ready. Strengthen,
+            modernize, or adopt advanced capabilities-everywhere along the way,
+            we will be there to assist you in staying engaged, being
+            responsible, and realizing the results that really count.
           </p>
-          <p className="text-xl text-primary-100 leading-relaxed">
-            Strengthen, modernize, or adopt advanced capabilities—everywhere
+          {/* <p className="text-xl text-primary-100 leading-relaxed">
+            Strengthen, modernize, or adopt advanced capabilities,everywhere
             along the way, we will be there to assist you in staying engaged,
             being responsible, and realizing the results that really count.
-          </p>
+          </p> */}
         </div>
       </Section>
 
@@ -668,16 +649,10 @@ export default function AboutUs() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/contact"
+              href="/contact-us"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-primary-600 rounded-lg hover:bg-primary-700 transition-colors shadow-lg hover:shadow-xl"
             >
-              Get in Touch
-            </a>
-            <a
-              href="/services"
-              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-primary-600 bg-white border-2 border-primary-600 rounded-lg hover:bg-primary-50 transition-colors"
-            >
-              Explore Our Services
+              Talk to Our Experts
             </a>
           </div>
         </div>

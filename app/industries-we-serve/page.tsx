@@ -44,7 +44,7 @@ export default function IndustriesWeServe() {
     {
       title: "AI & Machine Learning Companies",
       description:
-        "Specialized infrastructure for AI startups and ML enterprises — GPU clusters, distributed training, and MLOps platforms.",
+        "Specialized infrastructure for AI startups and ML enterprises , GPU clusters, distributed training, and MLOps platforms.",
       icon: <TrendingUp size={32} />,
       color: "from-purple-500 to-pink-500",
       stats: { clients: "50+", projects: "200+", satisfaction: "98%" },

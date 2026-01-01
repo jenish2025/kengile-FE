@@ -30,7 +30,7 @@ export default function DevOpsSREAutomation() {
             We help organizations adopt DevOps and Site Reliability Engineering (SRE) practices to improve deployment frequency, reduce failure rates, and enhance system reliability.
           </p>
           <p className="text-lg text-accent-700 mb-8">
-            Our services cover the entire DevOps lifecycle — from CI/CD pipeline setup to infrastructure automation and comprehensive observability.
+            Our services cover the entire DevOps lifecycle , from CI/CD pipeline setup to infrastructure automation and comprehensive observability.
           </p>
         </div>
       </Section>
