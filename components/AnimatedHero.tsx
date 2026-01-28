@@ -12,6 +12,8 @@ interface AnimatedHeroProps {
   description: string;
   ctaText?: string;
   ctaLink?: string;
+  secondaryCtaText?: string;
+  secondaryCtaLink?: string;
 }
 
 const AnimatedHero = ({
@@ -20,6 +22,8 @@ const AnimatedHero = ({
   description,
   ctaText = "Get Started",
   ctaLink = "/contact-us",
+  secondaryCtaText = "View Our Services",
+  secondaryCtaLink = "/services",
 }: AnimatedHeroProps) => {
   const [isHoveredPrimary, setIsHoveredPrimary] = useState(false);
   const [isHoveredSecondary, setIsHoveredSecondary] = useState(false);
@@ -180,7 +184,7 @@ const AnimatedHero = ({
             </motion.button>
           </Link>
 
-          <Link href="/services">
+          <Link href={secondaryCtaLink}>
             <motion.button
               onHoverStart={() => setIsHoveredSecondary(true)}
               onHoverEnd={() => setIsHoveredSecondary(false)}
@@ -188,7 +192,7 @@ const AnimatedHero = ({
               whileTap={{ scale: 0.95 }}
               className="group relative px-10 py-5 bg-white/80 backdrop-blur-sm border-2 border-primary-600 text-primary-600 hover:bg-primary-50 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-3"
             >
-              <span className="text-lg">View Our Services</span>
+              <span className="text-lg">{secondaryCtaText}</span>
               <motion.div
                 animate={isHoveredSecondary ? { rotate: [0, 360] } : {}}
                 transition={{ duration: 0.5 }}

@@ -245,18 +245,18 @@ export default function AboutUs() {
               We founded Kengile when our team of engineers and architects
               recognized a critical gap in the industry. Traditional IT
               infrastructure was not evolving fast enough to support the demands
-              of AI workloads, real-time analytics, and global connectivity. We
-              created Kengile to address this challenge and help organizations
-              move into the future.
+              of AI workloads, real-time analytics, and global connectivity.
             </p>
             <p className="text-lg text-accent-700 mb-6 leading-relaxed">
-              Our focus is simple,we deliver modern infrastructure solutions
-              powered by AI, cloud, and automation, supported by strong
-              engineering. As strategic partners, we guide clients from initial
-              planning through long-term optimization, ensuring their systems
-              remain secure, scalable, and future-ready.
+              We created Kengile to address this challenge and help
+              organizations move into the future. Our focus is simple - we
+              deliver modern infrastructure solutions powered by AI, cloud, and
+              automation, supported by strong engineering. As strategic
+              partners, we guide clients from initial planning through long-term
+              optimization, ensuring their systems remain secure, scalable, and
+              future-ready.
             </p>
-            <p className="text-lg text-accent-700 mb-8 leading-relaxed">
+            <p className="text-lg text-accent-700  leading-relaxed">
               Today, we serve Fortune 500 companies across more than 50
               countries, delivering enterprise-grade solutions that are secure,
               scalable, and environmentally responsible.

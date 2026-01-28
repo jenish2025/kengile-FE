@@ -3,6 +3,8 @@ import AnimatedHero from "@/components/AnimatedHero";
 import Section from "@/components/Section";
 import ServiceCard from "@/components/ServiceCard";
 import InsightCard from "@/components/InsightCard";
+import SectionHeader from "@/components/SectionHeader";
+import TechnologyCard from "@/components/TechnologyCard";
 import {
   Building2,
   Factory,
@@ -29,6 +31,10 @@ import {
   CircuitBoard,
   FlaskConical,
   Activity,
+  Code2,
+  Clock,
+  Unlock,
+  Handshake,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -44,7 +50,7 @@ export default function IndustriesWeServe() {
     {
       title: "AI & Machine Learning Companies",
       description:
-        "Specialized infrastructure for AI startups and ML enterprises , GPU clusters, distributed training, and MLOps platforms.",
+        "At Kengile, our experts provide specialized infrastructure tailored for AI startups and ML enterprises. We help build high-performance GPU clusters, distributed training environments, and fully automated MLOps platforms that accelerate model development and deployment.",
       icon: <TrendingUp size={32} />,
       color: "from-purple-500 to-pink-500",
       stats: { clients: "50+", projects: "200+", satisfaction: "98%" },
@@ -66,7 +72,7 @@ export default function IndustriesWeServe() {
     {
       title: "Energy & Utilities",
       description:
-        "As a trusted technology partner, we enable utilities to adopt Artificial Intelligence and IoT for smarter power forecasting, automation of smart grids, and precise energy distribution.",
+        "Kengile's industry experts empower utilities to leverage AI and IoT for smarter energy management. From advanced power forecasting to automating smart grids, we provide tailored solutions that optimize energy distribution and enhance sustainability in the sector.",
       icon: <Zap size={32} />,
       color: "from-yellow-500 to-orange-500",
       stats: { clients: "30+", projects: "150+", satisfaction: "96%" },
@@ -88,7 +94,7 @@ export default function IndustriesWeServe() {
     {
       title: "Financial Services & FinTech",
       description:
-        "Blockchain infrastructure, secure payment systems, and high-frequency trading platforms for financial institutions.",
+        "We work closely with financial institutions to deliver cutting-edge blockchain infrastructure, secure payment systems, and high-frequency trading platforms. Our experts in Kengile design robust solutions that drive innovation and ensure regulatory compliance in the evolving financial landscape.",
       icon: <Shield size={32} />,
       color: "from-green-500 to-emerald-500",
       stats: { clients: "40+", projects: "180+", satisfaction: "99%" },
@@ -110,7 +116,7 @@ export default function IndustriesWeServe() {
     {
       title: "Space Technology",
       description:
-        "We work with space innovators to enhance satellite connectivity, process deep-space data, and enable edge computing engineered for mission-critical environments.",
+        "Kengile's specialists collaborate with space innovators to enhance satellite connectivity and process deep-space data. We design mission-critical systems for real-time data analytics, edge computing, and satellite ground station software, enabling breakthrough advancements in space exploration.",
       icon: <Rocket size={32} />,
       color: "from-blue-500 to-cyan-500",
       stats: { clients: "15+", projects: "75+", satisfaction: "100%" },
@@ -132,7 +138,7 @@ export default function IndustriesWeServe() {
     {
       title: "Telecommunications",
       description:
-        "Our experts enable telecom providers to gain unprecedented network performance with 5G-ready infrastructure, cloud-native cores, and AI-driven optimization.",
+        "Our experts at Kengile help telecom providers unlock the full potential of their networks. From 5G-ready infrastructure to AI-driven network optimization, we design cloud-native telecom platforms that drive performance and enhance connectivity in an increasingly digital world.",
       icon: <Network size={32} />,
       color: "from-teal-500 to-cyan-500",
       stats: { clients: "35+", projects: "160+", satisfaction: "97%" },
@@ -154,7 +160,7 @@ export default function IndustriesWeServe() {
     {
       title: "Manufacturing",
       description:
-        "We help industrial organizations with IoT-enabled operations, real-time monitoring, predictive maintenance, and automation for large-scale production.",
+        "At Kengile, we support manufacturing industries with IoT-enabled operations and automation solutions that streamline production. Our industry experts implement predictive maintenance systems, digital twins, and real-time monitoring platforms to optimize large-scale manufacturing processes.",
       icon: <Factory size={32} />,
       color: "from-red-500 to-rose-500",
       stats: { clients: "60+", projects: "250+", satisfaction: "97%" },
@@ -176,7 +182,7 @@ export default function IndustriesWeServe() {
     {
       title: "Healthcare & Life Sciences",
       description:
-        "Through secure data platforms, AI-powered analytics, and high-performance computing for research, healthcare, and life sciences organizations can innovate in care delivery.",
+        "Kengile's healthcare industry experts enable organizations to innovate in care delivery through secure, AI-powered analytics platforms. We design high-performance computing infrastructures for genomic data processing, medical imaging, and drug discovery, transforming how healthcare services are delivered.",
       icon: <FlaskConical size={32} />,
       color: "from-pink-500 to-rose-500",
       stats: { clients: "25+", projects: "120+", satisfaction: "99%" },
@@ -221,10 +227,10 @@ export default function IndustriesWeServe() {
 
   const whyChooseUs = [
     {
-      icon: <Users size={40} />,
-      title: "Industry Veterans",
+      icon: <Code2 size={40} />,
+      title: "Experienced Engineers",
       description:
-        "Our team includes former engineers from leading tech companies and domain experts with decades of experience",
+        "Our senior engineers bring deep, hands-on experience across complex and large-scale systems. With proven success in leading engineering teams and delivering high-impact solutions, we ensure your project is handled by highly skilled and dependable professionals.",
       href: "/about-us",
       borderColor: "border-blue-100",
       hoverBorderColor: "hover:border-blue-400",
@@ -234,11 +240,11 @@ export default function IndustriesWeServe() {
       hoverTextColor: "hover:text-blue-700",
     },
     {
-      icon: <Award size={40} />,
-      title: "Proven Track Record",
+      icon: <Clock size={40} />,
+      title: "Agile & Efficient",
       description:
-        "Successfully delivered 1000+ projects across multiple industries with an average client satisfaction of 98%",
-      href: "/insights-case-studies",
+        "We work in two-week sprints with daily standups that focus on results, not lengthy meetings. Our approach ensures that we deliver production-ready systems in a fraction of the time. We've completed projects in 8 weeks that other agencies quoted 8 months for.",
+      href: "/services",
       borderColor: "border-purple-100",
       hoverBorderColor: "hover:border-purple-400",
       iconGradientFrom: "from-purple-500",
@@ -247,10 +253,10 @@ export default function IndustriesWeServe() {
       hoverTextColor: "hover:text-purple-700",
     },
     {
-      icon: <Globe size={40} />,
-      title: "Global Reach",
+      icon: <Unlock size={40} />,
+      title: "No Vendor Lock-In",
       description:
-        "Serving clients across 40+ countries with 24/7 support and localized solutions",
+        "We are committed to leveraging open standards and providing well-documented code. After a project has been finished, you can do what you want with it. Your organization can decide to maintain it themselves or bring in a different vendor if needed.",
       href: "/contact-us",
       borderColor: "border-green-100",
       hoverBorderColor: "hover:border-green-400",
@@ -260,11 +266,11 @@ export default function IndustriesWeServe() {
       hoverTextColor: "hover:text-green-700",
     },
     {
-      icon: <Rocket size={40} />,
-      title: "Innovation First",
+      icon: <Handshake size={40} />,
+      title: "True Partnership",
       description:
-        "Early adopters of emerging technologies, helping clients stay ahead of the curve",
-      href: "/innovation-labs",
+        "We work closely with you as long-term partners, not just a delivery team. If we believe a solution will not deliver the right results, we address it early and suggest better alternatives. Your success matters to us, and we stay focused on outcomes that support your business goals.",
+      href: "/contact-us",
       borderColor: "border-orange-100",
       hoverBorderColor: "hover:border-orange-400",
       iconGradientFrom: "from-orange-500",
@@ -276,65 +282,58 @@ export default function IndustriesWeServe() {
 
   const technologies = [
     {
-      name: "Cloud Platforms",
-      icon: <Cloud className="w-6 h-6" />,
-      tools: "AWS, Azure, GCP, Kubernetes",
+      name: "AI & Machine Learning",
+      icon: <Brain className="w-6 h-6" />,
+      tools: "PyTorch, TensorFlow, Hugging Face, MLOps, MLflow, Scikit-learn, NVIDIA CUDA",
     },
     {
-      name: "AI & ML",
-      icon: <Brain className="w-6 h-6" />,
-      tools: "TensorFlow, PyTorch, Hugging Face",
+      name: "Cloud Platforms",
+      icon: <Cloud className="w-6 h-6" />,
+      tools: "AWS, Azure, GCP, Kubernetes, Docker, Terraform, OpenShift",
     },
     {
       name: "Blockchain",
       icon: <Lock className="w-6 h-6" />,
-      tools: "Ethereum, Solana, Hyperledger",
+      tools: "Ethereum, Hyperledger, Solidity, Corda, IPFS, Web3, Chainlink",
     },
     {
-      name: "IoT",
-      icon: <Network className="w-6 h-6" />,
-      tools: "MQTT, LoRaWAN, EdgeX",
+      name: "Space Technology",
+      icon: <Rocket className="w-6 h-6" />,
+      tools: "Satellite networks, CubeSats, GNSS, Edge IoT, Telemetry",
     },
     {
-      name: "Data Analytics",
+      name: "Energy & Industrial IT Systems",
+      icon: <Zap className="w-6 h-6" />,
+      tools: "SCADA, IoT sensors, Smart grids, Energy analytics, Industrial automation, Digital twins",
+    },
+    {
+      name: "Data Engineering & Analytics",
       icon: <BarChart3 className="w-6 h-6" />,
-      tools: "Apache Spark, Databricks, Snowflake",
+      tools: "Spark, Kafka, Data Lakes, Airflow, Snowflake, DBT, BigQuery",
     },
     {
-      name: "DevOps",
+      name: "DevOps & SRE",
       icon: <Workflow className="w-6 h-6" />,
-      tools: "Docker, Jenkins, Terraform",
+      tools: "CI/CD, Jenkins, GitLab, Prometheus, Grafana, Ansible, ArgoCD",
+    },
+    {
+      name: "Security & Compliance",
+      icon: <Shield className="w-6 h-6" />,
+      tools: "Zero-trust, IAM, SIEM, Cloud Security, Encryption, Threat Detection, OWASP",
     },
   ];
 
   return (
     <>
       <AnimatedHero
-        title="Industries We Serve"
-        subtitle="Vertical Expertise"
-        description="Tailored IT solutions for AI startups, energy enterprises, financial systems, and space-technology innovators."
+        title="Our Industry Expertise"
+        subtitle="Industry Expertise"
+        description="We don't believe in one-size-fits-all. Our teams bring decades of hands-on experience in your specific sector, with a deep understanding of the regulations, challenges, and opportunities that define your business."
+        ctaText="Get Started"
+        ctaLink="/contact-us"
+        secondaryCtaText="Explore Our Services"
+        secondaryCtaLink="/services"
       />
-
-      <Section className="bg-white">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
-            Our Industry Expertise
-          </h2>
-          <p className="text-xl text-accent-600 max-w-3xl mx-auto">
-            We deliver specialized IT solutions across multiple verticals,
-            combining deep industry knowledge with cutting-edge technology
-          </p>
-        </div>
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {industries.map((industry, index) => (
-            <ServiceCard
-              key={industry.title}
-              {...industry}
-              delay={index * 0.1}
-            />
-          ))}
-        </div> */}
-      </Section>
 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -379,15 +378,13 @@ export default function IndustriesWeServe() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-200 to-indigo-200 rounded-full blur-3xl opacity-10"></div>
 
         <div className="container mx-auto px-4 relative">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Our Industry Expertise
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We deliver specialized IT solutions across multiple verticals,
-              combining deep industry knowledge with cutting-edge technology
-            </p>
-          </div>
+          <SectionHeader
+            title="Industries We Serve"
+            subtitle="We specialize in providing AI infrastructure solutions across various industries, each with its own distinct challenges. Our expert teams work closely to deliver customized solutions that drive growth and innovation."
+            className="text-center mb-16"
+            titleClassName="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+            subtitleClassName="text-xl text-gray-600 max-w-3xl mx-auto"
+          />
 
           <div className="space-y-16">
             {industries.map((industry, index) => (
@@ -480,31 +477,21 @@ export default function IndustriesWeServe() {
       {/* Technologies Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-gray-900">
-              Technologies We Master
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Leveraging cutting-edge technologies to deliver innovative
-              solutions across all industries
-            </p>
-          </div>
+          <SectionHeader
+            title="Our Technical Expertise"
+            subtitle="We specialize in AI, cloud, blockchain, and IT systems, using these advanced technology stacks to drive enterprise-grade projects and services."
+            className="text-center mb-12"
+            titleClassName="text-4xl font-bold mb-4 text-gray-900"
+            subtitleClassName="text-xl text-gray-600 max-w-2xl mx-auto"
+          />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {technologies.map((tech, index) => (
-              <div
+              <TechnologyCard
                 key={index}
-                className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 hover:shadow-lg transition-shadow"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center text-white mr-4">
-                    {tech.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">
-                    {tech.name}
-                  </h3>
-                </div>
-                <p className="text-gray-600">{tech.tools}</p>
-              </div>
+                name={tech.name}
+                icon={tech.icon}
+                tools={tech.tools}
+              />
             ))}
           </div>
         </div>
@@ -513,14 +500,13 @@ export default function IndustriesWeServe() {
       {/* Why Choose Us Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-gray-900">
-              Why Choose Us
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Industry-leading expertise combined with a client-first approach
-            </p>
-          </div>
+          <SectionHeader
+            title="Why Work With Us"
+            subtitle="Most consultancies talk about transformation. We've actually done it, built products from scratch, scaled systems to millions of users, navigated regulatory audits, and shipped code that's still running years later."
+            className="text-center mb-12"
+            titleClassName="text-4xl font-bold mb-4 text-gray-900"
+            subtitleClassName="text-xl text-gray-600 max-w-3xl mx-auto"
+          />
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {whyChooseUs.map((item, index) => (
               <InsightCard

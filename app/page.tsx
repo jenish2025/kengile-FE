@@ -99,8 +99,8 @@ export default function Home() {
       <AnimatedHero
         title="Future-Ready IT Services"
         subtitle="Next-Generation Technology Partner"
-        description="We design, build, and manage future-ready IT infrastructure powered by AI, cloud, energy systems, blockchain, and satellite networks. As a full-stack IT services provider, we help enterprises scale, transform, and achieve results."
-        ctaText="Start Your Journey"
+        description="We design, build, and manage future-ready IT infrastructure powered by AI, cloud, energy systems, blockchain, and satellite networks. As a full-stack IT services provider, we help businesses boost efficiency, security, and overall performance."
+        ctaText="See Our Projects"
         ctaLink="/contact-us"
       />
 
@@ -149,18 +149,11 @@ export default function Home() {
             <SectionHeader
               pillText="Who We Are"
               title="About Kengile"
-              subtitle="Kengile is a next-generation IT services company building smart, energy-saving, decentralized infrastructures for the future internet."
+              subtitle="Kengile is a next-generation IT services company building smart, energy-saving, decentralized infrastructures for the future internet. From top technologies in AI, cloud computing, energy systems, blockchain, to satellite networks, we combine them in an innovative and customer-centric manner. Our work enables global companies to modernize, optimize, and transform with confidence in their digital setup."
               className="mb-0"
               titleClassName="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-primary-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent mb-6 !leading-tight"
-              subtitleClassName="text-xl md:text-2xl text-gray-700 mb-6 max-w-4xl mx-auto leading-relaxed font-medium"
+              // subtitleClassName="text-xl md:text-2xl text-gray-700 mb-6 max-w-4xl mx-auto leading-relaxed font-medium"
             />
-            <p className="text-lg text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-              From top technologies in AI, cloud computing, energy systems,
-              blockchain, to satellite networks, we combine them in an
-              innovative and customer-centric manner. Our work enables global
-              companies to modernize, optimize, and transform with confidence in
-              their digital setup.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -268,7 +261,7 @@ export default function Home() {
             subtitle="Our customized IT solutions help enterprises across industries solve unique business challenges and achieve measurable results."
             className="text-center mb-16"
             titleClassName="text-4xl md:text-5xl font-bold text-gradient mb-4"
-            subtitleClassName="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium"
+            // subtitleClassName="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium"
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ServiceCard
@@ -342,7 +335,6 @@ export default function Home() {
             subtitle="We specialize in AI, cloud, blockchain, and IT systems, using these advanced technology stacks to drive enterprise-grade projects and services."
             className="text-center mb-20"
             titleClassName="text-4xl md:text-5xl font-bold text-gradient mb-4"
-            subtitleClassName="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium"
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -461,7 +453,6 @@ export default function Home() {
             subtitle="Build advanced AI infrastructure through our innovation labs with research, development, and full-stack IT services."
             className="text-center mb-20"
             titleClassName="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 bg-clip-text text-transparent mb-6 !leading-tight"
-            subtitleClassName="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium"
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto mb-16">
@@ -550,7 +541,6 @@ export default function Home() {
             subtitle="Discover real-world success stories from our AI infrastructure projects that deliver measurable impact."
             className="text-center mb-20"
             titleClassName="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent mb-6 !leading-tight"
-            subtitleClassName="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium"
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto mb-16">
@@ -805,7 +795,6 @@ export default function Home() {
             subtitle="We deliver results that truly matter for businesses through innovation, deep expertise, and unwavering commitment to excellence."
             className="text-center mb-20"
             titleClassName="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-primary-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6 !leading-tight"
-            subtitleClassName="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium"
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
