@@ -4,11 +4,11 @@ import Section from "@/components/Section";
 import ServiceCard from "@/components/ServiceCard";
 import SectionHeader from "@/components/SectionHeader";
 import FeatureCard from "@/components/FeatureCard";
-import {
-  Brain,
-  Server,
-  Cloud,
-  Settings,
+import { 
+  Brain, 
+  Server, 
+  Cloud, 
+  Settings, 
   Database,
   Code,
   Zap,

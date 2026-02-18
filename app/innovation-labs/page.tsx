@@ -399,7 +399,7 @@ export default function InnovationLabs() {
         secondaryCtaLink="/contact-us"
       />
 
-      <section className="py-16 bg-white">
+        <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {impactMetrics.map((metric, index) => (
@@ -629,7 +629,7 @@ export default function InnovationLabs() {
             Innovation doesn't happen in isolation. We've designed multiple
             pathways for researchers, companies, and entrepreneurs to work
             alongside our teams.
-          </p>
+            </p>
           <div className="grid md:grid-cols-2 gap-8">
             {collaborationPrograms.map((program, index) => (
               <div

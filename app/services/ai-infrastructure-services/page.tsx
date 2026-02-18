@@ -216,7 +216,7 @@ export default function AIInfrastructureServices() {
               distributed computing, and ensure reliable scaling. Hardware and
               network performance are tuned for demanding AI workloads.
             </p>
-          </div>
+        </div>
           <div className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all">
             <div className="flex items-center mb-4">
               <span className="text-2xl font-bold text-primary-600 mr-3">3.</span>
@@ -329,16 +329,16 @@ export default function AIInfrastructureServices() {
               <h3 className="text-2xl font-semibold text-accent-900 mb-4">
                 What Sets Us Apart
               </h3>
-              <FeatureList
-                features={[
+            <FeatureList
+              features={[
                   "Proven Expertise: We possess vast experience in designing and deploying an infrastructure of artificial intelligence.",
                   "Scalable Solutions: Scalable solutions that are adaptable to GPU, cloud, or hybrid environments to support growing intelligence projects and applications.",
                   "End-to-End Support: Right from planning the architecture to optimizing and monitoring, we offer complete life cycle support to our clientele.",
                   "Security & Compliance: Enterprise-level security standards like SOC 2, HIPAA, and GDPR.",
                   "Cost Optimization: AI FinOps methods for optimal ROI (Return on Investment).",
                   "Seamless Integration: Compatible with existing workflows, CI/CD pipelines, and enterprise systems.",
-                ]}
-              />
+              ]}
+            />
             </div>
 
             <div className="bg-gradient-subtle rounded-2xl p-8 shadow-sm border border-accent-100">

@@ -1,1115 +1,685 @@
-import { Metadata } from "next";
-import Link from "next/link";
-import AnimatedHero from "@/components/AnimatedHero";
-import Section from "@/components/Section";
-import CaseStudyCard from "@/components/CaseStudyCard";
+import { Metadata } from 'next'
+import Link from 'next/link'
+import AnimatedHero from '@/components/AnimatedHero'
+import Section from '@/components/Section'
+import SectionHeader from '@/components/SectionHeader'
+import FAQ from '@/components/FAQ'
+import CaseStudyCard from '@/components/CaseStudyCard'
+import IndustryCard from '@/components/IndustryCard'
 import {
-  Link2,
-  Shield,
   Network,
-  Cpu,
-  Lock,
+  Shield,
   Database,
   Zap,
+  BarChart3,
   CheckCircle,
   TrendingUp,
   Users,
-  Globe,
   Server,
   Activity,
   Code,
-  Settings,
   Layers,
-  GitBranch,
-  Key,
-  BarChart3,
-  Clock,
-  DollarSign,
   ArrowRight,
-} from "lucide-react";
+  Cloud,
+  DollarSign,
+  Settings,
+} from 'lucide-react'
 
 export const metadata: Metadata = {
-  title:
-    "Blockchain Infrastructure Services | Enterprise Private & Hybrid Networks | Kengile",
+  title: 'Blockchain Infrastructure Services | Kengile',
   description:
-    "Design, deploy, and manage enterprise blockchain networks with 99.99% uptime. Hyperledger, Ethereum, Corda expertise for private chains, consortium networks, and hybrid architectures.",
+    'Build secure, scalable blockchain networks with Kengile’s Blockchain Infrastructure Services. Ensure high availability, optimized operations, and reliability.',
   keywords:
-    "blockchain infrastructure, private blockchain, enterprise blockchain, Hyperledger Fabric, Ethereum private, Corda, consortium blockchain, hybrid blockchain, distributed ledger, blockchain nodes, smart contracts",
-};
+    'blockchain infrastructure, enterprise blockchain, node infrastructure, validator nodes, BIaaS, distributed ledger, smart contracts, blockchain monitoring',
+}
 
 export default function BlockchainInfrastructureServices() {
   return (
     <>
       <AnimatedHero
         title="Blockchain Infrastructure Services"
-        subtitle="Enterprise Private & Hybrid Networks"
-        description="Design, deploy, and manage blockchain networks with 99.99% uptime, enterprise-grade security, and comprehensive governance frameworks."
+        subtitle="Build reliable blockchain networks that scale with your business"
+        description="Build reliable blockchain infrastructure with Kengile’s Blockchain Infrastructure Services. Deploy secure networks, maintain high availability, and scale decentralized systems with confidence."
+        ctaText="Start Free Assessment"
+        ctaLink="/contact-us"
+        secondaryCtaText="See Our Work"
+        secondaryCtaLink="/insights-case-studies"
       />
 
-      {/* Stats Section */}
-      <Section className="bg-gradient-to-br from-purple-50 via-pink-50 to-indigo-50 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM5MzMzZWEiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PGNpcmNsZSBjeD0iMyIgY3k9IjMiIHI9IjMiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-60"></div>
-
-        <div className="max-w-6xl mx-auto relative">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-              Trusted by Global Enterprises
-            </h2>
-            <p className="text-xl text-gray-600">
-              Delivering enterprise blockchain infrastructure at scale
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              {
-                icon: <Network className="w-10 h-10" />,
-                value: "150+",
-                label: "Networks Deployed",
-                color: "purple",
-              },
-              {
-                icon: <Server className="w-10 h-10" />,
-                value: "5,000+",
-                label: "Nodes Managed",
-                color: "green",
-              },
-              {
-                icon: <Activity className="w-10 h-10" />,
-                value: "99.99%",
-                label: "Uptime SLA",
-                color: "indigo",
-              },
-              {
-                icon: <Globe className="w-10 h-10" />,
-                value: "40+",
-                label: "Countries Served",
-                color: "purple",
-              },
-            ].map((stat, index) => (
-              <div
-                key={index}
-                className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 border-2 border-purple-100 hover:border-purple-300 hover:shadow-2xl transition-all duration-500 text-center group"
-              >
-                <div
-                  className={`w-16 h-16 bg-gradient-to-br from-${stat.color}-500 to-${stat.color}-600 rounded-2xl flex items-center justify-center mx-auto mb-4 text-white group-hover:scale-110 transition-transform`}
-                >
-                  {stat.icon}
-                </div>
-                <div
-                  className={`text-4xl font-black bg-gradient-to-r from-${stat.color}-600 to-${stat.color}-700 bg-clip-text text-transparent mb-2`}
-                >
-                  {stat.value}
-                </div>
-                <div className="text-sm text-gray-600 font-medium">
-                  {stat.label}
-                </div>
+      {/* Stats */}
+      <section className="py-16 bg-blue-50">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                100+
               </div>
-            ))}
+              <div className="text-lg font-semibold text-gray-900 mb-1">
+                Enterprise Networks Delivered
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                35%
+              </div>
+              <div className="text-lg font-semibold text-gray-900 mb-1">
+                Less Operational Overhead
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                99.99%
+              </div>
+              <div className="text-lg font-semibold text-gray-900 mb-1">
+                Transaction Network Uptime
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                24/7
+              </div>
+              <div className="text-lg font-semibold text-gray-900 mb-1">
+                Managed Blockchain Support
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/* Why section */}
+      <Section className="bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold text-gradient mb-6">
+            Why Blockchain Infrastructure Is Essential for Business Growth
+          </h2>
+          <p className="text-lg text-accent-700 mb-6">
+            Old and cumbersome infrastructure can be a barrier for blockchain initiatives. Centralized systems, old
+            infrastructure, and lack of interoperability can cause delays, limit the scope for scaling, and make things
+            difficult as Web3 adoption and regulatory pressures increase. A new blockchain infrastructure backbone can be
+            a game-changer: a secure, scalable, and reliable decentralized infrastructure.
+          </p>
+          <p className="text-lg text-accent-700 mb-8">
+            When node management is easy, performance is good, and things are automated, the focus can be on innovation,
+            not infrastructure upkeep. Kengile is built to support this new infrastructure, providing production-ready
+            infrastructure for organizations to scale with confidence.
+          </p>
         </div>
       </Section>
 
-      {/* Introduction */}
-      <Section className="bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-6">
-            Enterprise Blockchain Infrastructure Excellence
+      {/* Services */}
+      <Section className="bg-gradient-subtle">
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <h2 className="text-4xl font-bold text-gradient mb-4">
+            Blockchain Infrastructure Services Tailored to Your Business
           </h2>
-          <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-            Building enterprise blockchain infrastructure requires deep
-            expertise in distributed systems, cryptography, consensus
-            mechanisms, and network architecture. We design and deploy
-            blockchain networks tailored for enterprise use cases, including{" "}
-            <span className="font-semibold text-purple-600">
-              private chains
-            </span>
-            ,{" "}
-            <span className="font-semibold text-pink-600">
-              consortium networks
-            </span>
-            , and{" "}
-            <span className="font-semibold text-indigo-600">
-              hybrid architectures
-            </span>
-            .
+          <p className="text-lg text-accent-700">
+            Our team provides top-tier blockchain infrastructure services, ensuring security, scalability, and high
+            availability for your decentralized networks. We cover all key services for your blockchain infrastructure,
+            keeping your initiatives running smoothly and on track with your business needs.
           </p>
-          <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-            Our infrastructure solutions ensure high performance,
-            enterprise-grade security, regulatory compliance, and comprehensive
-            governance. From network design and smart contract deployment to
-            node management and 24/7 monitoring, we provide end-to-end
-            blockchain infrastructure services.
-          </p>
-          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 border-2 border-purple-200">
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                <Shield className="text-white w-6 h-6" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  Why Enterprise Blockchain?
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Public blockchains trade privacy and performance for
-                  decentralization. Enterprise blockchains flip this equation ,
-                  providing permissioned access, regulatory compliance, high
-                  throughput (1,000+ TPS), and sub-second finality while
-                  maintaining cryptographic security and auditability.
-                </p>
-              </div>
+        </div>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all">
+              <Server className="text-primary-600 mb-4" size={40} />
+              <h3 className="text-2xl font-semibold text-accent-900 mb-3">Node Infrastructure Development</h3>
+              <p className="text-accent-600">
+                Develop and deploy high-performance and reliable validator nodes, full nodes, and archive nodes for
+                real-time transaction processing across various blockchain networks.
+              </p>
+            </div>
+            <div className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all">
+              <Cloud className="text-primary-600 mb-4" size={40} />
+              <h3 className="text-2xl font-semibold text-accent-900 mb-3">Cloud Blockchain Platform Architecture</h3>
+              <p className="text-accent-600">
+                Develop cloud-based blockchain platforms on AWS, Azure, Google Cloud, or a combination of these.
+                Implement scalable and affordable Blockchain Infrastructure as a Service (BIaaS) for your enterprise.
+              </p>
+            </div>
+            <div className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all">
+              <Layers className="text-primary-600 mb-4" size={40} />
+              <h3 className="text-2xl font-semibold text-accent-900 mb-3">Distributed Ledger Solutions</h3>
+              <p className="text-accent-600">
+                Develop private, consortium, and hybrid blockchains with optimized storage, high-speed consensus, and
+                seamless integration across participants.
+              </p>
+            </div>
+            <div className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all">
+              <Activity className="text-primary-600 mb-4" size={40} />
+              <h3 className="text-2xl font-semibold text-accent-900 mb-3">Real-Time Blockchain Event Streaming</h3>
+              <p className="text-accent-600">
+                Implement real-time architectures using WebSockets, GraphQL, and other event-driven methods. React and
+                respond immediately to on-chain events for better decision-making.
+              </p>
+            </div>
+            <div className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all">
+              <BarChart3 className="text-primary-600 mb-4" size={40} />
+              <h3 className="text-2xl font-semibold text-accent-900 mb-3">Blockchain Analytics and Monitoring</h3>
+              <p className="text-accent-600">
+                Connect your infrastructure with analytics and monitoring tools for a better view of transactions,
+                network monitoring, performance evaluation, and business insights.
+              </p>
+            </div>
+            <div className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all">
+              <Shield className="text-primary-600 mb-4" size={40} />
+              <h3 className="text-2xl font-semibold text-accent-900 mb-3">Security and Compliance Frameworks</h3>
+              <p className="text-accent-600">
+                Develop cryptographically secure blockchain networks with robust security and compliance measures. Ensure
+                compliance with regulations like SOC 2, GDPR, and other industry standards for data integrity and
+                network trust.
+              </p>
             </div>
           </div>
         </div>
       </Section>
 
-      {/* Platform Expertise */}
-      <Section className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
-        <div className="absolute top-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl"></div>
-
-        <div className="max-w-6xl mx-auto relative">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black mb-4">
-              Enterprise Blockchain Platforms
-            </h2>
-            <p className="text-xl text-purple-200">
-              Deep expertise across leading enterprise blockchain technologies
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Hyperledger Fabric",
-                description:
-                  "Modular, permissioned blockchain platform with pluggable consensus, private data collections, and channel-based architecture.",
-                features: [
-                  "Pluggable Consensus",
-                  "Private Channels",
-                  "Smart Contracts (Chaincode)",
-                  "MSP Identity Management",
-                ],
-                useCases: "Supply Chain, Trade Finance, Healthcare",
-                performance: "20,000+ TPS",
-                language: "Go, JavaScript, Java",
-                gradient: "from-blue-500 to-cyan-600",
-                icon: <Layers className="w-12 h-12" />,
-              },
-              {
-                name: "Ethereum Private",
-                description:
-                  "Private Ethereum networks using Quorum, Hyperledger Besu, or Geth with enterprise features and privacy layers.",
-                features: [
-                  "EVM Compatible",
-                  "Privacy Transactions",
-                  "Smart Contracts (Solidity)",
-                  "Enterprise Authorization",
-                ],
-                useCases: "DeFi, Asset Tokenization, DAOs",
-                performance: "1,000+ TPS",
-                language: "Solidity, Vyper",
-                gradient: "from-purple-500 to-indigo-600",
-                icon: <Code className="w-12 h-12" />,
-              },
-              {
-                name: "R3 Corda",
-                description:
-                  "DLT platform designed for financial services with point-to-point architecture and legal prose integration.",
-                features: [
-                  "Point-to-Point",
-                  "Legal Contracts",
-                  "UTXO Model",
-                  "Notary Services",
-                ],
-                useCases: "Banking, Insurance, Securities",
-                performance: "500+ TPS",
-                language: "Kotlin, Java",
-                gradient: "from-pink-500 to-rose-600",
-                icon: <GitBranch className="w-12 h-12" />,
-              },
-            ].map((platform, index) => (
-              <div
-                key={index}
-                className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border-2 border-white/10 hover:border-purple-400/50 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 group"
-              >
-                <div
-                  className={`w-20 h-20 bg-gradient-to-br ${platform.gradient} rounded-2xl flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform`}
-                >
-                  {platform.icon}
-                </div>
-                <h3 className="text-2xl font-bold mb-3">{platform.name}</h3>
-                <p className="text-purple-200 mb-6 leading-relaxed">
-                  {platform.description}
-                </p>
-
-                <div className="space-y-4 mb-6">
-                  <div>
-                    <div className="text-xs font-bold text-purple-300 uppercase mb-2">
-                      Key Features
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {platform.features.map((feature, i) => (
-                        <span
-                          key={i}
-                          className="px-3 py-1 bg-white/10 rounded-full text-xs font-medium text-white"
-                        >
-                          {feature}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
-                    <div>
-                      <div className="text-xs text-purple-300 mb-1">
-                        Performance
-                      </div>
-                      <div className="font-bold text-white">
-                        {platform.performance}
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-xs text-purple-300 mb-1">
-                        Language
-                      </div>
-                      <div className="font-bold text-white">
-                        {platform.language}
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div className="text-xs text-purple-300 mb-1">
-                      Ideal For
-                    </div>
-                    <div className="text-sm text-white font-medium">
-                      {platform.useCases}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* Core Services */}
-      <Section className="bg-gradient-to-br from-purple-50 via-white to-pink-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-              Comprehensive Infrastructure Services
-            </h2>
-            <p className="text-xl text-gray-600">
-              End-to-end blockchain network design, deployment, and management
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <Link2 className="w-10 h-10" />,
-                title: "Network Architecture Design",
-                description:
-                  "Design private, consortium, or hybrid blockchain networks optimized for your specific use case, compliance requirements, and performance needs.",
-                features: [
-                  "Topology Planning",
-                  "Consensus Selection",
-                  "Channel Design",
-                  "Capacity Planning",
-                ],
-                gradient: "from-purple-500 to-purple-600",
-              },
-              {
-                icon: <Server className="w-10 h-10" />,
-                title: "Node Deployment & Management",
-                description:
-                  "Deploy and manage blockchain nodes across multi-cloud and hybrid infrastructure with high availability, automated failover, and disaster recovery.",
-                features: [
-                  "Multi-Cloud Deployment",
-                  "Auto-Scaling",
-                  "Load Balancing",
-                  "Backup & Recovery",
-                ],
-                gradient: "from-pink-500 to-pink-600",
-              },
-              {
-                icon: <Shield className="w-10 h-10" />,
-                title: "Security & Compliance",
-                description:
-                  "Implement comprehensive security controls including HSM integration, key management, network isolation, and regulatory compliance frameworks.",
-                features: [
-                  "HSM Integration",
-                  "Key Management",
-                  "Access Controls",
-                  "Audit Trails",
-                ],
-                gradient: "from-indigo-500 to-indigo-600",
-              },
-              {
-                icon: <Users className="w-10 h-10" />,
-                title: "Governance Frameworks",
-                description:
-                  "Establish governance models, permission management, and consensus mechanisms for secure and compliant multi-party blockchain operations.",
-                features: [
-                  "Permission Models",
-                  "Voting Mechanisms",
-                  "Policy Enforcement",
-                  "Member Onboarding",
-                ],
-                gradient: "from-purple-500 to-pink-600",
-              },
-              {
-                icon: <Code className="w-10 h-10" />,
-                title: "Smart Contract Development",
-                description:
-                  "Design, develop, and audit smart contracts with formal verification, security best practices, and comprehensive testing frameworks.",
-                features: [
-                  "Contract Design",
-                  "Security Audits",
-                  "Testing & QA",
-                  "Upgrade Patterns",
-                ],
-                gradient: "from-rose-500 to-red-600",
-              },
-              {
-                icon: <Activity className="w-10 h-10" />,
-                title: "Monitoring & Operations",
-                description:
-                  "24/7 monitoring, alerting, and incident response with comprehensive dashboards for network health, transaction throughput, and performance metrics.",
-                features: [
-                  "Real-time Monitoring",
-                  "Custom Dashboards",
-                  "Alerting",
-                  "Incident Response",
-                ],
-                gradient: "from-cyan-500 to-blue-600",
-              },
-            ].map((service, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-3xl p-8 border-2 border-purple-100 hover:border-purple-400 hover:shadow-2xl transition-all duration-500 group"
-              >
-                <div
-                  className={`w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-2xl flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform`}
-                >
-                  {service.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-gray-700 mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-                <div className="space-y-2">
-                  {service.features.map((feature, i) => (
-                    <div
-                      key={i}
-                      className="flex items-center space-x-2 text-sm text-gray-600"
-                    >
-                      <CheckCircle className="w-4 h-4 text-purple-600 flex-shrink-0" />
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* Technical Architecture */}
+      {/* Industries */}
       <Section className="bg-white">
+        <SectionHeader
+          title="Industries We Serve With Our Blockchain Infrastructure Expertise"
+          subtitle="At Kengile, we provide blockchain infrastructure as a service, customized to meet the requirements of different industries. Our experts develop infrastructure solutions that can be scaled up, secured, and made enterprise-ready, transforming how businesses use blockchain technology."
+          className="text-center mb-12"
+          titleClassName="text-4xl font-bold text-gradient mb-4"
+          subtitleClassName="text-lg text-accent-700 max-w-4xl mx-auto"
+        />
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-              Enterprise Blockchain Architecture
-            </h2>
-            <p className="text-xl text-gray-600">
-              Layered architecture for scalable, secure blockchain
-              infrastructure
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <IndustryCard
+              title="Financial Services"
+              description="We develop Blockchain Infrastructure Services for the financial sector to provide secure, compliant, and efficient transaction processing."
+              useCases={[
+                'Secure custody solutions for digital assets',
+                'Compliant token issuance solutions',
+                'Real-time settlement and clearing solutions',
+              ]}
+            />
+            <IndustryCard
+              title="Supply Chain"
+              description="We build blockchain infrastructure for the supply chain that is modern, flexible, and enterprise-ready."
+              useCases={[
+                'End-to-end supply chain visibility solutions',
+                'Automated smart contract solutions',
+                'Immutable audit trail solutions for compliance',
+              ]}
+            />
+            <IndustryCard
+              title="Healthcare & Life Sciences"
+              description="We develop blockchain infrastructure for healthcare that is secure, compliant, and enterprise-ready, providing solutions for patient data privacy and interoperability."
+              useCases={[
+                'HIPAA-compliant health data exchanges',
+                'Pharmaceutical supply chain tracking',
+                'Patient-controlled health record systems',
+              ]}
+            />
+            <IndustryCard
+              title="Retail & E-Commerce"
+              description="We equip retailers with blockchain infrastructure as a service for loyalty programs, authenticity verification, and customer engagement platforms."
+              useCases={[
+                'Tokenized loyalty and rewards programs',
+                'Product authenticity verification systems',
+                'Web3-based customer engagement platforms',
+              ]}
+            />
+            <IndustryCard
+              title="Government & Public Sector"
+              description="We develop scalable blockchain platforms for government entities for digital identity, voting systems, and transparent public records."
+              useCases={[
+                'Digital identity management systems',
+                'Transparent public procurement platforms',
+                'Immutable land registries',
+              ]}
+            />
+            <IndustryCard
+              title="Gaming & Digital Assets"
+              description="We deliver scalable blockchain infrastructure for gaming studios and NFT platforms."
+              useCases={[
+                'High-speed NFT minting platforms',
+                'Cross-game asset interoperability',
+                'Scalable gaming token economies',
+              ]}
+            />
           </div>
-
-          <div className="space-y-6">
-            {[
-              {
-                layer: "Application Layer",
-                components: [
-                  "Web3 APIs",
-                  "Mobile SDKs",
-                  "REST APIs",
-                  "GraphQL Endpoints",
-                  "WebSocket Streams",
-                ],
-                description:
-                  "Developer-friendly interfaces for blockchain interaction with comprehensive SDKs and documentation.",
-                icon: <Globe className="w-8 h-8" />,
-                gradient: "from-purple-500 to-purple-600",
-              },
-              {
-                layer: "Smart Contract Layer",
-                components: [
-                  "Business Logic",
-                  "Access Controls",
-                  "State Management",
-                  "Event Emissions",
-                  "Upgrade Patterns",
-                ],
-                description:
-                  "Audited smart contracts implementing business logic with formal verification and security best practices.",
-                icon: <Code className="w-8 h-8" />,
-                gradient: "from-pink-500 to-rose-600",
-              },
-              {
-                layer: "Consensus Layer",
-                components: [
-                  "Raft/PBFT/PoA",
-                  "Transaction Ordering",
-                  "Block Validation",
-                  "Finality Guarantees",
-                  "Fork Resolution",
-                ],
-                description:
-                  "Pluggable consensus mechanisms optimized for enterprise requirements with deterministic finality.",
-                icon: <GitBranch className="w-8 h-8" />,
-                gradient: "from-indigo-500 to-blue-600",
-              },
-              {
-                layer: "Network Layer",
-                components: [
-                  "P2P Communication",
-                  "TLS Encryption",
-                  "Node Discovery",
-                  "Message Broadcasting",
-                  "Network Isolation",
-                ],
-                description:
-                  "Secure peer-to-peer networking with mutual TLS, firewall rules, and network segmentation.",
-                icon: <Network className="w-8 h-8" />,
-                gradient: "from-cyan-500 to-teal-600",
-              },
-              {
-                layer: "Storage Layer",
-                components: [
-                  "State Database",
-                  "Block Storage",
-                  "Transaction Logs",
-                  "World State",
-                  "Backup & Archival",
-                ],
-                description:
-                  "Persistent storage with CouchDB, LevelDB, or PostgreSQL backends and comprehensive backup strategies.",
-                icon: <Database className="w-8 h-8" />,
-                gradient: "from-green-500 to-emerald-600",
-              },
-              {
-                layer: "Infrastructure Layer",
-                components: [
-                  "Kubernetes",
-                  "Docker",
-                  "Load Balancers",
-                  "HSMs",
-                  "Monitoring Stack",
-                ],
-                description:
-                  "Cloud-native infrastructure with container orchestration, auto-scaling, and enterprise-grade security.",
-                icon: <Server className="w-8 h-8" />,
-                gradient: "from-orange-500 to-red-600",
-              },
-            ].map((layer, index) => (
-              <div
-                key={index}
-                className="grid md:grid-cols-12 gap-0 bg-gradient-to-br from-slate-50 to-purple-50 rounded-3xl overflow-hidden border-2 border-purple-100 hover:border-purple-400 hover:shadow-2xl transition-all duration-500"
-              >
-                {/* Layer Info Panel */}
-                <div
-                  className={`md:col-span-3 bg-gradient-to-br ${layer.gradient} p-8 text-white relative overflow-hidden`}
-                >
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
-                  <div className="relative">
-                    <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4">
-                      {layer.icon}
-                    </div>
-                    <h3 className="text-2xl font-bold mb-2">{layer.layer}</h3>
-                    <p className="text-sm text-white/80">{layer.description}</p>
-                  </div>
-                </div>
-
-                {/* Components Panel */}
-                <div className="md:col-span-9 p-8">
-                  <div className="flex flex-wrap gap-3">
-                    {layer.components.map((component, i) => (
-                      <div
-                        key={i}
-                        className="px-4 py-2 bg-white rounded-xl border-2 border-purple-200 text-gray-700 font-semibold hover:border-purple-400 hover:shadow-lg transition-all"
-                      >
-                        {component}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* Security Features */}
-      <Section className="bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 text-white relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full opacity-10">
-          <div className="absolute top-20 right-20 w-96 h-96 bg-indigo-500 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 left-20 w-96 h-96 bg-purple-500 rounded-full blur-3xl"></div>
-        </div>
-
-        <div className="max-w-6xl mx-auto relative">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black mb-4">
-              Enterprise-Grade Security
-            </h2>
-            <p className="text-xl text-indigo-200">
-              Multi-layered security architecture for blockchain infrastructure
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                icon: <Key className="w-8 h-8" />,
-                title: "HSM Key Management",
-                description:
-                  "Hardware Security Modules (HSMs) for cryptographic key generation, storage, and signing with FIPS 140-2 Level 3 compliance.",
-              },
-              {
-                icon: <Lock className="w-8 h-8" />,
-                title: "Identity & Access",
-                description:
-                  "Certificate-based identity management with MSP (Membership Service Provider) and fine-grained RBAC permissions.",
-              },
-              {
-                icon: <Shield className="w-8 h-8" />,
-                title: "Network Isolation",
-                description:
-                  "VPC isolation, firewall rules, and network segmentation ensuring nodes communicate only with authorized peers.",
-              },
-              {
-                icon: <Database className="w-8 h-8" />,
-                title: "Data Encryption",
-                description:
-                  "TLS 1.3 for data in transit, AES-256 for data at rest, and private data collections for confidential transactions.",
-              },
-              {
-                icon: <Activity className="w-8 h-8" />,
-                title: "Audit Logging",
-                description:
-                  "Comprehensive audit trails of all transactions, access attempts, and configuration changes with tamper-proof logs.",
-              },
-              {
-                icon: <CheckCircle className="w-8 h-8" />,
-                title: "Smart Contract Audits",
-                description:
-                  "Security audits, formal verification, and automated testing to identify vulnerabilities before deployment.",
-              },
-            ].map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white/5 backdrop-blur-sm rounded-3xl p-6 border-2 border-white/10 hover:border-indigo-400/50 hover:shadow-2xl transition-all duration-500 group"
-              >
-                <div className="w-14 h-14 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                <p className="text-indigo-200 leading-relaxed text-sm">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* Benefits & ROI */}
-      <Section className="bg-gradient-to-br from-purple-50 via-pink-50 to-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-              Business Impact & ROI
-            </h2>
-            <p className="text-xl text-gray-600">
-              Measurable benefits of enterprise blockchain infrastructure
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: <DollarSign className="w-10 h-10" />,
-                metric: "60-80%",
-                label: "Cost Reduction",
-                description:
-                  "Eliminate intermediaries and reduce reconciliation overhead",
-                color: "green",
-              },
-              {
-                icon: <Clock className="w-10 h-10" />,
-                metric: "90%+",
-                label: "Faster Settlement",
-                description:
-                  "Real-time settlement vs. days with traditional systems",
-                color: "blue",
-              },
-              {
-                icon: <Shield className="w-10 h-10" />,
-                metric: "95%+",
-                label: "Fraud Reduction",
-                description: "Immutable records and cryptographic verification",
-                color: "purple",
-              },
-              {
-                icon: <TrendingUp className="w-10 h-10" />,
-                metric: "100%",
-                label: "Transparency",
-                description:
-                  "Full audit trails and real-time visibility for all parties",
-                color: "indigo",
-              },
-            ].map((benefit, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-3xl p-8 border-2 border-purple-100 hover:border-purple-400 hover:shadow-2xl transition-all duration-500 text-center group"
-              >
-                <div
-                  className={`w-16 h-16 bg-gradient-to-br from-${benefit.color}-500 to-${benefit.color}-600 rounded-2xl flex items-center justify-center mx-auto mb-4 text-white group-hover:scale-110 transition-transform`}
-                >
-                  {benefit.icon}
-                </div>
-                <div
-                  className={`text-5xl font-black bg-gradient-to-r from-${benefit.color}-600 to-${benefit.color}-700 bg-clip-text text-transparent mb-2`}
-                >
-                  {benefit.metric}
-                </div>
-                <div className="text-lg font-bold text-gray-900 mb-2">
-                  {benefit.label}
-                </div>
-                <p className="text-sm text-gray-600">{benefit.description}</p>
-              </div>
-            ))}
+          <div className="text-center mt-12">
+            <Link
+              href="/industries-we-serve"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 transition-all shadow-lg hover:shadow-xl"
+            >
+              View All Industries
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
           </div>
         </div>
       </Section>
 
       {/* Case Studies */}
-      <Section className="bg-white">
+      <Section className="bg-gradient-subtle">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-5xl font-black bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-              Success Stories
-            </h2>
-            <p className="text-xl text-gray-600">
-              Blockchain infrastructure deployments driving real business value
-            </p>
-          </div>
+          <SectionHeader
+            title="Our Client Success Stories"
+            subtitle="See how Kengile helps businesses transform their blockchain infrastructure to improve performance, reduce costs, and achieve operational excellence. These case studies showcase measurable results from real-world transformations."
+            className="text-center mb-12"
+            titleClassName="text-4xl font-bold text-gradient mb-4"
+            subtitleClassName="text-xl text-accent-600 max-w-4xl mx-auto"
+          />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <CaseStudyCard
-              title="Global Supply Chain Traceability Network"
-              industry="Logistics & Manufacturing"
-              challenge="A Fortune 500 manufacturing company needed end-to-end visibility across their multi-tier supply chain spanning 15 countries and 500+ suppliers. Existing systems had data silos, lack of real-time tracking, and no immutable audit trails , leading to $50M+ annual losses from counterfeiting, quality issues, and compliance penalties."
-              solution="Designed and deployed a Hyperledger Fabric blockchain network with 80+ nodes across 5 continents. Implemented 15+ smart contracts for product provenance, quality certifications, customs clearance, and warranty management. Integrated with SAP, Oracle ERP, and IoT sensor data. Created mobile apps for suppliers and consumer-facing product verification."
+              title="DeFi Trading Platform for Global Exchange"
+              industry="Financial Services"
+              challenge="A global financial exchange struggled with settlement delays and high transaction costs. Legacy infrastructure couldn't handle the volume of cross-border transactions, leading to failed trades and customer complaints."
+              solution="Kengile engineered a high-performance blockchain trading platform using Hyperledger and custom consensus mechanisms. We built real-time settlement pipelines processing thousands of transactions per second, with smart contracts automating compliance checks."
               results={[
-                "Reduced supply chain fraud by 95% with cryptographic provenance",
-                "Improved traceability from 5 days to real-time (<5 seconds)",
-                "Processed 10M+ transactions/month with 99.99% uptime",
-                "Reduced reconciliation costs by 70% ($15M annual savings)",
-                "Enabled product recalls 10x faster with precise tracking",
-                "Achieved ISO 28000 compliance across all tiers",
+                '65% reduction in settlement time',
+                '$12M annual cost savings',
+                '10K+ TPS achieved',
+                '99.99% uptime maintained',
               ]}
               delay={0}
             />
             <CaseStudyCard
-              title="Multi-Bank Trade Finance Consortium"
-              industry="Banking & Financial Services"
-              challenge="A consortium of 12 international banks needed to digitize trade finance processes that involved 5-10 day document verification cycles, 15-20% error rates in manual processing, and $500M+ tied up in working capital. Existing systems required trusted intermediaries and had no real-time settlement."
-              solution="Built a Corda-based private blockchain network with PoA consensus and 40+ validator nodes. Developed smart contracts for Letters of Credit, Bills of Lading, and trade documentation. Integrated with SWIFT, central bank systems, and customs APIs. Implemented HSM-based key management and regulatory compliance frameworks for 8 jurisdictions."
+              title="Supply Chain Traceability for Global Manufacturer"
+              industry="Manufacturing"
+              challenge="A global manufacturing corporation could not track components across 15 countries. Fragmented data prevented quality assurance and accurate compliance reporting, leading to recalls and regulatory penalties."
+              solution="Kengile built an enterprise supply chain platform on Polygon, unifying supplier data, IoT sensors, and manufacturing records. We implemented real-time traceability and predictive quality analytics using on-chain attestations."
               results={[
-                "Reduced trade finance processing from 7-10 days to 24 hours",
-                "Eliminated 85% of manual document verification errors",
-                "Freed up $400M+ in working capital through faster settlement",
-                "Reduced operational costs by 60% across all member banks",
-                "Achieved sub-second finality for payment settlements",
-                "Full regulatory compliance (Basel III, KYC/AML, GDPR)",
+                '45% reduction in recalls',
+                '$20M annual savings achieved',
+                '15 countries unified',
+                '100% compliance achieved',
               ]}
               delay={0.1}
             />
-            <CaseStudyCard
-              title="Healthcare Data Sharing Network"
-              industry="Healthcare & Life Sciences"
-              challenge="A regional healthcare network comprising 25 hospitals, 200+ clinics, and 5 insurance providers struggled with patient data interoperability. Medical record exchange took 3-7 days, led to duplicate tests costing $2B+ annually, and created patient safety risks. HIPAA compliance was complex with centralized data stores."
-              solution="Deployed a Hyperledger Fabric permissioned network with private data collections for PHI. Implemented FHIR-compliant smart contracts for consent management, data access controls, and audit logging. Integrated with Epic, Cerner, and Allscripts EHR systems. Built patient mobile app for consent management and medical record access."
-              results={[
-                "Enabled real-time medical record exchange across all providers",
-                "Reduced duplicate diagnostic tests by 40% ($800M savings)",
-                "Improved patient safety with complete medication history access",
-                "Achieved 100% HIPAA compliance with cryptographic audit trails",
-                "Processed 5M+ consent transactions with patient control",
-                "Reduced administrative overhead by 50% in records departments",
-              ]}
-              delay={0.2}
-            />
-            <CaseStudyCard
-              title="Energy Trading & Carbon Credits Platform"
-              industry="Energy & Utilities"
-              challenge="A renewable energy consortium needed a transparent marketplace for peer-to-peer energy trading and carbon credit tracking across 500+ solar farms, wind installations, and corporate buyers. Existing centralized systems had high intermediary fees (15-20%), 48-hour settlement times, and no transparent carbon credit verification."
-              solution="Built an Ethereum-based private network using Hyperledger Besu with ERC-20 tokens for energy credits and ERC-721 NFTs for carbon offsets. Developed smart contracts for automated energy trading, real-time settlement, and IoT-verified carbon credit issuance. Integrated with smart meters, grid operators, and renewable energy asset monitoring systems."
-              results={[
-                "Enabled real-time P2P energy trading with <2 second settlement",
-                "Reduced intermediary fees from 15% to 0.5% (300x improvement)",
-                "Verified and tokenized 2M+ tons of CO2 offset credits",
-                "Increased renewable energy utilization by 25% through efficient trading",
-                "Processed $50M+ in energy transactions with zero fraud",
-                "Achieved compliance with EU ETS and voluntary carbon markets",
-              ]}
-              delay={0.3}
-            />
+          </div>
+          <div className="text-center mt-12">
+            <Link
+              href="/insights-case-studies"
+              className="inline-flex items-center px-8 py-4 bg-white text-primary-700 border border-primary-200 hover:bg-primary-50 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-sm"
+            >
+              View More Case Studies
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
           </div>
         </div>
       </Section>
 
-      {/* Implementation Process */}
-      <Section className="bg-gradient-to-br from-slate-50 via-purple-50 to-pink-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-              Our Implementation Process
-            </h2>
-            <p className="text-xl text-gray-600">
-              Proven methodology for enterprise blockchain deployment
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            {[
-              {
-                phase: "Phase 1",
-                title: "Discovery & Design",
-                duration: "2-4 weeks",
-                activities: [
-                  "Use case analysis",
-                  "Platform selection",
-                  "Network topology design",
-                  "Consensus mechanism selection",
-                  "Governance framework",
-                  "Security architecture",
-                ],
-                deliverables:
-                  "Technical architecture document, network design specifications, smart contract requirements",
-                icon: <Settings className="w-8 h-8" />,
-                gradient: "from-purple-500 to-purple-600",
-              },
-              {
-                phase: "Phase 2",
-                title: "Development & Testing",
-                duration: "6-10 weeks",
-                activities: [
-                  "Smart contract development",
-                  "Node configuration",
-                  "Integration development",
-                  "Security auditing",
-                  "Performance testing",
-                  "Chaos engineering",
-                ],
-                deliverables:
-                  "Audited smart contracts, integration APIs, test results, security audit report",
-                icon: <Code className="w-8 h-8" />,
-                gradient: "from-pink-500 to-rose-600",
-              },
-              {
-                phase: "Phase 3",
-                title: "Deployment",
-                duration: "2-4 weeks",
-                activities: [
-                  "Infrastructure provisioning",
-                  "Node deployment",
-                  "Smart contract deployment",
-                  "Integration testing",
-                  "Security hardening",
-                  "Monitoring setup",
-                ],
-                deliverables:
-                  "Production blockchain network, deployed contracts, monitoring dashboards, runbooks",
-                icon: <Zap className="w-8 h-8" />,
-                gradient: "from-indigo-500 to-blue-600",
-              },
-              {
-                phase: "Phase 4",
-                title: "Operations & Support",
-                duration: "Ongoing",
-                activities: [
-                  "24/7 monitoring",
-                  "Incident response",
-                  "Performance optimization",
-                  "Scaling & upgrades",
-                  "Governance support",
-                  "Training & documentation",
-                ],
-                deliverables:
-                  "SLA-backed support, monthly reports, optimization recommendations, training materials",
-                icon: <Activity className="w-8 h-8" />,
-                gradient: "from-cyan-500 to-teal-600",
-              },
-            ].map((step, index) => (
-              <div
-                key={index}
-                className="grid md:grid-cols-12 gap-0 bg-white rounded-3xl overflow-hidden border-2 border-purple-200 hover:border-purple-400 hover:shadow-2xl transition-all duration-500"
-              >
-                {/* Phase Info */}
-                <div
-                  className={`md:col-span-3 bg-gradient-to-br ${step.gradient} p-8 text-white relative overflow-hidden`}
-                >
-                  <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
-                  <div className="relative">
-                    <div className="text-sm font-bold uppercase tracking-wider mb-2 text-white/80">
-                      {step.phase}
-                    </div>
-                    <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4">
-                      {step.icon}
-                    </div>
-                    <h3 className="text-2xl font-bold mb-2">{step.title}</h3>
-                    <div className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold">
-                      {step.duration}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Details */}
-                <div className="md:col-span-9 p-8">
-                  <div className="mb-6">
-                    <h4 className="text-sm font-bold text-purple-600 uppercase mb-3">
-                      Key Activities
-                    </h4>
-                    <div className="grid md:grid-cols-2 gap-3">
-                      {step.activities.map((activity, i) => (
-                        <div
-                          key={i}
-                          className="flex items-center space-x-2 text-gray-700"
-                        >
-                          <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0" />
-                          <span className="font-medium">{activity}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="pt-4 border-t border-purple-200">
-                    <h4 className="text-sm font-bold text-purple-600 uppercase mb-2">
-                      Deliverables
-                    </h4>
-                    <p className="text-gray-700">{step.deliverables}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* Technology Stack */}
+      {/* Benefits */}
       <Section className="bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-              Our Technology Stack
-            </h2>
-            <p className="text-xl text-gray-600">
-              Industry-leading tools and frameworks for blockchain
-              infrastructure
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              {
-                category: "Platforms",
-                technologies: [
-                  "Hyperledger Fabric",
-                  "Ethereum/Besu",
-                  "R3 Corda",
-                  "Hyperledger Sawtooth",
-                  "Quorum",
-                  "Polygon Edge",
-                ],
-                gradient: "from-purple-500 to-purple-600",
-              },
-              {
-                category: "Infrastructure",
-                technologies: [
-                  "Kubernetes",
-                  "Docker",
-                  "Terraform",
-                  "Ansible",
-                  "AWS/Azure/GCP",
-                  "Helm Charts",
-                ],
-                gradient: "from-pink-500 to-rose-600",
-              },
-              {
-                category: "Security",
-                technologies: [
-                  "HashiCorp Vault",
-                  "AWS KMS",
-                  "Thales HSM",
-                  "Certbot/Let's Encrypt",
-                  "OpenSSL",
-                  "Trivy/Anchore",
-                ],
-                gradient: "from-indigo-500 to-blue-600",
-              },
-              {
-                category: "Monitoring",
-                technologies: [
-                  "Prometheus",
-                  "Grafana",
-                  "Elasticsearch",
-                  "Jaeger",
-                  "PagerDuty",
-                  "Splunk",
-                ],
-                gradient: "from-cyan-500 to-teal-600",
-              },
-            ].map((stack, index) => (
-              <div
-                key={index}
-                className="bg-gradient-to-br from-slate-50 to-purple-50 rounded-3xl p-8 border-2 border-purple-200 hover:border-purple-400 hover:shadow-2xl transition-all duration-500"
-              >
-                <div
-                  className={`w-14 h-14 bg-gradient-to-br ${stack.gradient} rounded-2xl flex items-center justify-center mb-4 text-white`}
-                >
-                  <Layers className="w-7 h-7" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  {stack.category}
-                </h3>
-                <div className="space-y-2">
-                  {stack.technologies.map((tech, i) => (
-                    <div
-                      key={i}
-                      className="px-3 py-2 bg-white rounded-lg border border-purple-200 text-sm font-medium text-gray-700 hover:border-purple-400 transition-colors"
-                    >
-                      {tech}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* FAQ Section */}
-      <Section className="bg-gradient-to-br from-purple-50 via-pink-50 to-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-              Frequently Asked Questions
-            </h2>
-          </div>
-
-          <div className="space-y-6">
-            {[
-              {
-                question:
-                  "What's the difference between private and public blockchains?",
-                answer:
-                  "Public blockchains (Bitcoin, Ethereum mainnet) are permissionless , anyone can join, read, and write. Private/enterprise blockchains are permissioned , only authorized participants can join and transact. Private blockchains offer better performance (1,000+ TPS vs. 15-30 TPS), privacy, regulatory compliance, and governance controls , essential for enterprise use cases.",
-              },
-              {
-                question:
-                  "How long does it take to deploy a blockchain network?",
-                answer:
-                  "A production-ready enterprise blockchain network typically takes 12-18 weeks from kickoff to launch, including discovery (2-4 weeks), development (6-10 weeks), testing (2-3 weeks), and deployment (2-4 weeks). PoC/pilot deployments can be done in 4-6 weeks. Timeline depends on complexity, integration requirements, and governance structure.",
-              },
-              {
-                question: "What consensus mechanisms do you recommend?",
-                answer:
-                  "For enterprise blockchains, we recommend: Raft (high performance, 1000+ TPS, crash fault tolerant), PBFT (Byzantine fault tolerant, financial services), or PoA (Proof of Authority, energy efficient). Public blockchain consensus like PoW is unsuitable for enterprises due to energy consumption and slow finality.",
-              },
-              {
-                question: "How do you ensure regulatory compliance?",
-                answer:
-                  "We implement comprehensive compliance frameworks including: data residency controls (ensuring data stays in specific jurisdictions), GDPR-compliant privacy features (right to erasure via off-chain data), audit trails with tamper-proof logs, identity verification (KYC/AML integration), and smart contract governance for regulatory rules enforcement.",
-              },
-              {
-                question: "What are the ongoing operational costs?",
-                answer:
-                  "Operational costs depend on network size and SLA requirements. Typical monthly costs: small network (5-10 nodes) $5K-10K, medium network (20-50 nodes) $20K-40K, large network (100+ nodes) $80K-150K+. Includes infrastructure, monitoring, support, security updates, and backup/DR. Managed services typically cost 40-60% less than building in-house teams.",
-              },
-              {
-                question: "Can you migrate existing data to blockchain?",
-                answer:
-                  "Yes. We create ETL pipelines to migrate existing data from databases, ERPs, or legacy systems to blockchain. Typically involves: data validation and cleansing, batch migration of historical records, smart contract initialization with current state, parallel running of old and new systems during transition (2-4 weeks), and full cutover with rollback plan.",
-              },
-            ].map((faq, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-3xl p-8 border-2 border-purple-200 hover:border-purple-400 hover:shadow-xl transition-all duration-500"
-              >
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {faq.question}
-                </h3>
-                <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* CTA Section */}
-      <Section className="bg-gradient-to-br from-purple-600 via-pink-600 to-indigo-600 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzIiBjeT0iMyIgcj0iMyIvPjwvZz48L2c+PC9zdmc+')]"></div>
-        </div>
-
-        <div className="max-w-4xl mx-auto text-center relative">
-          <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-3xl flex items-center justify-center mx-auto mb-6">
-            <Network className="w-10 h-10" />
-          </div>
-          <h2 className="text-5xl font-black mb-6">
-            Ready to Deploy Your Blockchain Network?
-          </h2>
-          <p className="text-xl text-purple-100 mb-10 leading-relaxed max-w-3xl mx-auto">
-            Our blockchain infrastructure team has deployed 150+ enterprise
-            networks across financial services, supply chain, healthcare, and
-            energy sectors. Let&apos;s discuss your requirements and design a
-            blockchain solution that delivers measurable ROI.
-          </p>
-          <div className="flex flex-wrap justify-center gap-6">
-            <Link
-              href="/contact-us"
-              className="group inline-flex items-center space-x-3 px-10 py-5 bg-white text-purple-600 rounded-2xl font-bold text-lg hover:bg-purple-50 transition-all duration-300 hover:scale-105 shadow-2xl"
-            >
-              <span>Start Your Blockchain Project</span>
-              <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
-            </Link>
-            <Link
-              href="/insights/blockchain-enterprise"
-              className="inline-flex items-center space-x-3 px-10 py-5 bg-transparent border-2 border-white text-white rounded-2xl font-bold text-lg hover:bg-white/10 transition-all duration-300"
-            >
-              <span>Read Technical Deep Dive</span>
-            </Link>
-          </div>
-
-          <div className="mt-16 pt-12 border-t border-white/20">
-            <p className="text-purple-100 mb-4">
-              Trusted by leading enterprises worldwide
-            </p>
-            <div className="flex justify-center space-x-8 text-sm text-purple-200">
-              <span>✓ 150+ Networks Deployed</span>
-              <span>✓ 99.99% Uptime SLA</span>
-              <span>✓ 24/7 Expert Support</span>
-              <span>✓ Multi-Cloud Deployment</span>
+          <SectionHeader
+            title="How Your Business Benefits from Blockchain Infrastructure"
+            subtitle="Imagine a way into the decentralized economy that's easier and faster than ever before. Our blockchain infrastructure as a service gives you a better way to deploy your blockchain network, with easier operations, greater reliability, and greater flexibility to innovate."
+            className="text-center mb-12"
+            titleClassName="text-4xl font-bold text-gradient mb-4"
+            subtitleClassName="text-xl text-accent-600 max-w-4xl mx-auto"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all">
+              <Zap className="text-primary-600 mb-4" size={36} />
+              <h3 className="text-xl font-semibold text-accent-900 mb-3">Fast Blockchain Deployment</h3>
+              <p className="text-accent-600 text-sm">
+                Launch your enterprise network and decentralized applications in an instant with our ready-to-use nodes and
+                pipeline.
+              </p>
+            </div>
+            <div className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all">
+              <CheckCircle className="text-primary-600 mb-4" size={36} />
+              <h3 className="text-xl font-semibold text-accent-900 mb-3">Sturdy and Reliable Operations</h3>
+              <p className="text-accent-600 text-sm">
+                Keep your system always available with constant node monitoring and automatic failover. Ensure consistent
+                performance and uninterrupted blockchain operations.
+              </p>
+            </div>
+            <div className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all">
+              <TrendingUp className="text-primary-600 mb-4" size={36} />
+              <h3 className="text-xl font-semibold text-accent-900 mb-3">Growth-Ready Networks</h3>
+              <p className="text-accent-600 text-sm">
+                Scale your nodes, transactions, and smart contracts with ease to accommodate your growing network.
+              </p>
+            </div>
+            <div className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all">
+              <DollarSign className="text-primary-600 mb-4" size={36} />
+              <h3 className="text-xl font-semibold text-accent-900 mb-3">Cost-Optimized Infrastructure</h3>
+              <p className="text-accent-600 text-sm">
+                Optimize your infrastructure and cloud costs with our efficient consensus algorithm and smart infrastructure
+                management.
+              </p>
+            </div>
+            <div className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all">
+              <BarChart3 className="text-primary-600 mb-4" size={36} />
+              <h3 className="text-xl font-semibold text-accent-900 mb-3">Analytics and AI at Your Fingertips</h3>
+              <p className="text-accent-600 text-sm">
+                Take advantage of our on-chain analytics and AI-based insights and predictions integrated into your
+                blockchain infrastructure and AI infrastructure for smarter, predictive network insights.
+              </p>
+            </div>
+            <div className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all">
+              <Settings className="text-primary-600 mb-4" size={36} />
+              <h3 className="text-xl font-semibold text-accent-900 mb-3">Automated Network Management</h3>
+              <p className="text-accent-600 text-sm">
+                Simplify your operations with our automated network management and reduce your operational hassles.
+              </p>
             </div>
           </div>
         </div>
       </Section>
+
+      {/* Tech Stack */}
+      <Section className="bg-gradient-subtle">
+        <div className="max-w-6xl mx-auto">
+          <SectionHeader
+            title="Enterprise-Grade Technologies We Work With"
+            className="text-center mb-12"
+            titleClassName="text-4xl font-bold text-gradient mb-4"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl p-6 border border-accent-200">
+              <h3 className="text-xl font-semibold text-accent-900 mb-4">Blockchain Protocols</h3>
+              <p className="text-accent-700 text-sm">
+                Ethereum | Polygon | Solana | Hyperledger Fabric | Avalanche | Cosmos
+              </p>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-accent-200">
+              <h3 className="text-xl font-semibold text-accent-900 mb-4">Smart Contract Development</h3>
+              <p className="text-accent-700 text-sm">
+                Solidity | Rust | Move | Vyper | Hardhat | Foundry
+              </p>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-accent-200">
+              <h3 className="text-xl font-semibold text-accent-900 mb-4">Cloud Platforms</h3>
+              <p className="text-accent-700 text-sm">
+                AWS (EKS, Lambda) | Azure (AKS, Functions) | GCP (GKE, Cloud Run)
+              </p>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-accent-200">
+              <h3 className="text-xl font-semibold text-accent-900 mb-4">Node Infrastructure</h3>
+              <p className="text-accent-700 text-sm">
+                Geth | Lighthouse | Prysm | Tendermint | Substrate | Cosmos SDK
+              </p>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-accent-200">
+              <h3 className="text-xl font-semibold text-accent-900 mb-4">Indexing &amp; Data</h3>
+              <p className="text-accent-700 text-sm">
+                The Graph | Goldsky | Subsquid | Dune Analytics | Flipside
+              </p>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-accent-200">
+              <h3 className="text-xl font-semibold text-accent-900 mb-4">Security &amp; Monitoring</h3>
+              <p className="text-accent-700 text-sm">
+                OpenZeppelin | Slither | MythX | Tenderly | Forta | Chainlink
+              </p>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Process */}
+      <Section className="bg-white">
+        <div className="max-w-4xl mx-auto">
+          <SectionHeader
+            title="Our Blockchain Infrastructure Development Process"
+            subtitle="Kengile has a well-defined, production-level process for designing, implementing, and optimizing enterprise blockchain infrastructure. Each phase is designed with a focus on high availability, scalability, and security, while minimizing downtime."
+            className="text-center mb-12"
+            titleClassName="text-4xl font-bold text-gradient mb-4"
+            subtitleClassName="text-xl text-accent-600"
+          />
+          <div className="space-y-8">
+            <div className="flex items-start space-x-6">
+              <div className="flex-shrink-0 w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-xl">
+                01
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-accent-900 mb-2">Blockchain Network Assessment</h3>
+                <p className="text-accent-600">
+                  Review your blockchain infrastructure in its entirety, including nodes, smart contracts, and network
+                  configuration. Identify areas of inefficiency, security vulnerabilities, and scalability issues to
+                  develop a comprehensive implementation strategy.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start space-x-6">
+              <div className="flex-shrink-0 w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-xl">
+                02
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-accent-900 mb-2">
+                  Infrastructure Architecture &amp; Protocol Design
+                </h3>
+                <p className="text-accent-600">
+                  Design production-level infrastructure with optimal consensus algorithms, node configurations, network
+                  design, and security mechanisms. Technology selection is aligned with your strategy for performance,
+                  regulatory, and scalability requirements.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start space-x-6">
+              <div className="flex-shrink-0 w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-xl">
+                03
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-accent-900 mb-2">Node &amp; Smart Contract Deployment</h3>
+                <p className="text-accent-600">
+                  Deploy nodes and smart contracts, configure consensus algorithms, and perform security audits. Continuous
+                  validation ensures high availability, security, and optimal performance of the blockchain network.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start space-x-6">
+              <div className="flex-shrink-0 w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-xl">
+                04
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-accent-900 mb-2">Network Launch &amp; Optimization</h3>
+                <p className="text-accent-600">
+                  Launch with zero downtime, optimize performance, lower transaction costs, establish monitoring and
+                  notification systems, and provide knowledge transfer for effective management and scaling.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Why Choose Kengile */}
+      <Section className="bg-gradient-subtle">
+        <div className="max-w-7xl mx-auto">
+          <SectionHeader
+            title="Why Choose Kengile for Blockchain Infrastructure Solutions"
+            subtitle="Creating modern blockchain systems is a science of knowledge, planning, and execution. At Kengile, we have developed effective strategies and expertise to build a modern, secure, and highly optimized blockchain platform."
+            className="text-center mb-12"
+            titleClassName="text-4xl font-bold text-gradient mb-4"
+            subtitleClassName="text-lg text-accent-700 max-w-4xl mx-auto"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all">
+              <Users className="text-primary-600 mb-4" size={36} />
+              <h3 className="text-xl font-semibold text-accent-900 mb-3">Seasoned Blockchain Engineers</h3>
+              <p className="text-accent-600 text-sm">
+                Seasoned blockchain technology engineers will lead your project, ensuring the delivery of your platform
+                with maximum reliability and expert guidance.
+              </p>
+            </div>
+            <div className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all">
+              <Layers className="text-primary-600 mb-4" size={36} />
+              <h3 className="text-xl font-semibold text-accent-900 mb-3">Protocol Agnostic Approach</h3>
+              <p className="text-accent-600 text-sm">
+                Our solutions are designed with your business requirements, not vendor commissions, supporting any
+                blockchain protocol for maximum flexibility.
+              </p>
+            </div>
+            <div className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all">
+              <Activity className="text-primary-600 mb-4" size={36} />
+              <h3 className="text-xl font-semibold text-accent-900 mb-3">Zero Downtime Delivery</h3>
+              <p className="text-accent-600 text-sm">
+                Zero downtime is ensured with our phased delivery process, keeping your business running with minimal
+                disruption during migration and deployment.
+              </p>
+            </div>
+            <div className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all">
+              <TrendingUp className="text-primary-600 mb-4" size={36} />
+              <h3 className="text-xl font-semibold text-accent-900 mb-3">Measurable ROI</h3>
+              <p className="text-accent-600 text-sm">
+                We work with you to establish measurable metrics for your project and share weekly progress for
+                transparency and maximum business value.
+              </p>
+            </div>
+            <div className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all">
+              <Shield className="text-primary-600 mb-4" size={36} />
+              <h3 className="text-xl font-semibold text-accent-900 mb-3">Security First Design</h3>
+              <p className="text-accent-600 text-sm">
+                Security best practices are used to design your blockchain platform, protecting your critical
+                infrastructure and sensitive business information.
+              </p>
+            </div>
+            <div className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all">
+              <Server className="text-primary-600 mb-4" size={36} />
+              <h3 className="text-xl font-semibold text-accent-900 mb-3">24/7 Support</h3>
+              <p className="text-accent-600 text-sm">
+                We are with you every step of the way with 24/7 support for a minimum of 12 months after your go-live to
+                ensure operational excellence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Related Services */}
+      <Section className="bg-white">
+        <div className="max-w-6xl mx-auto">
+          <SectionHeader
+            title="Related Services"
+            subtitle="Complementary solutions to enhance your blockchain capabilities."
+            className="text-center mb-12"
+            titleClassName="text-4xl font-bold text-gradient mb-4"
+            subtitleClassName="text-xl text-accent-600"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Link
+              href="/services/cloud-hpc-engineering"
+              className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all group"
+            >
+              <Cloud className="text-primary-600 mb-4" size={32} />
+              <h3 className="text-xl font-semibold text-accent-900 mb-2 group-hover:text-primary-600 transition-colors">
+                Cloud &amp; HPC Engineering
+              </h3>
+              <p className="text-accent-600 mb-4">
+                Scale your compute infrastructure to support blockchain networks.
+              </p>
+              <span className="text-primary-600 font-semibold inline-flex items-center space-x-1">
+                <span>Learn More</span>
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+            <Link
+              href="/services/data-engineering-analytics"
+              className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all group"
+            >
+              <Database className="text-primary-600 mb-4" size={32} />
+              <h3 className="text-xl font-semibold text-accent-900 mb-2 group-hover:text-primary-600 transition-colors">
+                Data Engineering Services
+              </h3>
+              <p className="text-accent-600 mb-4">
+                Build data pipelines and manage distributed ledger data.
+              </p>
+              <span className="text-primary-600 font-semibold inline-flex items-center space-x-1">
+                <span>Learn More</span>
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+            <Link
+              href="/services/devops-sre-automation"
+              className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all group"
+            >
+              <Activity className="text-primary-600 mb-4" size={32} />
+              <h3 className="text-xl font-semibold text-accent-900 mb-2 group-hover:text-primary-600 transition-colors">
+                DevOps &amp; SRE Automation
+              </h3>
+              <p className="text-accent-600 mb-4">
+                Ensure reliable and secure blockchain deployment and operations.
+              </p>
+              <span className="text-primary-600 font-semibold inline-flex items-center space-x-1">
+                <span>Learn More</span>
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </Section>
+
+      {/* FAQ */}
+      <Section className="bg-gradient-subtle">
+        <div className="max-w-4xl mx-auto">
+          <FAQ
+            items={[
+              {
+                question: 'How long does it take to roll out a blockchain network?',
+                answer:
+                  'The duration of a blockchain network rollout varies based on the complexity of the project, such as the number of nodes, smart contracts, and existing infrastructure. Generally, a production-ready version takes between 8–16 weeks to develop. We follow a flexible development process, allowing you to experience the benefits of the network early on while keeping it stable, secure, and optimized.',
+              },
+              {
+                question: 'What kind of ROI should we expect, and when?',
+                answer:
+                  'ROI varies based on the specific use case, transaction volume, and automation strategies. In most instances, clients experience significant benefits within 3–6 months, such as cost savings, faster transactions, increased transparency, and enhanced security. The overall ROI will depend on how well your organization utilizes the power of blockchain.',
+              },
+              {
+                question: 'How do you protect the security of our blockchain network?',
+                answer:
+                  'We ensure that the security of the blockchain network is addressed at all stages of development. We implement a zero-trust policy, ensure that all data transmitted between nodes and smart contracts is encrypted, and constantly monitor the network with alerts for suspicious activity to prevent cyber attacks.',
+              },
+              {
+                question: 'Will the infrastructure meet regulatory requirements?',
+                answer:
+                  'Compliance is integrated into our design. Our solutions ensure your network is compliant with SOC 2, GDPR, CCPA, and various industry standards such as PCI-DSS for financial services.',
+              },
+              {
+                question: 'Can your team connect our blockchain infrastructure with existing systems?',
+                answer:
+                  'Yes. Our team is vendor-agnostic and ensures seamless integration with your legacy systems, smart contracts, ERP systems, and other enterprise applications.',
+              },
+              {
+                question: 'How will our team operate and maintain the blockchain infrastructure?',
+                answer:
+                  'We provide extensive knowledge transfer and training sessions to your teams so they can manage and monitor your blockchain infrastructure on their own, without relying entirely on our teams.',
+              },
+              {
+                question: 'Do you provide ongoing monitoring and support?',
+                answer:
+                  'Yes. Our managed blockchain solutions include 24x7 monitoring and support to ensure your blockchain infrastructure is always running optimally.',
+              },
+              {
+                question: 'How scalable is your blockchain infrastructure?',
+                answer:
+                  'Our blockchain solutions are designed to scale both horizontally and vertically, handling more nodes, more smart contracts, and more transactions. Scalability is integrated into our design from the beginning to accommodate your growing needs without compromising performance and reliability.',
+              },
+            ]}
+          />
+        </div>
+      </Section>
+
+      {/* CTA */}
+      <Section className="bg-primary-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Blockchain Infrastructure?
+          </h2>
+          <p className="text-xl text-white/90 mb-8">
+            Schedule a free consultation with our Blockchain Infrastructure Services experts to discuss your challenges
+            and explore how we can help you unlock the full potential of distributed ledger technology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact-us"
+              className="inline-block px-8 py-4 bg-white text-primary-600 hover:bg-white/90 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+            >
+              Start Free Assessment
+            </Link>
+            <Link
+              href="/contact-us"
+              className="inline-block px-8 py-4 bg-transparent border-2 border-white text-white hover:bg-white/10 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+            >
+              Schedule a Call
+            </Link>
+          </div>
+        </div>
+      </Section>
     </>
-  );
+  )
 }

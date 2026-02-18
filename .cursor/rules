@@ -1,0 +1,32 @@
+
+
+Act as a senior frontend engineer.
+
+Project Stack:
+- Next.js (App Router)
+- React
+- Tailwind CSS
+
+Component Rules:
+- Use functional components only.
+- Use "use client" only when required.
+- Prefer server components.
+
+Styling:
+- Tailwind CSS only.
+- Mobile-first responsive design.
+- Avoid inline styles.
+
+Code Quality:
+- Use clean, readable code.
+
+Performance:
+- Use next/image for images.
+
+  Please follow below instructions if your provide any md file for replace or upate page content
+- Take a time review all section in .md file
+- Make the order exact same as per the document
+- Remove unnecessary section from page if not present in provided file
+- Make content exact same
+- Create an use component as per requirement
+- Make design clean and clear
