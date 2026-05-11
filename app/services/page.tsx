@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import AnimatedHero from "@/components/AnimatedHero";
 import Section from "@/components/Section";
 import ServiceCard from "@/components/ServiceCard";
@@ -28,6 +29,8 @@ export const metadata: Metadata = {
     "Kengile offers a wide range of IT services, including AI-ready infrastructure, modern data centers, blockchain solutions, energy systems, and space connectivity to help businesses grow.",
   keywords:
     "IT services, AI infrastructure, cloud services, data center, blockchain, energy solutions, space connectivity",
+  robots: { index: true, follow: true },
+  alternates: { canonical: "https://kengile.com/services" },
 };
 
 export default function Services() {
@@ -266,6 +269,28 @@ export default function Services() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://kengile.com/services' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li><Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link></li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">Services</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
         title="Our Services"
         description="We offer a complete range of IT services that cover AI-ready infrastructure, secure data centers, advanced blockchain systems, and innovative energy platforms."

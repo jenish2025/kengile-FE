@@ -23,20 +23,56 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Green Cloud Services | Sustainable IT & Carbon-Aware Cloud',
+  title: 'Green Cloud & Sustainable IT Services | Carbon-Aware Cloud | Kengile',
   description:
-    'Reduce energy costs and carbon emissions with Kengile’s Green Cloud Services. Build sustainable IT infrastructure, optimize cloud systems, and meet ESG goals.',
+    'Reduce energy costs and carbon emissions with Kengile\'s Green Cloud & Sustainable IT Services. Build sustainable IT infrastructure, optimize cloud systems, and meet ESG goals.',
   keywords:
     'green cloud, sustainable IT, carbon neutral cloud, energy efficient data center, sustainable technology, green IT',
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: 'https://kengile.com/services/green-cloud-services',
+  },
 }
 
 export default function GreenCloudSustainableIT() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://kengile.com/services' },
+              { '@type': 'ListItem', position: 3, name: 'Green Cloud & Sustainable IT Services', item: 'https://kengile.com/services/green-cloud-services' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li>
+              <Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link>
+            </li>
+            <li className="text-accent-400">/</li>
+            <li>
+              <Link href="/services" className="text-accent-500 hover:text-primary-600 transition-colors">Services</Link>
+            </li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">Green Cloud & Sustainable IT Services</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
         title="Green Cloud Services"
-        subtitle="Sustainable IT & Carbon-Aware Cloud"
-        description="Build sustainable data centers and carbon-aware cloud systems with Kengile’s Green Cloud Services. Cut energy costs, reduce environmental impact, and achieve your organization’s sustainability goals."
+        subtitle="Carbon-Aware Cloud for a Greener Future"
+        description="Build sustainable data centers and carbon-aware cloud systems with Kengile's Green Cloud Services. Cut energy costs, reduce environmental impact, and achieve your organization's sustainability goals."
         ctaText="Start Free Assessment"
         ctaLink="/contact-us"
         secondaryCtaText="See Our Work"
@@ -171,7 +207,7 @@ export default function GreenCloudSustainableIT() {
       <Section className="bg-white">
         <SectionHeader
           title="Industries We Serve"
-          subtitle="Kengile provides Green Cloud Solutions for each industry’s specific needs. Our experts design sustainable, robust, and optimized infrastructure that reduces environmental footprints while increasing business value."
+          subtitle="Kengile provides Green Cloud Solutions for each industry's specific needs. Our experts design sustainable, robust, and optimized infrastructure that reduces environmental footprints while increasing business value."
           className="text-center mb-12"
           titleClassName="text-4xl font-bold text-gradient mb-4"
           subtitleClassName="text-lg text-accent-700 max-w-4xl mx-auto"
@@ -235,7 +271,7 @@ export default function GreenCloudSustainableIT() {
           </div>
           <div className="text-center mt-12">
             <Link
-              href="/industries-we-serve"
+              href="/our-industry-expertise"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 transition-all shadow-lg hover:shadow-xl"
             >
               View All Industries
@@ -272,7 +308,7 @@ export default function GreenCloudSustainableIT() {
             <CaseStudyCard
               title="Energy & Utilities Smart Grid Sustainable Infrastructure"
               industry="Energy & Utilities"
-              challenge="A large energy company had an outdated IT infrastructure that wasted excess energy and was not scalable with the company’s overall goal of a clean energy future. They required an IT infrastructure that reflected their clean energy vision."
+              challenge="A large energy company had an outdated IT infrastructure that wasted excess energy and was not scalable with the company's overall goal of a clean energy future. They required an IT infrastructure that reflected their clean energy vision."
               solution="Kengile developed a sustainable IT infrastructure with edge computing and energy-efficient data centers, featuring real-time energy optimization and carbon measurement for the entire system."
               results={[
                 'IT energy consumption reduced by 55%',

@@ -10,6 +10,14 @@ export const metadata: Metadata = {
     "We design, build, and manage future-ready IT infrastructure , integrating AI, cloud, energy systems, blockchain, and satellite networks for global enterprises.",
   keywords:
     "AI infrastructure, cloud services, data center, blockchain, space connectivity, IT services, future technology",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://kengile.com"),
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title:
       "Future-Ready IT Services | AI • Cloud • Energy • Blockchain • Space",

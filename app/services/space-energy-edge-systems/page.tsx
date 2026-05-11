@@ -9,11 +9,38 @@ export const metadata: Metadata = {
   title: 'Space Energy & Edge IT | AI-Powered Infrastructure Solutions',
   description: 'Build AI-optimized energy management and edge computing systems for space networks and remote environments.',
   keywords: 'space energy, edge computing space, satellite edge computing, space infrastructure, orbital systems',
+  robots: { index: true, follow: true },
+  alternates: { canonical: 'https://kengile.com/services/space-energy-edge-systems' },
 }
 
 export default function SpaceEnergyEdgeSystems() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://kengile.com/services' },
+              { '@type': 'ListItem', position: 3, name: 'Space Energy & Edge IT', item: 'https://kengile.com/services/space-energy-edge-systems' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li><Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link></li>
+            <li className="text-accent-400">/</li>
+            <li><Link href="/services" className="text-accent-500 hover:text-primary-600 transition-colors">Services</Link></li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">Space Energy & Edge IT</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
         title="Space Energy & Edge Systems"
         subtitle="AI-Powered Infrastructure Solutions"

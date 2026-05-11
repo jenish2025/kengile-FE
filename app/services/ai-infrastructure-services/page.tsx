@@ -36,6 +36,8 @@ export const metadata: Metadata = {
     "End-to-end AI infrastructure services , GPU cloud setup, distributed training, MLOps pipelines, and performance optimization.",
   keywords:
     "AI infrastructure, GPU cloud, MLOps, machine learning infrastructure, distributed training, AI cloud services",
+  robots: { index: true, follow: true },
+  alternates: { canonical: 'https://kengile.com/services/ai-infrastructure-services' },
 };
 
 export default function AIInfrastructureServices() {
@@ -110,6 +112,31 @@ export default function AIInfrastructureServices() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://kengile.com/services' },
+              { '@type': 'ListItem', position: 3, name: 'AI Infrastructure Services', item: 'https://kengile.com/services/ai-infrastructure-services' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li><Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link></li>
+            <li className="text-accent-400">/</li>
+            <li><Link href="/services" className="text-accent-500 hover:text-primary-600 transition-colors">Services</Link></li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">AI Infrastructure Services</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
         title="AI Infrastructure Services"
         subtitle="AI Infrastructure Services"
@@ -163,7 +190,7 @@ export default function AIInfrastructureServices() {
         <div className="max-w-4xl mx-auto">
           <SectionHeader
             title="Why AI Infrastructure Matters for Enterprise AI"
-            subtitle="Success in AI requires more than model capabilities. An organization that lacks proper infrastructure will experience slow training times, cost escalation in the cloud, security concerns, and deployment unpredictability. At Kengile, our AI infrastructure services aim for a strong, scalable, and production-ready environment for experimentation, growth, and more."
+            subtitle={<>Success in AI requires more than model capabilities. An organization that lacks proper infrastructure will experience slow training times, cost escalation in the cloud, security concerns, and deployment unpredictability. At Kengile, our <strong>AI infrastructure services</strong> aim for a strong, scalable, and production-ready environment for experimentation, growth, and more.</>}
             className="text-center mb-8"
             titleClassName="text-4xl font-bold text-gradient mb-6"
             subtitleClassName="text-lg text-accent-700 max-w-3xl mx-auto"
@@ -216,7 +243,7 @@ export default function AIInfrastructureServices() {
               distributed computing, and ensure reliable scaling. Hardware and
               network performance are tuned for demanding AI workloads.
             </p>
-        </div>
+          </div>
           <div className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all">
             <div className="flex items-center mb-4">
               <span className="text-2xl font-bold text-primary-600 mr-3">3.</span>
@@ -329,16 +356,16 @@ export default function AIInfrastructureServices() {
               <h3 className="text-2xl font-semibold text-accent-900 mb-4">
                 What Sets Us Apart
               </h3>
-            <FeatureList
-              features={[
+              <FeatureList
+                features={[
                   "Proven Expertise: We possess vast experience in designing and deploying an infrastructure of artificial intelligence.",
                   "Scalable Solutions: Scalable solutions that are adaptable to GPU, cloud, or hybrid environments to support growing intelligence projects and applications.",
                   "End-to-End Support: Right from planning the architecture to optimizing and monitoring, we offer complete life cycle support to our clientele.",
                   "Security & Compliance: Enterprise-level security standards like SOC 2, HIPAA, and GDPR.",
                   "Cost Optimization: AI FinOps methods for optimal ROI (Return on Investment).",
                   "Seamless Integration: Compatible with existing workflows, CI/CD pipelines, and enterprise systems.",
-              ]}
-            />
+                ]}
+              />
             </div>
 
             <div className="bg-gradient-subtle rounded-2xl p-8 shadow-sm border border-accent-100">
@@ -461,10 +488,10 @@ export default function AIInfrastructureServices() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gradient mb-4">
-            Real-World Success Stories
+              Real-World Success Stories
             </h2>
             <p className="text-xl text-accent-600">
-            Our AI infrastructure solutions have helped businesses across industries scale efficiently, optimize performance, and achieve measurable results. Here, we showcase how Kengile’s expertise delivers real-world impact for enterprise AI initiatives.
+              Our AI infrastructure solutions have helped businesses across industries scale efficiently, optimize performance, and achieve measurable results. Here, we showcase how Kengile’s expertise delivers real-world impact for enterprise AI initiatives.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -704,7 +731,7 @@ export default function AIInfrastructureServices() {
         </div>
       </Section>
 
-     
+
 
       {/* Related Services */}
       <Section className="bg-white">

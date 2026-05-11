@@ -46,6 +46,8 @@ export const metadata: Metadata = {
     "We deliver future-ready IT services across infrastructure, AI, cloud, blockchain, and satellite networks to accelerate enterprise growth. Start your journey.",
   keywords:
     "AI infrastructure, cloud services, data center, blockchain, space connectivity, IT services, future technology",
+  robots: { index: true, follow: true },
+  alternates: { canonical: "https://kengile.com" },
 };
 
 export default function Home() {
@@ -152,7 +154,7 @@ export default function Home() {
               subtitle="Kengile is a next-generation IT services company building smart, energy-saving, decentralized infrastructures for the future internet. From top technologies in AI, cloud computing, energy systems, blockchain, to satellite networks, we combine them in an innovative and customer-centric manner. Our work enables global companies to modernize, optimize, and transform with confidence in their digital setup."
               className="mb-0"
               titleClassName="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-primary-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent mb-6 !leading-tight"
-              // subtitleClassName="text-xl md:text-2xl text-gray-700 mb-6 max-w-4xl mx-auto leading-relaxed font-medium"
+            // subtitleClassName="text-xl md:text-2xl text-gray-700 mb-6 max-w-4xl mx-auto leading-relaxed font-medium"
             />
           </div>
 
@@ -198,7 +200,7 @@ export default function Home() {
           </div>
 
           <div className="text-center">
-            <Link href="/about-us">
+            <Link href="/about-kengile">
               <button className="group px-10 py-5 bg-gradient-to-r from-primary-600 via-indigo-600 to-purple-600 text-white hover:from-primary-700 hover:via-indigo-700 hover:to-purple-700 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-indigo-500/50 inline-flex items-center space-x-3">
                 <span>Learn More About Us</span>
                 <ArrowRight
@@ -261,54 +263,54 @@ export default function Home() {
             subtitle="Our customized IT solutions help enterprises across industries solve unique business challenges and achieve measurable results."
             className="text-center mb-16"
             titleClassName="text-4xl md:text-5xl font-bold text-gradient mb-4"
-            // subtitleClassName="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium"
+          // subtitleClassName="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium"
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ServiceCard
               title="Space Technology"
               description="We work with space innovators to enhance satellite connectivity, process deep-space data, and enable edge computing engineered for mission-critical environments."
-              href="/industries-we-serve"
+              href="/our-industry-expertise"
               icon={<Rocket size={32} />}
               delay={0}
             />
             <ServiceCard
               title="Telecommunications"
               description="Our experts enable telecom providers to gain unprecedented network performance with 5G-ready infrastructure, cloud-native cores, and AI-driven optimization."
-              href="/industries-we-serve"
+              href="/our-industry-expertise"
               icon={<Network size={32} />}
               delay={0.1}
             />
             <ServiceCard
               title="Energy & Utilities"
               description="As a trusted technology partner, we enable utilities to adopt Artificial Intelligence and IoT for smarter power forecasting, automation of smart grids, and precise energy distribution."
-              href="/industries-we-serve"
+              href="/our-industry-expertise"
               icon={<Zap size={32} />}
               delay={0.2}
             />
             <ServiceCard
               title="Financial Services"
               description="Our teams create secure digital finance ecosystems, blockchain-supported settlement systems, and high-performance architectures for today's financial operations."
-              href="/industries-we-serve"
+              href="/our-industry-expertise"
               icon={<Shield size={32} />}
               delay={0.3}
             />
             <ServiceCard
               title="Manufacturing"
               description="We help industrial organizations with IoT-enabled operations, real-time monitoring, predictive maintenance, and automation for large-scale production."
-              href="/industries-we-serve"
+              href="/our-industry-expertise"
               icon={<Factory size={32} />}
               delay={0.4}
             />
             <ServiceCard
               title="Healthcare & Life Sciences"
               description="Through secure data platforms, AI-powered analytics, and high-performance computing for research, healthcare, and life sciences organizations can innovate in care delivery."
-              href="/industries-we-serve"
+              href="/our-industry-expertise"
               icon={<FlaskConical size={32} />}
               delay={0.5}
             />
           </div>
           <div className="text-center mt-12">
-            <Link href="/industries-we-serve">
+            <Link href="/our-industry-expertise">
               <button className="group px-8 py-4 bg-transparent border-2 border-primary-600 text-primary-600 hover:bg-primary-50 hover:border-primary-700 rounded-xl font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center space-x-2 shadow-lg hover:shadow-xl">
                 <span>Explore All Industries</span>
                 <ArrowRight
@@ -850,7 +852,7 @@ export default function Home() {
       </Section>
 
       {/* Careers */}
-      <Section className="bg-gradient-to-br from-accent-50 via-primary-50 to-accent-50 relative overflow-hidden">
+      {/* <Section className="bg-gradient-to-br from-accent-50 via-primary-50 to-accent-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyNTYzZWIiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTAgMGg0MHY0MEgwVjB6bTQwIDQwaDQwdjQwSDQwVjQweiIvPjwvZz48L2c+PC9zdmc+')] opacity-50"></div>
         <div className="relative">
           <SectionHeader
@@ -896,7 +898,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </Section>
+      </Section> */}
 
       {/* CTA Section */}
       <Section className="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 overflow-hidden">

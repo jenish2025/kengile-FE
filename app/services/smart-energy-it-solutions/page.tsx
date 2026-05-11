@@ -9,16 +9,52 @@ import IndustryCard from '@/components/IndustryCard'
 import { Zap, BarChart3, Database, Cloud, Shield, Settings, ArrowRight, CheckCircle, TrendingUp, Server, Users, DollarSign, Activity, Eye, Leaf, Satellite } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Smart Energy IT Services for Modern Energy Infrastructure | Kengile',
-  description: 'Modernize energy operations with Kengile\'s smart energy IT services. Enable real-time monitoring, analytics, and scalable energy platforms for efficiency.',
+  title: 'Smart Energy IT Solutions for Modern Energy Infrastructure | Kengile',
+  description: 'Modernize energy operations with Kengile\'s smart energy IT solutions. Enable real-time monitoring, analytics, and scalable energy platforms for efficiency.',
   keywords: 'smart energy, energy IT solutions, grid optimization, power forecasting, energy analytics, IoT energy',
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: 'https://kengile.com/services/smart-energy-it-solutions',
+  },
 }
 
 export default function SmartEnergyITSolutions() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://kengile.com/services' },
+              { '@type': 'ListItem', position: 3, name: 'Smart Energy IT Solutions', item: 'https://kengile.com/services/smart-energy-it-solutions' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li>
+              <Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link>
+            </li>
+            <li className="text-accent-400">/</li>
+            <li>
+              <Link href="/services" className="text-accent-500 hover:text-primary-600 transition-colors">Services</Link>
+            </li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">Smart Energy IT Solutions</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
-        title="Smart Energy IT Services"
+        title="Smart Energy IT Solutions"
         subtitle="Transform your energy operations"
         description="Transform your energy operations with our comprehensive smart energy IT services. Build intelligent grids, real-time monitoring systems, and AI-powered analytics that optimize consumption, reduce costs, and accelerate sustainability goals."
         ctaText="Start Free Assessment"
@@ -86,7 +122,7 @@ export default function SmartEnergyITSolutions() {
             Smart Energy IT Services Tailored to Your Business
           </h2>
           <p className="text-lg text-accent-700">
-            At Kengile, we provide smart energy IT services that align with your business objectives. We analyze your current state and provide practical IT solutions to increase efficiency, reliability, and sustainability across all aspects of your business.
+            At Kengile, we provide <strong>smart energy IT services</strong> that align with your business objectives. We analyze your current state and provide practical IT solutions to increase efficiency, reliability, and sustainability across all aspects of your business.
           </p>
         </div>
         <div className="max-w-6xl mx-auto">
@@ -150,7 +186,7 @@ export default function SmartEnergyITSolutions() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <IndustryCard
               title="Utilities & Power Generation"
-              description="We engineer smart energy IT Solutions for utilities to ensure secure, reliable, and efficient grid operations. Our solutions support renewable integration, demand forecasting, and operational intelligence."
+              description={<>We engineer <strong><em>smart energy IT solutions</em></strong> for utilities to ensure secure, reliable, and efficient grid operations. Our solutions support renewable integration, demand forecasting, and operational intelligence.</>}
               useCases={[
                 'Unify grid data across substations for holistic insights',
                 'Build compliant data pipelines for regulatory reporting',
@@ -159,7 +195,7 @@ export default function SmartEnergyITSolutions() {
             />
             <IndustryCard
               title="Real Estate"
-              description="Kengile delivers modern energy management infrastructure for commercial buildings. Our services support building automation, occupancy optimization, and sustainability reporting."
+              description={<>Kengile delivers modern <strong><em>smart energy IT solutions</em></strong> for commercial buildings. Our services support building automation, occupancy optimization, and sustainability reporting.</>}
               useCases={[
                 'Build building-wide energy consumption dashboards',
                 'Automate HVAC optimization with predictive analytics',
@@ -168,7 +204,7 @@ export default function SmartEnergyITSolutions() {
             />
             <IndustryCard
               title="Manufacturing"
-              description="We engineer energy solutions to handle high-consumption manufacturing operations. Our infrastructure supports process optimization and reduces energy costs."
+              description={<>We engineer <strong><em>smart energy IT solutions</em></strong> to handle high-consumption manufacturing operations. Our infrastructure supports process optimization and reduces energy costs.</>}
               useCases={[
                 'Build energy consumption profiles per production line',
                 'Enable real-time demand response capabilities',
@@ -177,7 +213,7 @@ export default function SmartEnergyITSolutions() {
             />
             <IndustryCard
               title="Smart Cities & Residential"
-              description="We help municipalities and developers leverage smart meter data for grid optimization and sustainability. Our solutions support smart city energy initiatives."
+              description={<>We help municipalities and developers leverage <strong><em>smart energy IT solutions</em></strong> for grid optimization and sustainability. Our solutions support smart city energy initiatives.</>}
               useCases={[
                 'Integrate AMI data for comprehensive usage analytics',
                 'Build real-time grid monitoring dashboards',
@@ -186,7 +222,7 @@ export default function SmartEnergyITSolutions() {
             />
             <IndustryCard
               title="Government & Public Sector"
-              description="Kengile builds scalable energy platforms for government agencies to power sustainability initiatives and compliance reporting."
+              description={<>Kengile builds scalable <strong><em>smart energy IT solutions</em></strong> for government agencies to power sustainability initiatives and compliance reporting.</>}
               useCases={[
                 'Build agency-wide energy performance dashboards',
                 'Enable automated compliance reporting',
@@ -195,7 +231,7 @@ export default function SmartEnergyITSolutions() {
             />
             <IndustryCard
               title="Transportation"
-              description="We engineer energy solutions for EV fleet management, charging infrastructure, and route optimization. Our real-time platforms enable operational excellence."
+              description={<>We engineer <strong><em>smart energy IT solutions</em></strong> for EV fleet management, charging infrastructure, and route optimization. Our real-time platforms enable operational excellence.</>}
               useCases={[
                 'Build real-time EV charging management platforms',
                 'Enable predictive maintenance analytics',
@@ -205,7 +241,7 @@ export default function SmartEnergyITSolutions() {
           </div>
           <div className="text-center mt-12">
             <Link
-              href="/industries-we-serve"
+              href="/our-industry-expertise"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 transition-all shadow-lg hover:shadow-xl"
             >
               View All Industries
@@ -308,7 +344,7 @@ export default function SmartEnergyITSolutions() {
               <Activity className="text-primary-600 mb-4" size={36} />
               <h3 className="text-xl font-semibold text-accent-900 mb-3">Operational Reliability with SRE Automation</h3>
               <p className="text-accent-600 text-sm">
-                Our SRE automation practices reduce downtime, automate monitoring and alerting, and ensure your energy systems stay reliable at scale.
+                Our <Link href="/services/devops-sre-automation" className="text-primary-600 hover:underline">SRE automation</Link> practices reduce downtime, automate monitoring and alerting, and ensure your energy systems stay reliable at scale.
               </p>
             </div>
             <div className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all">
@@ -519,7 +555,7 @@ export default function SmartEnergyITSolutions() {
             subtitleClassName="text-xl text-accent-600"
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Link href="/services/green-cloud-sustainable-it" className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all group">
+            <Link href="/services/green-cloud-services" className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all group">
               <Leaf className="text-primary-600 mb-4" size={32} />
               <h3 className="text-xl font-semibold text-accent-900 mb-2 group-hover:text-primary-600 transition-colors">Green Cloud Sustainable IT</h3>
               <p className="text-accent-600 mb-4">Optimize energy-efficient IT systems for smarter energy management</p>

@@ -31,11 +31,40 @@ export const metadata: Metadata = {
     'Build secure, scalable blockchain networks with Kengile’s Blockchain Infrastructure Services. Ensure high availability, optimized operations, and reliability.',
   keywords:
     'blockchain infrastructure, enterprise blockchain, node infrastructure, validator nodes, BIaaS, distributed ledger, smart contracts, blockchain monitoring',
+  robots: { index: true, follow: true },
+  alternates: {
+    canonical: 'https://kengile.com/services/blockchain-infrastructure-services',
+  },
 }
 
 export default function BlockchainInfrastructureServices() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://kengile.com/services' },
+              { '@type': 'ListItem', position: 3, name: 'Blockchain Infrastructure Services', item: 'https://kengile.com/services/blockchain-infrastructure-services' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li><Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link></li>
+            <li className="text-accent-400">/</li>
+            <li><Link href="/services" className="text-accent-500 hover:text-primary-600 transition-colors">Services</Link></li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">Blockchain Infrastructure Services</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
         title="Blockchain Infrastructure Services"
         subtitle="Build reliable blockchain networks that scale with your business"
@@ -241,7 +270,7 @@ export default function BlockchainInfrastructureServices() {
           </div>
           <div className="text-center mt-12">
             <Link
-              href="/industries-we-serve"
+              href="/our-industry-expertise"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 transition-all shadow-lg hover:shadow-xl"
             >
               View All Industries

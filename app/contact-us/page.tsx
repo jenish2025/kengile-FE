@@ -1,13 +1,48 @@
-"use client";
-
+import { Metadata } from 'next'
+import Link from 'next/link'
 import AnimatedHero from "@/components/AnimatedHero";
 import Section from "@/components/Section";
 import ContactUsForm from "@/components/ContactUsForm";
 import { Mail, Phone, MapPin } from "lucide-react";
 
+export const metadata: Metadata = {
+  title: 'Contact Us | Get in Touch with Kengile',
+  description: 'Connect with Kengile\'s AI, energy, and cloud experts. Partner with us to transform your IT infrastructure for the next decade and beyond.',
+  keywords: 'contact Kengile, IT services contact, AI cloud consulting, get in touch',
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: 'https://kengile.com/contact-us',
+  },
+}
+
 export default function ContactUs() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'Contact Us', item: 'https://kengile.com/contact-us' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li><Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link></li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">Contact Us</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
         title="Contact Us"
         subtitle="Let's Build the Future Together"

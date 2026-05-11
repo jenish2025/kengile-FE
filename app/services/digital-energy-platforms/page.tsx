@@ -9,11 +9,38 @@ export const metadata: Metadata = {
   title: 'Digital Energy Platforms | IoT, Automation & Analytics',
   description: 'Integrate sensors, IoT, and predictive analytics to optimize energy use across large-scale IT and industrial environments.',
   keywords: 'digital energy platform, IoT energy, energy automation, predictive analytics, smart energy management',
+  robots: { index: true, follow: true },
+  alternates: { canonical: 'https://kengile.com/services/digital-energy-platforms' },
 }
 
 export default function DigitalEnergyPlatforms() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://kengile.com/services' },
+              { '@type': 'ListItem', position: 3, name: 'Digital Energy Platforms', item: 'https://kengile.com/services/digital-energy-platforms' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li><Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link></li>
+            <li className="text-accent-400">/</li>
+            <li><Link href="/services" className="text-accent-500 hover:text-primary-600 transition-colors">Services</Link></li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">Digital Energy Platforms</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
         title="Digital Energy Platforms"
         subtitle="IoT, Automation & Analytics"

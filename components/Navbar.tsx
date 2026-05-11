@@ -97,7 +97,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "/" },
 
-    { name: "About", href: "/about-us" },
+    { name: "About", href: "/about-kengile" },
     {
       name: "Services",
       href: "/services",
@@ -139,7 +139,7 @@ const Navbar = () => {
         },
         {
           name: "Green Cloud",
-          href: "/services/green-cloud-sustainable-it",
+          href: "/services/green-cloud-services",
           icon: "🌱",
         },
         {
@@ -154,7 +154,7 @@ const Navbar = () => {
         },
       ],
     },
-    { name: "Industries", href: "/industries-we-serve" },
+    { name: "Industries", href: "/our-industry-expertise" },
     { name: "Innovation", href: "/innovation-labs" },
     { name: "Insights", href: "/insights-case-studies" },
     { name: "Careers", href: "/careers" },

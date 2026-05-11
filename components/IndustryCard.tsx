@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 interface IndustryCardProps {
   title: string;
-  description: string;
+  description: ReactNode;
   useCases: string[];
   icon?: ReactNode;
 }

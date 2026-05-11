@@ -9,11 +9,38 @@ export const metadata: Metadata = {
   title: 'Renewable Energy Automation | AI & IoT Solutions for Power Sector',
   description: 'Automate and monitor renewable energy operations with advanced AI and IoT infrastructure.',
   keywords: 'renewable energy automation, solar automation, wind energy, AI power sector, IoT renewable energy',
+  robots: { index: true, follow: true },
+  alternates: { canonical: 'https://kengile.com/services/renewable-energy-automation' },
 }
 
 export default function RenewableEnergyAutomation() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://kengile.com/services' },
+              { '@type': 'ListItem', position: 3, name: 'Renewable Energy Automation', item: 'https://kengile.com/services/renewable-energy-automation' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li><Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link></li>
+            <li className="text-accent-400">/</li>
+            <li><Link href="/services" className="text-accent-500 hover:text-primary-600 transition-colors">Services</Link></li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">Renewable Energy Automation</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
         title="Renewable Energy Automation"
         subtitle="AI & IoT Solutions for Power Sector"

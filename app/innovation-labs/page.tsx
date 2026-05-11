@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import AnimatedHero from "@/components/AnimatedHero";
 import Section from "@/components/Section";
 import ServiceCard from "@/components/ServiceCard";
@@ -35,6 +36,13 @@ export const metadata: Metadata = {
     "Discover our innovation labs driving breakthroughs in AI infrastructure, blockchain ecosystems, and sustainable IT systems.",
   keywords:
     "innovation labs, R&D, research and development, technology innovation, AI research, blockchain research",
+  alternates: {
+    canonical: "https://kengile.com/innovation-labs",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function InnovationLabs() {
@@ -389,6 +397,28 @@ export default function InnovationLabs() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'Innovation Labs', item: 'https://kengile.com/innovation-labs' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li><Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link></li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">Innovation Labs</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
         title="Innovation Labs"
         subtitle="Future-Driven IT Research & Development"
@@ -619,8 +649,8 @@ export default function InnovationLabs() {
       >
         <div className="container mx-auto px-4">
           <SectionHeader
-            title="Collaboration Programs"
-            subtitle="Let's Build the Future Together"
+            pillText="Collaboration Programs"
+            title="Let's Build the Future Together"
             className="text-center mb-6"
             titleClassName="text-4xl font-bold mb-4 text-gray-900"
             subtitleClassName="text-xl text-gray-600 max-w-2xl mx-auto"

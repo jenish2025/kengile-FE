@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import Image from "next/image";
 import AnimatedHero from "@/components/AnimatedHero";
 import Section from "@/components/Section";
@@ -25,11 +26,17 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Us | Global IT Services Partner for AI & Infrastructure",
-  description:
-    "Learn how we combine IT expertise, AI innovation, cloud strength, and modern energy solutions to create sustainable and intelligent infrastructure for the future of digital business.",
+  title: "About Us - Kengile",
+  description: "Kengile has been an advanced IT services provider since 2018, dedicated to helping businesses grow with innovative technology solutions and real impact.",
   keywords:
     "IT services company, AI infrastructure, cloud services, technology partner, digital transformation",
+  alternates: {
+    canonical: "https://kengile.com/about-kengile",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function AboutUs() {
@@ -207,6 +214,28 @@ export default function AboutUs() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'About Kengile', item: 'https://kengile.com/about-kengile' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li><Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link></li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">About Kengile</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
         title="About Kengile"
         subtitle="Technology Partner for the Future"
@@ -275,9 +304,9 @@ export default function AboutUs() {
           />
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-gradient-to-br from-primary-50 to-white border border-primary-200 rounded-2xl p-10">
-              <h2 className="text-3xl font-bold text-accent-900 mb-6">
+              <h3 className="text-3xl font-bold text-accent-900 mb-6">
                 Our Mission
-              </h2>
+              </h3>
               <p className="text-lg text-accent-700 leading-relaxed mb-4">
                 Our mission is to help organizations worldwide build their
                 sophisticated IT infrastructure, unlocking the potential of new
@@ -291,9 +320,9 @@ export default function AboutUs() {
               </p>
             </div>
             <div className="bg-gradient-to-br from-accent-50 to-white border border-accent-200 rounded-2xl p-10">
-              <h2 className="text-3xl font-bold text-accent-900 mb-6">
+              <h3 className="text-3xl font-bold text-accent-900 mb-6">
                 Our Vision
-              </h2>
+              </h3>
               <p className="text-lg text-accent-700 leading-relaxed mb-4">
                 Our vision is to become the most trusted partner for the next
                 generation of smart and sustainable infrastructure, fueling
@@ -476,14 +505,12 @@ export default function AboutUs() {
               {milestones.map((milestone, index) => (
                 <div
                   key={milestone.year}
-                  className={`flex items-center ${
-                    index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-                  }`}
+                  className={`flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+                    }`}
                 >
                   <div
-                    className={`w-1/2 ${
-                      index % 2 === 0 ? "pr-12 text-right" : "pl-12 text-left"
-                    }`}
+                    className={`w-1/2 ${index % 2 === 0 ? "pr-12 text-right" : "pl-12 text-left"
+                      }`}
                   >
                     <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-accent-200">
                       <div className="text-3xl font-bold text-primary-600 mb-2">

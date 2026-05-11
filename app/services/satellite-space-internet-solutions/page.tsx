@@ -14,11 +14,38 @@ export const metadata: Metadata = {
     'Transform connectivity with Kengile’s Satellite & Space Internet Solutions. Build global networks, enable real-time communication, and leverage AI-powered analytics to bridge the digital divide and connect the unconnected.',
   keywords:
     'satellite internet, space connectivity, satellite network, low earth orbit, LEO, GEO, global connectivity, VSAT, satellite IT services',
+  robots: { index: true, follow: true },
+  alternates: { canonical: 'https://kengile.com/services/satellite-space-internet-solutions' },
 }
 
 export default function SatelliteSpaceInternetSolutions() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://kengile.com/services' },
+              { '@type': 'ListItem', position: 3, name: 'Satellite & Space Internet Solutions', item: 'https://kengile.com/services/satellite-space-internet-solutions' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li><Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link></li>
+            <li className="text-accent-400">/</li>
+            <li><Link href="/services" className="text-accent-500 hover:text-primary-600 transition-colors">Services</Link></li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">Satellite & Space Internet Solutions</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
         title="Satellite & Space Internet Solutions"
         subtitle="Space Connectivity IT Services"
@@ -230,7 +257,7 @@ export default function SatelliteSpaceInternetSolutions() {
           </div>
           <div className="text-center mt-12">
             <Link
-              href="/industries-we-serve"
+              href="/our-industry-expertise"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 transition-all shadow-lg hover:shadow-xl"
             >
               View All Industries

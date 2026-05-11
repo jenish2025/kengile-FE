@@ -15,11 +15,40 @@ export const metadata: Metadata = {
   title: 'Cloud & HPC Engineering | Multi-Cloud & Compute Services',
   description: 'Design hybrid cloud and HPC systems that deliver scalability, security, and AI-ready compute efficiency.',
   keywords: 'cloud engineering, HPC, high performance computing, hybrid cloud, multi-cloud, cloud architecture',
+  robots: { index: true, follow: true },
+  alternates: {
+    canonical: 'https://kengile.com/services/cloud-hpc-engineering',
+  },
 }
 
 export default function CloudHPCEngineering() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://kengile.com/services' },
+              { '@type': 'ListItem', position: 3, name: 'Cloud & HPC Engineering', item: 'https://kengile.com/services/cloud-hpc-engineering' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li><Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link></li>
+            <li className="text-accent-400">/</li>
+            <li><Link href="/services" className="text-accent-500 hover:text-primary-600 transition-colors">Services</Link></li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">Cloud & HPC Engineering</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
         title="Cloud & HPC Engineering Services"
         subtitle="Cloud & HPC Engineering Services"
@@ -98,7 +127,7 @@ export default function CloudHPCEngineering() {
               <Cloud className="text-primary-600 mb-4" size={40} />
               <h3 className="text-2xl font-semibold text-accent-900 mb-3">Hybrid Cloud Architecture</h3>
               <p className="text-accent-600">
-                Our cloud architects collaborate closely with your team to architect and implement hybrid architectures that integrate seamlessly with public cloud, private cloud, and on-premises infrastructure. Through our cloud &amp; HPC engineering services, we have enabled enterprises to reduce latency by 60% while retaining complete data sovereignty.
+                Our cloud architects collaborate closely with your team to architect and implement hybrid architectures that integrate seamlessly with public cloud, private cloud, and on-premises infrastructure. Through our <strong>cloud &amp; HPC engineering services</strong>, we have enabled enterprises to reduce latency by 60% while retaining complete data sovereignty.
               </p>
             </div>
             <div className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all">
@@ -153,71 +182,83 @@ export default function CloudHPCEngineering() {
       <Section className="bg-white">
         <SectionHeader
           title="Cloud and HPC Engineering Built Around Industry Workloads"
-          subtitle="At Kengile, cloud and HPC engineering is driven by the working realities of each industry. We engineer hybrid cloud and high-performance computing environments that meet the sector-specific needs of each industry, including data intensity, latency sensitivity, regulatory requirements, and scalability needs."
+          subtitle={<>At Kengile, <strong><em>cloud and HPC engineering</em></strong> is driven by the working realities of each industry. We engineer hybrid cloud and high-performance computing environments that meet the sector-specific needs of each industry, including data intensity, latency sensitivity, regulatory requirements, and scalability needs.</>}
           className="text-center mb-12"
           titleClassName="text-4xl font-bold text-gradient mb-4"
           subtitleClassName="text-lg text-accent-700 max-w-4xl mx-auto"
         />
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <IndustryCard
+            <FeatureCard
+              icon={<FlaskConical size={36} className="text-white" />}
               title="Healthcare and Life Sciences"
               description="In the healthcare and life sciences industry, data volumes, regulatory requirements, and reliability are not negotiable. Our engineers design cloud and HPC platforms that meet research-driven computation and clinical workloads without sacrificing security and availability."
-              useCases={[
-                'High-throughput genomic and biomedical research',
-                'AI-enabled medical imaging and diagnostics',
-                'Secure management of regulated patient and clinical data',
+              features={[
+                "High-throughput genomic and biomedical research",
+                "AI-enabled medical imaging and diagnostics",
+                "Secure management of regulated patient and clinical data",
               ]}
+              colorTheme="blue"
             />
-            <IndustryCard
+            <FeatureCard
+              icon={<BarChart3 size={36} className="text-white" />}
               title="Financial Services and Banking"
               description="In the financial services industry, milliseconds count, and accuracy is paramount. Kengile engineers cloud and HPC platforms that meet latency-sensitive workloads, complex analytics, and rigorous regulatory requirements."
-              useCases={[
-                'Large-scale risk modeling and financial simulations',
-                'Real-time fraud detection and transaction monitoring',
-                'Compute scalability for compliance and stress testing',
+              features={[
+                "Large-scale risk modeling and financial simulations",
+                "Real-time fraud detection and transaction monitoring",
+                "Compute scalability for compliance and stress testing",
               ]}
+              colorTheme="green"
             />
-            <IndustryCard
+            <FeatureCard
+              icon={<Cpu size={36} className="text-white" />}
               title="Manufacturing"
               description="For manufacturing companies, computing performance is a critical factor in manufacturing efficiency and innovation. Kengile’s cloud and HPC platforms support simulation-driven design, operation, and real-time analytics on the factory floor."
-              useCases={[
-                'Digital twins and engineering simulation',
-                'Predictive maintenance and AI-driven quality assurance',
-                'Real-time analytics for smart manufacturing infrastructure',
+              features={[
+                "Digital twins and engineering simulation",
+                "Predictive maintenance and AI-driven quality assurance",
+                "Real-time analytics for smart manufacturing infrastructure",
               ]}
+              colorTheme="orange"
             />
-            <IndustryCard
+            <FeatureCard
+              icon={<Network size={36} className="text-white" />}
               title="Media and Telecommunications"
               description="Media and telecommunication infrastructure require high throughput and low latency. Our cloud and HPC platforms are designed to handle large amounts of data while ensuring consistent performance."
-              useCases={[
-                'High-performance media processing and rendering',
-                'Network analytics and performance optimization',
-                'Scalable compute and storage for content delivery networks',
+              features={[
+                "High-performance media processing and rendering",
+                "Network analytics and performance optimization",
+                "Scalable compute and storage for content delivery networks",
               ]}
+              colorTheme="purple"
             />
-            <IndustryCard
+            <FeatureCard
+              icon={<DollarSign size={36} className="text-white" />}
               title="Retail and E-Commerce"
               description="In retail and e-commerce, customer experience is driven by speed, analytics, and elasticity. Kengile’s cloud and HPC platforms support real-time analytics and peak-load operation."
-              useCases={[
-                'Personalization and recommendation systems',
-                'Demand forecasting and dynamic pricing engines',
-                'Elastic compute for seasonal and promotional traffic',
+              features={[
+                "Personalization and recommendation systems",
+                "Demand forecasting and dynamic pricing engines",
+                "Elastic compute for seasonal and promotional traffic",
               ]}
+              colorTheme="teal"
             />
-            <IndustryCard
+            <FeatureCard
+              icon={<Server size={36} className="text-white" />}
               title="Information Technology and Enterprise Platforms"
               description="In enterprise IT, multiple workloads need to work seamlessly together in hybrid environments. Our engineers design cloud and HPC platforms to support mission-critical applications at scale."
-              useCases={[
-                'Hybrid cloud and HPC orchestration',
-                'Enterprise AI and analytics workloads',
-                'Performance and cost optimization across infrastructure',
+              features={[
+                "Hybrid cloud and HPC orchestration",
+                "Enterprise AI and analytics workloads",
+                "Performance and cost optimization across infrastructure",
               ]}
+              colorTheme="cyan"
             />
           </div>
           <div className="text-center mt-12">
             <Link
-              href="/industries-we-serve"
+              href="/our-industry-expertise"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 transition-all shadow-lg hover:shadow-xl"
             >
               View All Industries
@@ -248,7 +289,7 @@ export default function CloudHPCEngineering() {
                 'Reduced infrastructure costs by 55%',
                 'Eliminated vendor lock-in through a multi-cloud strategy',
                 'Improved simulation throughput by 40%',
-                'Achieved 99.95% availability across all cloud environments',
+                // 'Achieved 99.95% availability across all cloud environments',
               ]}
               delay={0}
             />
@@ -306,7 +347,7 @@ export default function CloudHPCEngineering() {
             <FeatureCard
               icon={<FlaskConical className="text-white" size={36} />}
               title="Scientific Computing & Simulations"
-              description="Our HPC engineers design clusters that deliver petascale performance. We work with research teams at universities and national labs to solve the most computationally intensive scientific problems."
+              description="Our HPC engineers design clusters that deliver petascale performance. We work with research teams at universities and national labs."
               features={[
                 "Petascale performance clusters",
                 "Research collaboration",

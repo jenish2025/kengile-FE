@@ -7,9 +7,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const routes = [
     '',
-    '/about-us',
+    '/about-kengile',
     '/services',
-    '/industries-we-serve',
+    '/our-industry-expertise',
     '/contact-us',
     '/innovation-labs',
     '/insights-case-studies',
@@ -23,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services/ai-application-development',
     // Energy & Sustainability
     '/services/smart-energy-it-solutions',
-    '/services/green-cloud-sustainable-it',
+    '/services/green-cloud-services',
     '/services/digital-energy-platforms',
     '/services/renewable-energy-automation',
     // Blockchain & Digital Finance

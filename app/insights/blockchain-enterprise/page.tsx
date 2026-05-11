@@ -25,11 +25,38 @@ export const metadata: Metadata = {
     "Case studies on how enterprises are leveraging blockchain for supply chain, identity, and financial services.",
   keywords:
     "enterprise blockchain, smart contracts, supply chain, DeFi, Web3, distributed ledger technology",
+  robots: { index: true, follow: true },
+  alternates: { canonical: 'https://kengile.com/insights/blockchain-enterprise' },
 };
 
 export default function BlockchainEnterprisePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'Insights', item: 'https://kengile.com/insights-case-studies' },
+              { '@type': 'ListItem', position: 3, name: 'Blockchain in Enterprise', item: 'https://kengile.com/insights/blockchain-enterprise' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li><Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link></li>
+            <li className="text-accent-400">/</li>
+            <li><Link href="/insights-case-studies" className="text-accent-500 hover:text-primary-600 transition-colors">Insights</Link></li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">Blockchain in Enterprise</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
         title="Blockchain in Enterprise"
         subtitle="Real-World Applications & ROI"

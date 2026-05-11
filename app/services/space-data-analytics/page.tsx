@@ -9,11 +9,38 @@ export const metadata: Metadata = {
   title: 'Space Data Analytics | AI & Cloud Platforms for SpaceTech',
   description: 'Use AI and data engineering to analyze satellite imagery and deliver predictive insights for space and earth observation.',
   keywords: 'space data analytics, satellite imagery, earth observation, space data processing, satellite analytics, AI space data',
+  robots: { index: true, follow: true },
+  alternates: { canonical: 'https://kengile.com/services/space-data-analytics' },
 }
 
 export default function SpaceDataAnalytics() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://kengile.com/services' },
+              { '@type': 'ListItem', position: 3, name: 'Space Data Analytics', item: 'https://kengile.com/services/space-data-analytics' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li><Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link></li>
+            <li className="text-accent-400">/</li>
+            <li><Link href="/services" className="text-accent-500 hover:text-primary-600 transition-colors">Services</Link></li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">Space Data Analytics</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
         title="Space Data Analytics"
         subtitle="AI & Cloud Platforms for SpaceTech"

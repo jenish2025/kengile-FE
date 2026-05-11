@@ -15,17 +15,17 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ title, description, href, icon, delay = 0 }: ServiceCardProps) => {
   const [isHovered, setIsHovered] = useState(false)
-  
+
   // Mouse position tracking for 3D tilt effect
   const x = useMotionValue(0)
   const y = useMotionValue(0)
-  
+
   const mouseXSpring = useSpring(x)
   const mouseYSpring = useSpring(y)
-  
+
   const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["7.5deg", "-7.5deg"])
   const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-7.5deg", "7.5deg"])
-  
+
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect()
     const width = rect.width
@@ -37,7 +37,7 @@ const ServiceCard = ({ title, description, href, icon, delay = 0 }: ServiceCardP
     x.set(xPct)
     y.set(yPct)
   }
-  
+
   const handleMouseLeave = () => {
     x.set(0)
     y.set(0)
@@ -63,9 +63,9 @@ const ServiceCard = ({ title, description, href, icon, delay = 0 }: ServiceCardP
       {/* Decorative gradient orbs */}
       <div className="absolute -top-12 -right-12 w-32 h-32 bg-gradient-to-br from-primary-200 to-primary-400 rounded-full blur-3xl opacity-0 group-hover:opacity-30 transition-opacity duration-500" />
       <div className="absolute -bottom-12 -left-12 w-32 h-32 bg-gradient-to-br from-primary-300 to-primary-500 rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
-      
+
       {/* Animated gradient background */}
-      <motion.div 
+      <motion.div
         className="absolute inset-0 bg-gradient-to-br from-primary-50 via-primary-100/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"
         animate={isHovered ? {
           background: [
@@ -77,10 +77,10 @@ const ServiceCard = ({ title, description, href, icon, delay = 0 }: ServiceCardP
         } : {}}
         transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
       />
-      
+
       {/* Mesh gradient pattern overlay */}
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-        <div 
+        <div
           className="absolute inset-0 rounded-3xl"
           style={{
             backgroundImage: `radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
@@ -89,7 +89,7 @@ const ServiceCard = ({ title, description, href, icon, delay = 0 }: ServiceCardP
           }}
         />
       </div>
-      
+
       {/* Sparkle effects on hover */}
       {isHovered && (
         <>
@@ -119,7 +119,7 @@ const ServiceCard = ({ title, description, href, icon, delay = 0 }: ServiceCardP
           </motion.div>
         </>
       )}
-      
+
       {/* Shine effect on hover */}
       <motion.div
         className="absolute inset-0 opacity-0 group-hover:opacity-100 rounded-3xl"
@@ -132,10 +132,10 @@ const ServiceCard = ({ title, description, href, icon, delay = 0 }: ServiceCardP
         } : {}}
         transition={{ duration: 1.5, repeat: Infinity }}
       />
-      
+
       <div className="relative z-10" style={{ transform: "translateZ(20px)" }}>
         {icon && (
-          <motion.div 
+          <motion.div
             className="mb-6 inline-block"
             whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.2 }}
             transition={{ duration: 0.5 }}
@@ -170,50 +170,24 @@ const ServiceCard = ({ title, description, href, icon, delay = 0 }: ServiceCardP
             </div>
           </motion.div>
         )}
-        
-        <motion.h3 
+
+        <motion.h3
           className="text-xl font-bold text-accent-900 mb-4 group-hover:text-primary-600 transition-colors leading-tight"
           animate={isHovered ? { x: [0, 3, 0] } : {}}
           transition={{ duration: 0.4 }}
         >
           {title}
         </motion.h3>
-        
+
         <p className="text-accent-600 mb-6 leading-relaxed group-hover:text-accent-700 transition-colors text-[15px]">
           {description}
         </p>
-        
-        <Link
-          href={href}
-          className="inline-flex items-center space-x-2 text-primary-600 hover:text-primary-700 transition-colors font-bold group/link text-sm"
-        >
-          <span className="relative">
-            Learn More
-            <motion.span
-              className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-primary-500 to-primary-600"
-              initial={{ width: 0 }}
-              animate={isHovered ? { width: "100%" } : { width: 0 }}
-              transition={{ duration: 0.3 }}
-            />
-          </span>
-          <motion.div
-            animate={isHovered ? { x: [0, 5, 0] } : {}}
-            transition={{ duration: 0.6, repeat: Infinity }}
-            className="relative"
-          >
-            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
-            {/* Arrow glow on hover */}
-            <motion.div
-              className="absolute inset-0 bg-primary-400 rounded-full blur-md opacity-0 group-hover:opacity-50"
-              animate={isHovered ? { scale: [1, 1.5, 1] } : {}}
-              transition={{ duration: 1, repeat: Infinity }}
-            />
-          </motion.div>
-        </Link>
+
+        {/* Learn more link intentionally removed per requirements */}
       </div>
-      
+
       {/* Bottom accent line with gradient animation */}
-      <motion.div 
+      <motion.div
         className="absolute bottom-0 left-0 h-1.5 bg-gradient-to-r from-primary-400 via-primary-600 to-primary-500 rounded-b-3xl"
         initial={{ width: 0 }}
         animate={isHovered ? { width: "100%" } : { width: 0 }}
@@ -225,7 +199,7 @@ const ServiceCard = ({ title, description, href, icon, delay = 0 }: ServiceCardP
           transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
         />
       </motion.div>
-      
+
       {/* Side accent bars */}
       <motion.div
         className="absolute left-0 top-1/4 w-1 h-12 bg-gradient-to-b from-transparent via-primary-400 to-transparent opacity-0 group-hover:opacity-100 rounded-r-full"
@@ -233,7 +207,7 @@ const ServiceCard = ({ title, description, href, icon, delay = 0 }: ServiceCardP
         animate={isHovered ? { scaleY: 1 } : { scaleY: 0 }}
         transition={{ duration: 0.4 }}
       />
-      
+
       {/* Enhanced corner accents with multiple layers */}
       <motion.div
         className="absolute top-0 right-0 w-24 h-24 opacity-0 group-hover:opacity-100 overflow-hidden rounded-tr-3xl"
@@ -266,7 +240,7 @@ const ServiceCard = ({ title, description, href, icon, delay = 0 }: ServiceCardP
           transition={{ duration: 1.5, repeat: Infinity, delay: 0.3 }}
         />
       </motion.div>
-      
+
       {/* Bottom left decorative element */}
       <motion.div
         className="absolute bottom-0 left-0 w-20 h-20 opacity-0 group-hover:opacity-100 overflow-hidden rounded-bl-3xl"

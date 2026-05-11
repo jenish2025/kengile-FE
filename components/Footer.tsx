@@ -53,8 +53,8 @@ const Footer = () => {
   ];
 
   const company = [
-    { name: "About Us", href: "/about-us" },
-    { name: "Industries We Serve", href: "/industries-we-serve" },
+    { name: "About Us", href: "/about-kengile" },
+    { name: "Industries We Serve", href: "/our-industry-expertise" },
     { name: "Innovation Labs", href: "/innovation-labs" },
     { name: "Insights & Case Studies", href: "/insights-case-studies" },
     { name: "Careers", href: "/careers" },

@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   title: 'Data Center Modernization | Smart IT Infrastructure Services',
   description: 'Transform traditional IT environments into intelligent, automated, energy-efficient data centers built for AI workloads.',
   keywords: 'data center modernization, smart data center, IT infrastructure, data center automation, energy efficient data center',
+  robots: { index: true, follow: true },
+  alternates: {
+    canonical: 'https://kengile.com/services/data-center-modernization',
+  },
 }
 
 export default function DataCenterModernization() {
@@ -46,7 +50,7 @@ export default function DataCenterModernization() {
     {
       title: "AIOps & Intelligent Infrastructure Management",
       description:
-        "With expert data center modernization services, we apply AIOps to enable autonomous monitoring and predictive maintenance. Kengile can assist in minimizing downtime and manual intervention with intelligent and autonomous infrastructure management.",
+        <>With expert <strong>data center modernization services</strong>, we apply AIOps to enable autonomous monitoring and predictive maintenance. Kengile can assist in minimizing downtime and manual intervention with intelligent and autonomous infrastructure management.</>,
       icon: <Brain size={40} />,
     },
     {
@@ -61,7 +65,7 @@ export default function DataCenterModernization() {
     {
       title: "Healthcare and Life Sciences",
       description:
-        "We offer data center modernization for the healthcare industry to ensure secure, compliant, and reliable operations. Our services enable critical hospital applications, research, and patient data management.",
+        <>We offer <strong><em>data center modernization</em></strong> for the healthcare industry to ensure secure, compliant, and reliable operations. Our services enable critical hospital applications, research, and patient data management.</>,
       useCases: [
         "Minimize downtime for critical applications",
         "Optimize energy consumption in data centers",
@@ -310,6 +314,31 @@ export default function DataCenterModernization() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://kengile.com/services' },
+              { '@type': 'ListItem', position: 3, name: 'Data Center Modernization', item: 'https://kengile.com/services/data-center-modernization' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li><Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link></li>
+            <li className="text-accent-400">/</li>
+            <li><Link href="/services" className="text-accent-500 hover:text-primary-600 transition-colors">Services</Link></li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">Data Center Modernization</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
         title="Data Center Modernization"
         subtitle="Data Center Modernization"
@@ -455,7 +484,7 @@ export default function DataCenterModernization() {
       <Section className="bg-white">
         <SectionHeader
           title="Data Center Modernization for Every Industry"
-          subtitle="Kengile offers data center modernization services that are industry-specific. Our team of experts offers scalable, efficient, and robust infrastructure that enhances performance, lowers costs, and enables new workloads such as AI, cloud, and analytics."
+          subtitle={<>Kengile offers <strong>data center modernization services</strong> that are industry-specific. Our team of experts offers scalable, efficient, and robust infrastructure that enhances performance, lowers costs, and enables new workloads such as AI, cloud, and analytics.</>}
           className="text-center mb-12"
           titleClassName="text-4xl font-bold text-gradient mb-4"
           subtitleClassName="text-lg text-accent-700 max-w-4xl mx-auto"
@@ -473,7 +502,7 @@ export default function DataCenterModernization() {
         </div>
         <div className="text-center">
           <Link
-            href="/industries-we-serve"
+            href="/our-industry-expertise"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 transition-all shadow-lg hover:shadow-xl"
           >
             View All Industries
@@ -534,7 +563,7 @@ export default function DataCenterModernization() {
       <Section className="bg-white">
         <SectionHeader
           title="How Can You Benefit from Our Data Center Modernization Services?"
-          subtitle="A modern data center delivers higher performance, reliability, and efficiency while reducing costs. Our data center modernization services help businesses scale infrastructure, optimize operations, and prepare for future workloads."
+          subtitle={<>A modern data center delivers higher performance, reliability, and efficiency while reducing costs. Our <strong>data center modernization services</strong> help businesses scale infrastructure, optimize operations, and prepare for future workloads.</>}
           className="text-center mb-12"
           titleClassName="text-4xl font-bold text-gradient mb-4"
           subtitleClassName="text-lg text-accent-700 max-w-4xl mx-auto"
@@ -904,7 +933,7 @@ export default function DataCenterModernization() {
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </span>
             </Link>
-            <Link href="/services/green-cloud-sustainable-it" className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all group">
+            <Link href="/services/green-cloud-services" className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all group">
               <Zap className="text-primary-600 mb-4" size={32} />
               <h3 className="text-xl font-semibold text-accent-900 mb-2 group-hover:text-primary-600 transition-colors">Green Cloud</h3>
               <p className="text-accent-600 mb-4">Optimize cloud usage to reduce cost and improve efficiency</p>

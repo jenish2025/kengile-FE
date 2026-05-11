@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 interface ServiceFeatureCardProps {
   title: string;
-  description: string;
+  description: ReactNode;
   icon: ReactNode;
 }
 

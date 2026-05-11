@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import AnimatedHero from "@/components/AnimatedHero";
 import Section from "@/components/Section";
 import ServiceCard from "@/components/ServiceCard";
@@ -43,6 +44,13 @@ export const metadata: Metadata = {
     "Tailored IT solutions for AI startups, energy enterprises, financial systems, and space-technology innovators.",
   keywords:
     "IT services industries, AI startups, energy companies, FinTech, SpaceTech, enterprise IT solutions",
+  alternates: {
+    canonical: "https://kengile.com/our-industry-expertise",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function IndustriesWeServe() {
@@ -201,28 +209,28 @@ export default function IndustriesWeServe() {
         "Clinical trial data management",
       ],
     },
-    {
-      title: "Financial Services",
-      description:
-        "Our teams create secure digital finance ecosystems, blockchain-supported settlement systems, and high-performance architectures for today's financial operations.",
-      icon: <Shield size={32} />,
-      color: "from-green-500 to-emerald-500",
-      stats: { clients: "40+", projects: "180+", satisfaction: "99%" },
-      capabilities: [
-        "Blockchain and DeFi platform development",
-        "High-frequency trading infrastructure",
-        "Payment gateway integration",
-        "Risk management systems",
-        "Regulatory compliance automation",
-        "Fraud detection using AI/ML",
-      ],
-      useCases: [
-        "Cryptocurrency exchange platforms",
-        "Digital wallet solutions",
-        "Smart contract development",
-        "Cross-border payment systems",
-      ],
-    },
+    // {
+    //   title: "Financial Services",
+    //   description:
+    //     "Our teams create secure digital finance ecosystems, blockchain-supported settlement systems, and high-performance architectures for today's financial operations.",
+    //   icon: <Shield size={32} />,
+    //   color: "from-green-500 to-emerald-500",
+    //   stats: { clients: "40+", projects: "180+", satisfaction: "99%" },
+    //   capabilities: [
+    //     "Blockchain and DeFi platform development",
+    //     "High-frequency trading infrastructure",
+    //     "Payment gateway integration",
+    //     "Risk management systems",
+    //     "Regulatory compliance automation",
+    //     "Fraud detection using AI/ML",
+    //   ],
+    //   useCases: [
+    //     "Cryptocurrency exchange platforms",
+    //     "Digital wallet solutions",
+    //     "Smart contract development",
+    //     "Cross-border payment systems",
+    //   ],
+    // },
   ];
 
   const whyChooseUs = [
@@ -231,7 +239,7 @@ export default function IndustriesWeServe() {
       title: "Experienced Engineers",
       description:
         "Our senior engineers bring deep, hands-on experience across complex and large-scale systems. With proven success in leading engineering teams and delivering high-impact solutions, we ensure your project is handled by highly skilled and dependable professionals.",
-      href: "/about-us",
+      href: "/about-kengile",
       borderColor: "border-blue-100",
       hoverBorderColor: "hover:border-blue-400",
       iconGradientFrom: "from-blue-500",
@@ -325,6 +333,28 @@ export default function IndustriesWeServe() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'Our Industry Expertise', item: 'https://kengile.com/our-industry-expertise' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li><Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link></li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">Our Industry Expertise</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
         title="Our Industry Expertise"
         subtitle="Industry Expertise"

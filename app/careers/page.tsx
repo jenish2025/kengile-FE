@@ -35,6 +35,8 @@ export const metadata: Metadata = {
     "Build your career in AI, cloud, blockchain, and infrastructure services , shaping the next wave of global innovation.",
   keywords:
     "careers, jobs, IT jobs, AI engineer, cloud architect, blockchain developer, infrastructure engineer",
+  robots: { index: true, follow: true },
+  alternates: { canonical: "https://kengile.com/careers" },
 };
 
 export default function Careers() {
@@ -277,6 +279,28 @@ export default function Careers() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'Careers', item: 'https://kengile.com/careers' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li><Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link></li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">Careers</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
         title="Careers at Kengile"
         subtitle="Shape the Future of Technology"
@@ -621,7 +645,7 @@ export default function Careers() {
               <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
             </Link>
             <Link
-              href="/about-us"
+              href="/about-kengile"
               className="inline-flex items-center space-x-2 px-10 py-5 bg-transparent border-2 border-white text-white rounded-2xl font-bold hover:bg-white/10 transition-all duration-300"
             >
               <span>Learn More About Us</span>

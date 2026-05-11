@@ -8,11 +8,38 @@ export const metadata: Metadata = {
   title: 'Sustainable Data Centers | Kengile Insights',
   description: 'How green data centers and renewable energy integration are reshaping the IT industry&apos;s environmental impact.',
   keywords: 'sustainable data centers, green computing, renewable energy, carbon-negative infrastructure, PUE optimization',
+  robots: { index: true, follow: true },
+  alternates: { canonical: 'https://kengile.com/insights/sustainable-data-centers' },
 }
 
 export default function SustainableDataCentersPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'Insights', item: 'https://kengile.com/insights-case-studies' },
+              { '@type': 'ListItem', position: 3, name: 'Sustainable Data Centers', item: 'https://kengile.com/insights/sustainable-data-centers' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li><Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link></li>
+            <li className="text-accent-400">/</li>
+            <li><Link href="/insights-case-studies" className="text-accent-500 hover:text-primary-600 transition-colors">Insights</Link></li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">Sustainable Data Centers</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
         title="Sustainable Data Centers"
         subtitle="The Path to Carbon Neutrality"

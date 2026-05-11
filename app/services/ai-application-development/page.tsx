@@ -12,18 +12,54 @@ export const metadata: Metadata = {
   title: 'AI Application Development Service | Custom AI Apps | Kengile',
   description: 'Transform your business with Kengile\'s AI Application Development Services. Build custom AI applications, automate workflows, and unlock actionable insights.',
   keywords: 'AI application development, LLM, generative AI, AI automation, machine learning applications, AI software development',
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: 'https://kengile.com/services/ai-application-development',
+  },
 }
 
 export default function AIApplicationDevelopment() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://kengile.com/services' },
+              { '@type': 'ListItem', position: 3, name: 'AI Application Development Services', item: 'https://kengile.com/services/ai-application-development' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li>
+              <Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link>
+            </li>
+            <li className="text-accent-400">/</li>
+            <li>
+              <Link href="/services" className="text-accent-500 hover:text-primary-600 transition-colors">Services</Link>
+            </li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">AI Application Development Services</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
         title="AI Application Development Services"
         subtitle="Transform your business with intelligent, custom AI applications"
         description="Transform your business with intelligent, custom AI applications that drive growth, efficiency, and measurable ROI. Kengile delivers end-to-end AI Application Development Services that automate processes, unlock insights, and power smarter decisions."
-        ctaText="Start Free Consultation"
+        ctaText="Schedule AI Readiness Assessment"
         ctaLink="/contact-us"
-        secondaryCtaText="See Our Work"
+        secondaryCtaText="View Case Studies"
         secondaryCtaLink="/insights-case-studies"
       />
 
@@ -86,7 +122,7 @@ export default function AIApplicationDevelopment() {
             Our AI Application Development Services That Actually Work
           </h2>
           <p className="text-lg text-accent-700">
-            Our AI Application Development Services focus on six key pillars designed to turn your data into a competitive advantage. Kengile&apos;s experts assess your needs and deliver solutions that enhance efficiency, accuracy, and business outcomes.
+            Our <strong>AI Application Development Services</strong> focus on six key pillars designed to turn your data into a competitive advantage. Kengile&apos;s experts assess your needs and deliver solutions that enhance efficiency, accuracy, and business outcomes.
           </p>
         </div>
         <div className="max-w-6xl mx-auto">
@@ -123,7 +159,7 @@ export default function AIApplicationDevelopment() {
               <Database className="text-primary-600 mb-4" size={40} />
               <h3 className="text-2xl font-semibold text-accent-900 mb-3">Data Engineering &amp; MLOps</h3>
               <p className="text-accent-600">
-                As a seasoned AI application development company, Kengile offers comprehensive data pipeline and MLOps infrastructure solutions that maintain AI applications in a production-ready state through monitoring, versioning, and continuous improvement.
+                As a seasoned <strong><i>AI application development company</i></strong>, Kengile offers comprehensive data pipeline and MLOps infrastructure solutions that maintain AI applications in a production-ready state through monitoring, versioning, and continuous improvement.
               </p>
             </div>
             <div className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all">
@@ -146,7 +182,7 @@ export default function AIApplicationDevelopment() {
           titleClassName="text-4xl font-bold text-gradient mb-4"
           subtitleClassName="text-lg text-accent-700 max-w-4xl mx-auto"
         />
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <IndustryCard
               title="Healthcare & Life Sciences"
@@ -195,7 +231,7 @@ export default function AIApplicationDevelopment() {
             />
             <IndustryCard
               title="Information Technology"
-              description="Kengile develops AI for the IT industry that automates business flows and strengthens security. Our solutions optimize system reliability, enhance threat detection, and provide scalable AI infrastructure, helping businesses deploy and manage AI applications effectively."
+              description={<>Kengile develops AI for the IT industry that automates business flows and strengthens security. Our solutions optimize system reliability, enhance threat detection, and provide scalable <Link href="/services/ai-infrastructure-services" className="text-primary-600 hover:underline">AI infrastructure</Link>, helping businesses deploy and manage AI applications effectively.</>}
               useCases={[
                 'Intelligent IT operations (AIOps)',
                 'Automated code review and testing',
@@ -205,7 +241,7 @@ export default function AIApplicationDevelopment() {
           </div>
           <div className="text-center mt-12">
             <Link
-              href="/industries-we-serve"
+              href="/our-industry-expertise"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 transition-all shadow-lg hover:shadow-xl"
             >
               View All Industries

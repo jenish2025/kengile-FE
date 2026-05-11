@@ -9,11 +9,38 @@ export const metadata: Metadata = {
   title: 'Stablecoin Development | Blockchain & FinTech IT Services',
   description: 'End-to-end development of stablecoins and digital assets with blockchain integration, security, and scalability.',
   keywords: 'stablecoin development, digital currency, blockchain development, FinTech, cryptocurrency, token development',
+  robots: { index: true, follow: true },
+  alternates: { canonical: 'https://kengile.com/services/stablecoin-development-services' },
 }
 
 export default function StablecoinDevelopmentServices() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://kengile.com/services' },
+              { '@type': 'ListItem', position: 3, name: 'Stablecoin Development Services', item: 'https://kengile.com/services/stablecoin-development-services' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li><Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link></li>
+            <li className="text-accent-400">/</li>
+            <li><Link href="/services" className="text-accent-500 hover:text-primary-600 transition-colors">Services</Link></li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">Stablecoin Development Services</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
         title="Stablecoin Development Services"
         subtitle="Blockchain & FinTech IT Services"

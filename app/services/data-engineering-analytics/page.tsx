@@ -12,11 +12,53 @@ export const metadata: Metadata = {
   title: 'Data Engineering Services | Kengile',
   description: 'Transform raw data into actionable insights with our end-to-end data engineering services. Build scalable pipelines, real-time analytics, and AI-ready infrastructure that accelerates business growth and decision-making.',
   keywords: 'data engineering, big data, ETL, data pipelines, analytics, data warehouse, data lake',
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: 'Data Engineering Services | Kengile',
+    description: 'Transform raw data into actionable insights with our end-to-end data engineering services. Build scalable pipelines, real-time analytics, and AI-ready infrastructure that accelerates business growth and decision-making.',
+    url: 'https://kengile.com/services/data-engineering-analytics',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://kengile.com/services/data-engineering-analytics',
+  },
 }
 
 export default function DataEngineeringAnalytics() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://kengile.com/services' },
+              { '@type': 'ListItem', position: 3, name: 'Data Engineering Services', item: 'https://kengile.com/services/data-engineering-analytics' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li>
+              <Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link>
+            </li>
+            <li className="text-accent-400">/</li>
+            <li>
+              <Link href="/services" className="text-accent-500 hover:text-primary-600 transition-colors">Services</Link>
+            </li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">Data Engineering Services</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
         title="Data Engineering Services"
         subtitle="Transform raw data into actionable insights"
@@ -86,7 +128,7 @@ export default function DataEngineeringAnalytics() {
             Our Data Engineering Services That Drive Results
           </h2>
           <p className="text-lg text-accent-700">
-            At Kengile, we focus our data engineering services on six key pillars, helping you leverage data as a true differentiator. Our team of experts examines your existing infrastructure and provides solutions to optimize performance, trustworthiness, and analytics-readiness.
+            At Kengile, we focus our <strong>data engineering services</strong> on six key pillars, helping you leverage data as a true differentiator. Our team of experts examines your existing infrastructure and provides solutions to optimize performance, trustworthiness, and analytics-readiness.
           </p>
         </div>
         <div className="max-w-6xl mx-auto">
@@ -146,7 +188,7 @@ export default function DataEngineeringAnalytics() {
           titleClassName="text-4xl font-bold text-gradient mb-4"
           subtitleClassName="text-lg text-accent-700 max-w-4xl mx-auto"
         />
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <IndustryCard
               title="Healthcare & Life Sciences"
@@ -205,7 +247,7 @@ export default function DataEngineeringAnalytics() {
           </div>
           <div className="text-center mt-12">
             <Link
-              href="/industries-we-serve"
+              href="/our-industry-expertise"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 transition-all shadow-lg hover:shadow-xl"
             >
               View All Industries
@@ -227,7 +269,7 @@ export default function DataEngineeringAnalytics() {
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <CaseStudyCard
-              title="Manufacturing IoT Analytics for Predictive Maintenance"
+              title="IoT Analytics for Predictive Maintenance"
               industry="Manufacturing"
               challenge="A global manufacturing company experienced recurring unplanned equipment downtime, resulting in annual losses of millions of dollars. The sensor data from 5,000+ machines was locked in isolated systems and could not be leveraged for predictive analytics."
               solution="Kengile developed a real-time IoT data analytics platform on top of Kafka and Databricks. We designed and implemented streaming analytics pipelines that processed millions of sensor events per minute, with machine learning models capable of predicting equipment failures up to 72 hours in advance."
@@ -240,10 +282,10 @@ export default function DataEngineeringAnalytics() {
               delay={0}
             />
             <CaseStudyCard
-              title="Retail Omnichannel Customer Analytics"
+              title="Omnichannel Customer Analytics"
               industry="Retail"
-              challenge="A national retailer was unable to integrate online and offline customer activity. Disparate data sources made it difficult to deliver personalized experiences and reliable inventory forecasts, resulting in lost sales."
-              solution="Kengile designed and implemented a customer 360 analytics platform on Snowflake. We integrated POS, e-commerce, loyalty, and marketing data. We also designed and implemented real-time identity resolution and predictive demand forecasting models."
+              challenge="A national retailer was unable to integrate online and offline customer activity. Disparate data sources made it difficult to deliver personalized experiences and reliable inventory forecasts, resulting in lost sales.Lack of a unified data layer meant marketing teams stale weekly reports."
+              solution="Kengile designed and implemented a customer 360 analytics platform on Snowflake. We integrated POS, e-commerce, loyalty, and marketing data. We also designed and implemented real-time identity resolution and predictive demand forecasting models. This enabled marketing teams to react to real-time buying trends."
               results={[
                 'Unified 25M+ customer profiles across channels',
                 'Improved inventory accuracy by 35%',

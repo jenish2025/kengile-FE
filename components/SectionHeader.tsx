@@ -1,7 +1,7 @@
 interface SectionHeaderProps {
   pillText?: string;
   title: string;
-  subtitle?: string;
+  subtitle?: string | React.ReactNode;
   className?: string;
   titleClassName?: string;
   subtitleClassName?: string;

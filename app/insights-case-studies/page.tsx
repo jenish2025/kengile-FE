@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   title: 'Insights & Case Studies | Future-Ready IT Services Trends',
   description: 'Read the latest insights, research papers, and case studies on AI, data infrastructure, and digital transformation.',
   keywords: 'IT insights, case studies, whitepapers, technology trends, AI research, digital transformation',
+  robots: { index: true, follow: true },
+  alternates: { canonical: 'https://kengile.com/insights-case-studies' },
 }
 
 export default function InsightsCaseStudies() {
@@ -250,6 +252,28 @@ export default function InsightsCaseStudies() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'Insights & Case Studies', item: 'https://kengile.com/insights-case-studies' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li><Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link></li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">Insights & Case Studies</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
         title="Insights & Case Studies"
         subtitle="Future-Ready IT Knowledge Hub"

@@ -15,10 +15,10 @@ A modern, SEO-optimized website for Kengile, positioning the company as a next-g
 
 ```
 ├── app/
-│   ├── about-us/
+│   ├── about-kengile/
 │   ├── careers/
 │   ├── contact-us/
-│   ├── industries-we-serve/
+│   ├── our-industry-expertise/
 │   ├── innovation-labs/
 │   ├── insights-case-studies/
 │   ├── services/

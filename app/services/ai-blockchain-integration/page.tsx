@@ -9,11 +9,38 @@ export const metadata: Metadata = {
   title: 'AI + Blockchain Services | Secure Data & Compute Infrastructure',
   description: 'Integrate AI intelligence with blockchain for transparent, decentralized IT operations and smart automation.',
   keywords: 'AI blockchain, decentralized AI, blockchain AI integration, smart contracts AI, decentralized compute',
+  robots: { index: true, follow: true },
+  alternates: { canonical: 'https://kengile.com/services/ai-blockchain-integration' },
 }
 
 export default function AIBlockchainIntegration() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://kengile.com/services' },
+              { '@type': 'ListItem', position: 3, name: 'AI + Blockchain Services', item: 'https://kengile.com/services/ai-blockchain-integration' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li><Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link></li>
+            <li className="text-accent-400">/</li>
+            <li><Link href="/services" className="text-accent-500 hover:text-primary-600 transition-colors">Services</Link></li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">AI + Blockchain Services</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
         title="AI & Blockchain Integration"
         subtitle="Secure Data & Compute Infrastructure"

@@ -7,18 +7,50 @@ import FeatureList from '@/components/FeatureList'
 import UseCaseCard from '@/components/UseCaseCard'
 import FAQ from '@/components/FAQ'
 import CaseStudyCard from '@/components/CaseStudyCard'
-import IndustryCard from '@/components/IndustryCard'
 import { Settings, GitBranch, Monitor, Zap, CheckCircle, Server, Cloud, Code, ArrowRight, Shield } from 'lucide-react'
+import IndustryCard from '@/components/IndustryCard'
 
 export const metadata: Metadata = {
-  title: 'DevOps & SRE Automation Services | Kengile',
-  description: 'Kengile’s DevOps & SRE Automation Service provides CI/CD pipelines, observability, and reliability engineering to speed deployments and cut toil.',
-  keywords: 'DevOps, SRE, site reliability engineering, CI/CD, Kubernetes, automation, observability, Kengile',
+  title: "DevOps & SRE Automation Services | Kengile",
+  description: "Kengile’s DevOps & SRE Automation Service provides CI/CD pipelines, observability, and reliability engineering to speed deployments and cut toil.",
+  keywords: "DevOps, SRE, site reliability engineering, CI/CD, Kubernetes, automation, observability, Kengile",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://kengile.com/services/devops-sre-automation",
+  },
 }
 
 export default function DevOpsSREAutomation() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kengile.com' },
+              { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://kengile.com/services' },
+              { '@type': 'ListItem', position: 3, name: 'DevOps & SRE Automation Services', item: 'https://kengile.com/services/devops-sre-automation' },
+            ],
+          }),
+        }}
+      />
+      <nav aria-label="Breadcrumb" className="bg-white border-b border-accent-100">
+        <div className="container mx-auto px-4 py-3">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li><Link href="/" className="text-accent-500 hover:text-primary-600 transition-colors">Home</Link></li>
+            <li className="text-accent-400">/</li>
+            <li><Link href="/services" className="text-accent-500 hover:text-primary-600 transition-colors">Services</Link></li>
+            <li className="text-accent-400">/</li>
+            <li className="text-accent-900 font-medium">DevOps & SRE Automation Services</li>
+          </ol>
+        </div>
+      </nav>
       <AnimatedHero
         title="DevOps & SRE Automation Services"
         subtitle="Build resilient systems that scale and automate repetitive toil"
@@ -217,7 +249,7 @@ export default function DevOpsSREAutomation() {
           </div>
           <div className="text-center mt-12">
             <Link
-              href="/industries-we-serve"
+              href="/our-industry-expertise"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-lg font-semibold hover:from-primary-700 hover:to-primary-800 transition-all shadow-lg hover:shadow-xl"
             >
               View More Industries
@@ -446,38 +478,72 @@ export default function DevOpsSREAutomation() {
         </div>
       </Section>
 
-      {/* FAQ */}
+      {/* Technical Stack */}
       <Section className="bg-gradient-subtle">
-        <div className="max-w-4xl mx-auto">
-          <FAQ
-            items={[
-              {
-                question: 'What is the difference between DevOps and SRE?',
-                answer:
-                  'DevOps is all about the culture and technical approaches that enable fast and reliable software delivery, like CI/CD, infrastructure as code, and close collaboration between development and operations teams. SRE (Site Reliability Engineering) is a Google-developed set of DevOps practices with a strong focus on reliability via SLIs/SLOs, error budgets, and treating operations as a software engineering problem. At Kengile, we often provide both together—DevOps for speed, and SRE for reliability in production.'
-              },
-              {
-                question: 'How long does a typical DevOps transformation take?',
-                answer:
-                  'That depends on your current situation and goals. Quick wins, such as setting up an initial CI/CD pipeline, can typically be accomplished in 2–4 weeks. Comprehensive transformations that include infrastructure automation, observability, and SRE practices usually take 3–6 months. Cultural transformation is ongoing, so we break our work into phases so you see quick value while progressing toward long-term maturity.'
-              },
-              {
-                question: 'Can you assist with migrating from legacy systems?',
-                answer:
-                  'Yes. We frequently help organizations modernize legacy systems and processes while maintaining business continuity. Our teams gradually introduce automation, CI/CD, and observability, while integrating with or incrementally replacing legacy tooling and infrastructure to reduce risk.'
-              },
-              {
-                question: 'What kinds of tools and platforms do you work with?',
-                answer:
-                  'We work with a broad range of industry-standard tools for CI/CD, infrastructure as code, observability, and cloud platforms. This includes Jenkins, GitLab CI, GitHub Actions, ArgoCD, Kubernetes, Terraform, Prometheus, Grafana, ELK Stack, and major cloud providers such as AWS, Azure, and Google Cloud.'
-              },
-              {
-                question: 'Do you provide training and handover to our internal team?',
-                answer:
-                  'Absolutely. Enablement is a core part of every engagement. We provide hands-on training, documentation, runbooks, and pairing sessions so your internal teams can confidently operate, extend, and evolve the DevOps and SRE capabilities we build together.'
-              }
-            ]}
+        <div className="max-w-6xl mx-auto">
+          <SectionHeader
+            title="Technical Stack We Work With"
+            subtitle="We work with the industry's leading DevOps and SRE tools to build automation pipelines, reliable infrastructure, and observability platforms that fit your engineering environment."
+            className="text-center mb-12"
+            titleClassName="text-4xl font-bold text-gradient mb-4"
+            subtitleClassName="text-lg text-accent-700 max-w-4xl mx-auto"
           />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl p-6 border border-accent-200 hover:border-primary-500 hover:shadow-lg transition-all">
+              <GitBranch className="text-primary-600 mb-4" size={32} />
+              <h3 className="text-lg font-semibold text-accent-900 mb-3">CI/CD Platforms</h3>
+              <div className="flex flex-wrap gap-2">
+                {['GitHub Actions', 'GitLab CI', 'Jenkins', 'ArgoCD', 'CircleCI', 'Tekton'].map((tool) => (
+                  <span key={tool} className="px-3 py-1 bg-primary-50 text-primary-700 text-sm rounded-full font-medium">{tool}</span>
+                ))}
+              </div>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-accent-200 hover:border-primary-500 hover:shadow-lg transition-all">
+              <Server className="text-primary-600 mb-4" size={32} />
+              <h3 className="text-lg font-semibold text-accent-900 mb-3">Container &amp; Orchestration</h3>
+              <div className="flex flex-wrap gap-2">
+                {['Kubernetes', 'Docker', 'Helm', 'OpenShift', 'Rancher', 'Istio'].map((tool) => (
+                  <span key={tool} className="px-3 py-1 bg-primary-50 text-primary-700 text-sm rounded-full font-medium">{tool}</span>
+                ))}
+              </div>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-accent-200 hover:border-primary-500 hover:shadow-lg transition-all">
+              <Code className="text-primary-600 mb-4" size={32} />
+              <h3 className="text-lg font-semibold text-accent-900 mb-3">Infrastructure as Code</h3>
+              <div className="flex flex-wrap gap-2">
+                {['Terraform', 'Ansible', 'Pulumi', 'AWS CDK', 'Crossplane', 'Chef'].map((tool) => (
+                  <span key={tool} className="px-3 py-1 bg-primary-50 text-primary-700 text-sm rounded-full font-medium">{tool}</span>
+                ))}
+              </div>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-accent-200 hover:border-primary-500 hover:shadow-lg transition-all">
+              <Monitor className="text-primary-600 mb-4" size={32} />
+              <h3 className="text-lg font-semibold text-accent-900 mb-3">Observability &amp; Monitoring</h3>
+              <div className="flex flex-wrap gap-2">
+                {['Prometheus', 'Grafana', 'Datadog', 'ELK Stack', 'Jaeger', 'OpenTelemetry'].map((tool) => (
+                  <span key={tool} className="px-3 py-1 bg-primary-50 text-primary-700 text-sm rounded-full font-medium">{tool}</span>
+                ))}
+              </div>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-accent-200 hover:border-primary-500 hover:shadow-lg transition-all">
+              <Cloud className="text-primary-600 mb-4" size={32} />
+              <h3 className="text-lg font-semibold text-accent-900 mb-3">Cloud Platforms</h3>
+              <div className="flex flex-wrap gap-2">
+                {['AWS', 'Microsoft Azure', 'Google Cloud', 'DigitalOcean', 'Hybrid Cloud'].map((tool) => (
+                  <span key={tool} className="px-3 py-1 bg-primary-50 text-primary-700 text-sm rounded-full font-medium">{tool}</span>
+                ))}
+              </div>
+            </div>
+            <div className="bg-white rounded-xl p-6 border border-accent-200 hover:border-primary-500 hover:shadow-lg transition-all">
+              <Shield className="text-primary-600 mb-4" size={32} />
+              <h3 className="text-lg font-semibold text-accent-900 mb-3">Security &amp; Compliance</h3>
+              <div className="flex flex-wrap gap-2">
+                {['Vault', 'SonarQube', 'Snyk', 'Trivy', 'OPA', 'Falco'].map((tool) => (
+                  <span key={tool} className="px-3 py-1 bg-primary-50 text-primary-700 text-sm rounded-full font-medium">{tool}</span>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </Section>
 
@@ -507,7 +573,7 @@ export default function DevOpsSREAutomation() {
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </span>
             </Link>
-            <Link href="/services/green-cloud-sustainable-it" className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all group">
+            <Link href="/services/green-cloud-services" className="bg-white border border-accent-200 rounded-xl p-6 hover:border-primary-500 hover:shadow-lg transition-all group">
               <Zap className="text-primary-600 mb-4" size={32} />
               <h3 className="text-xl font-semibold text-accent-900 mb-2 group-hover:text-primary-600 transition-colors">Green Cloud</h3>
               <p className="text-accent-600 mb-4">Optimize cloud usage to reduce cost and improve efficiency</p>
@@ -517,6 +583,41 @@ export default function DevOpsSREAutomation() {
               </span>
             </Link>
           </div>
+        </div>
+      </Section>
+
+      {/* FAQ */}
+      <Section className="bg-gradient-subtle">
+        <div className="max-w-4xl mx-auto">
+          <FAQ
+            items={[
+              {
+                question: 'What is the difference between DevOps and SRE?',
+                answer:
+                  'DevOps is all about the culture and technical approaches that enable fast and reliable software delivery, like CI/CD, infrastructure as code, and close collaboration between development and operations teams. SRE (Site Reliability Engineering) is a Google-developed set of DevOps practices with a strong focus on reliability via SLIs/SLOs, error budgets, and treating operations as a software engineering problem. At Kengile, we often provide both together DevOps for speed, and SRE for reliability in production.'
+              },
+              {
+                question: 'How long does a typical DevOps transformation take?',
+                answer:
+                  'That depends on your current situation and goals. Quick wins, such as setting up an initial CI/CD pipeline, can typically be accomplished in 2–4 weeks. Comprehensive transformations that include infrastructure automation, observability, and SRE practices usually take 3–6 months. Cultural transformation is ongoing, so we break our work into phases so you see quick value while progressing toward long-term maturity.'
+              },
+              {
+                question: 'Can you assist with migrating from legacy systems?',
+                answer:
+                  'Yes. We frequently help organizations modernize legacy systems and processes while maintaining business continuity. Our teams gradually introduce automation, CI/CD, and observability, while integrating with or incrementally replacing legacy tooling and infrastructure to reduce risk.'
+              },
+              {
+                question: 'What kinds of tools and platforms do you work with?',
+                answer:
+                  'We work with a broad range of industry-standard tools for CI/CD, infrastructure as code, observability, and cloud platforms. This includes Jenkins, GitLab CI, GitHub Actions, ArgoCD, Kubernetes, Terraform, Prometheus, Grafana, ELK Stack, and major cloud providers such as AWS, Azure, and Google Cloud.'
+              },
+              {
+                question: 'Do you provide training and handover to our internal team?',
+                answer:
+                  'Absolutely. Enablement is a core part of every engagement. We provide hands-on training, documentation, runbooks, and pairing sessions so your internal teams can confidently operate, extend, and evolve the DevOps and SRE capabilities we build together.'
+              }
+            ]}
+          />
         </div>
       </Section>
 
